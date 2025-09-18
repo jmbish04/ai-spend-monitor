@@ -12,14 +12,14 @@
   },
   "dependencies": {
     "hono": "^4.9.7",
-    "zod": "^4.1.9"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250917.0",
     "@types/node": "^24.5.2",
     "miniflare": "^4.20250913.0",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4",
+    "vitest": "^1.6.0",
     "wrangler": "^4.37.1"
   }
 }
