@@ -1,0 +1,2701 @@
+# --- METADATA ---
+# Source-URL: https://developers.cloudflare.com/developer-spotlight/llms-full.txt
+# Category: meta_and_docs
+# Service: developer-spotlight (Developer Spotlight)
+# Artifact: llms-full — LLM-optimized full context export of the docs
+# Retrieved-At: 2025-08-10T22:45:14.572603-07:00
+# Content-SHA256: 5ad3009c1a3f403496c1f6a5921031a15bf23a2880adb516128dff830707352b
+# --- END METADATA ---
+
+<page>
+---
+title: Developer Spotlight program · Cloudflare Developer Spotlight
+description: Find examples of how our community of developers are getting the
+  most out of our products.
+lastUpdated: 2025-02-06T21:05:40.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/
+  md: https://developers.cloudflare.com/developer-spotlight/index.md
+---
+
+![Illustration of a laptop.](https://developers.cloudflare.com/_astro/developer_spotlight.D2AqR_ks_14Iwsx.webp)
+
+Find examples of how our community of developers are getting the most out of our products.
+
+Applications are currently open until Thursday, the 24th of October 2024. To apply, please read the [application guide](https://developers.cloudflare.com/developer-spotlight/application-guide/)
+
+## View latest contributions
+
+[Setup Fullstack Authentication with Next.js, Auth.js, and Cloudflare D1](https://developers.cloudflare.com/developer-spotlight/tutorials/fullstack-authentication-with-next-js-and-cloudflare-d1/)
+
+By Mackenly Jones
+
+[Build a Voice Notes App with auto transcriptions using Workers AI](https://developers.cloudflare.com/workers-ai/tutorials/build-a-voice-notes-app-with-auto-transcription/)
+
+By Rajeev R. Sharma
+
+[Protect payment forms from malicious bots using Turnstile](https://developers.cloudflare.com/turnstile/tutorials/protecting-your-payment-form-from-attackers-bots-using-turnstile/)
+
+By Hidetaka Okamoto
+
+[Build Live Cursors with Next.js, RPC and Durable Objects](https://developers.cloudflare.com/workers/tutorials/live-cursors-with-nextjs-rpc-do/)
+
+By Ivan Buendia
+
+[Build an interview practice tool with Workers AI](https://developers.cloudflare.com/workers-ai/tutorials/build-ai-interview-practice-tool/)
+
+By Vasyl
+
+[Automate analytics reporting with Cloudflare Workers and email routing](https://developers.cloudflare.com/workers/tutorials/automated-analytics-reporting/)
+
+By Aleksej Komnenovic
+
+[Create a sitemap from Sanity CMS with Workers](https://developers.cloudflare.com/developer-spotlight/tutorials/create-sitemap-from-sanity-cms/)
+
+By John Siciliano
+
+[Recommend products on e-commerce sites using Workers AI and Stripe](https://developers.cloudflare.com/developer-spotlight/tutorials/creating-a-recommendation-api/)
+
+By Hidetaka Okamoto
+
+[Custom access control for files in R2 using D1 and Workers](https://developers.cloudflare.com/developer-spotlight/tutorials/custom-access-control-for-files/)
+
+By Dominik Fuerst
+
+[Send form submissions using Astro and Resend](https://developers.cloudflare.com/developer-spotlight/tutorials/handle-form-submission-with-astro-resend/)
+
+By Cody Walsh
+
+</page>
+
+<page>
+---
+title: 404 - Page Not Found · Cloudflare Developer Spotlight
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/404/
+  md: https://developers.cloudflare.com/developer-spotlight/404/index.md
+---
+
+# 404
+
+Check the URL, try using our [search](https://developers.cloudflare.com/search/) or try our LLM-friendly [llms.txt directory](https://developers.cloudflare.com/llms.txt).
+
+</page>
+
+<page>
+---
+title: Application guide · Cloudflare Developer Spotlight
+description: If you use Cloudflare's developer products and would like to share
+  your expertise then Cloudflare's Developer Spotlight program is for you.
+  Whether you use Cloudflare in your profession, as a student or as a hobby, let
+  us spotlight your creativity. Write a tutorial for our documentation and earn
+  credits for your Cloudflare account along with having your name credited on
+  your work.
+lastUpdated: 2025-05-30T09:36:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/application-guide/
+  md: https://developers.cloudflare.com/developer-spotlight/application-guide/index.md
+---
+
+If you use Cloudflare's developer products and would like to share your expertise then Cloudflare's Developer Spotlight program is for you. Whether you use Cloudflare in your profession, as a student or as a hobby, let us spotlight your creativity. Write a tutorial for our documentation and earn credits for your Cloudflare account along with having your name credited on your work.
+
+The Developer Spotlight program is open for applicants until Thursday, the 24th of October 2024.
+
+## Who can apply?
+
+The following is required in order to be an eligible applicant for the Developer Spotlight program:
+
+* You must not be an employee of Cloudflare.
+* You must be 18 or older.
+* All participants must agree to the [Developer Spotlight terms](https://developers.cloudflare.com/developer-spotlight/terms/).
+
+## Submission rules
+
+Your tutorial must be:
+
+1. Easy for anyone to follow.
+2. Technically accurate.
+3. Entirely original, written only by you.
+4. Written following Cloudflare's documentation style guide. For more information, please visit our [style guide documentation](https://developers.cloudflare.com/style-guide/) and our [tutorial style guide documentation](https://developers.cloudflare.com/style-guide/documentation-content-strategy/content-types/tutorial/#template)
+5. About how to use [Cloudflare's Developer Platform products](https://developers.cloudflare.com/products/?product-group=Developer+platform) to create a project or solve a problem.
+6. Complete, not an unfinished draft.
+
+## How to apply
+
+To apply to the program, submit an application through the [Developer Spotlight signup form](https://forms.gle/anpTPu45tnwjwXsk8). Successful applicants will be contacted by email.
+
+## Account credits
+
+Account credits can be used towards recurring monthly charges for Cloudflare plans or add-on services. Once a tutorial submission has been approved and published, we can then add 350 credits to your Cloudflare account. Credits are only valid for three years. Valid payment details must be stored on the receiving account before credits can be added.
+
+## FAQ
+
+### How many tutorial topic ideas can I submit?
+
+You may submit as many tutorial topics ideas as you like in your application.
+
+### When will I be compensated for my tutorial?
+
+We will add the account credits to your Cloudflare account after your tutorial has been approved and published under the Developer Spotlight program.
+
+### If my tutorial is accepted and published on Cloudflare's Developer Spotlight program, can I republish it elsewhere?
+
+We ask that you do not republish any tutorials that have been published under the Cloudflare Developer Spotlight program.
+
+### Will I be credited for my work?
+
+You will be credited as the author of any tutorial you submit that is successfully published through the Cloudflare Developer Spotlight program. We will add your details to your work after it has been approved.
+
+### What happens If my topic of choice gets accepted but the tutorial submission gets rejected?
+
+Our team will do our best to help you edit your tutorial's pull request to be ready for submission; however, in the unlikely chance that your tutorial's pull request is rejected, you are still free to publish your work elsewhere.
+
+</page>
+
+<page>
+---
+title: Developer Spotlight Terms · Cloudflare Developer Spotlight
+description: These Developer Spotlight Terms (the “Terms”) govern your
+  participation in the Cloudflare Developer Spotlight Program (the “Program”).
+  As used in these Terms, "Cloudflare", "us" or "we" refers to Cloudflare, Inc.
+  and its affiliates.
+lastUpdated: 2025-01-10T17:00:14.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/terms/
+  md: https://developers.cloudflare.com/developer-spotlight/terms/index.md
+---
+
+These Developer Spotlight Terms (the “Terms”) govern your participation in the Cloudflare Developer Spotlight Program (the “Program”). As used in these Terms, "Cloudflare", "us" or "we" refers to Cloudflare, Inc. and its affiliates.
+
+THESE TERMS DO NOT APPLY TO YOUR ACCESS AND USE OF THE CLOUDFLARE PRODUCTS AND SERVICES THAT ARE PROVIDED UNDER THE [SELF-SERVE SUBSCRIPTION AGREEMENT](https://www.cloudflare.com/terms/), THE [ENTERPRISE SUBSCRIPTION AGREEMENT](https://www.cloudflare.com/enterpriseterms/), OR OTHER WRITTEN AGREEMENT SIGNED BETWEEN YOU AND CLOUDFLARE (IF APPLICABLE).
+
+1. Eligibility. By agreeing to these Terms, you represent and warrant to us: (i) that you are at least eighteen (18) years of age; (ii) that you have not previously been suspended or removed from the Program and (iii) that your participation in the Program is in compliance with any and all applicable laws and regulations.
+
+2. Submissions. From time-to-time, Cloudflare may accept certain tutorials, blogs, and other content submissions from its developer community (“Dev Content”) for consideration for publication on a Cloudflare blog, developer documentation, social media platform or other website. You grant us a worldwide, perpetual, irrevocable, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display and distribute such Dev Content in any and all media or distribution methods now known or later developed.
+
+a. Likeness. You hereby grant to Cloudflare the royalty free right to use your name and likeness and any trademarks you include in the Dev Content in any and all manner, media, products, means, or methods, now known or hereafter created, throughout the world, in perpetuity, in connection with Cloudflare’s exercise of its rights under these Terms, including Cloudflare’s use of the Dev Content. Notwithstanding any other provision of these Terms, nothing herein will obligate Cloudflare to use the Dev Content in any manner. You understand and agree that you will have no right to any proceeds derived by Cloudflare or any third party from the use of the Dev Content.
+
+b. Representations & Warranties. By submitting Dev Content, you represent and warrant that (1) you are the author and sole owner of all rights to the Dev Content; (2) the Dev Content is original and has not in whole or in part previously been published in any form and is not in the public domain; (3) your Dev Content is accurate and not misleading; (4) your Dev Content, does not: (i) infringe, violate, or misappropriate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right; or (ii) slander, defame, or libel any third-party; and (2) no payments will be due from Cloudflare to any third party for the exercise of any rights granted under these Terms.
+
+c. Compensation. Unless otherwise agreed by Cloudflare in writing, you understand and agree that Cloudflare will have no obligation to you or any third-party for any compensation, reimbursement, or any other payments in connection with your participation in the Program or publication of Dev Content.
+
+1. Termination. These Terms will continue in full force and effect until either party terminates upon 30 days’ written notice to the other party. The provisions of Sections 2, 4, and 5 shall survive any termination or expiration of this agreement.
+
+2. Indemnification. You agree to defend, indemnify, and hold harmless Cloudflare and its officers, directors, employees, consultants, affiliates, subsidiaries and agents (collectively, the "Cloudflare Entities") from and against any and all claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees and costs, arising out of or in any way connected with your violation of any third-party right, including without limitation any intellectual property right, publicity, confidentiality, property or privacy right. We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you (and without limiting your indemnification obligations with respect to such matter), and in such case, you agree to cooperate with our defense of such claim.
+
+3. Limitation of Liability. IN NO EVENT WILL THE CLOUDFLARE ENTITIES BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATING TO YOUR PARTICIPATION IN THE PROGRAM, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), STATUTE, OR ANY OTHER LEGAL THEORY, WHETHER OR NOT THE CLOUDFLARE ENTITIES HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+4. Independent Contractor. The parties acknowledge and agree that you are an independent contractor, and nothing in these Terms will create a relationship of employment, joint venture, partnership or agency between the parties. Neither party will have the right, power or authority at any time to act on behalf of, or represent the other party. Cloudflare will not obtain workers’ compensation or other insurance on your behalf, and you are solely responsible for all payments, benefits, and insurance required for the performance of services hereunder, including, without limitation, taxes or other withholdings, unemployment, payroll disbursements, and other related expenses. You hereby acknowledge and agree that these Terms are not governed by any union or collective bargaining agreement and Cloudflare will not pay you any union-required residuals, reuse fees, pension, health and welfare benefits or other benefits/payments.
+
+5. Governing Law. These Terms will be governed by the laws of the State of California without regard to conflict of law principles. To the extent that any lawsuit or court proceeding is permitted hereunder, you and Cloudflare agree to submit to the personal and exclusive jurisdiction of the state and federal courts located within San Francisco County, California for the purpose of litigating all such disputes.
+
+6. Modifications. Cloudflare reserves the right to make modifications to these Terms at any time. Revised versions of these Terms will be posted publicly online. Unless otherwise specified, any modifications to the Terms will take effect the day they are posted publicly online. If you do not agree with the revised Terms, your sole and exclusive remedy will be to discontinue your participation in the Program.
+
+7. General. These Terms, together with any applicable product limits, disclaimers, or other terms presented to you on a Cloudflare controlled website (e.g., [www.cloudflare.com](http://www.cloudflare.com), as well as the other websites that Cloudflare operates and that link to these Terms) or documentation, each of which are incorporated by reference into these Terms, constitute the entire and exclusive understanding and agreement between you and Cloudflare regarding your participation in the Program. Use of section headers in these Terms is for convenience only and will not have any impact on the interpretation of particular provisions. You may not assign or transfer these Terms or your rights hereunder, in whole or in part, by operation of law or otherwise, without our prior written consent. We may assign these Terms at any time without notice. The failure to require performance of any provision will not affect our right to require performance at any time thereafter, nor will a waiver of any breach or default of these Terms or any provision of these Terms constitute a waiver of any subsequent breach or default or a waiver of the provision itself. In the event that any part of these Terms is held to be invalid or unenforceable, the unenforceable part will be given effect to the greatest extent possible and the remaining parts will remain in full force and effect. Upon termination of these Terms, any provision that by its nature or express terms should survive will survive such termination or expiration.
+
+</page>
+
+<page>
+---
+title: Tutorials · Cloudflare Developer Spotlight
+lastUpdated: 2025-05-06T17:35:57.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/tutorials/
+  md: https://developers.cloudflare.com/developer-spotlight/tutorials/index.md
+---
+
+| Name | Last Updated | Type | Difficulty |
+| - | - | - | - |
+| [Setup Fullstack Authentication with Next.js, Auth.js, and Cloudflare D1](https://developers.cloudflare.com/developer-spotlight/tutorials/fullstack-authentication-with-next-js-and-cloudflare-d1/) | 3 months ago | 📝 Tutorial | Intermediate |
+| [Build a Voice Notes App with auto transcriptions using Workers AI](https://developers.cloudflare.com/workers-ai/guides/tutorials/build-a-voice-notes-app-with-auto-transcription/) | 7 months ago | 📝 Tutorial | Intermediate |
+| [Protect payment forms from malicious bots using Turnstile](https://developers.cloudflare.com/turnstile/tutorials/protecting-your-payment-form-from-attackers-bots-using-turnstile/) | 7 months ago | 📝 Tutorial | Beginner |
+| [Automate analytics reporting with Cloudflare Workers and email routing](https://developers.cloudflare.com/workers/tutorials/automated-analytics-reporting/) | 8 months ago | 📝 Tutorial | Beginner |
+| [Build Live Cursors with Next.js, RPC and Durable Objects](https://developers.cloudflare.com/workers/tutorials/live-cursors-with-nextjs-rpc-do/) | 8 months ago | 📝 Tutorial | Intermediate |
+| [Build an interview practice tool with Workers AI](https://developers.cloudflare.com/workers-ai/guides/tutorials/build-ai-interview-practice-tool/) | 8 months ago | 📝 Tutorial | Intermediate |
+| [Recommend products on e-commerce sites using Workers AI and Stripe](https://developers.cloudflare.com/developer-spotlight/tutorials/creating-a-recommendation-api/) | about 1 year ago | 📝 Tutorial | Beginner |
+| [Custom access control for files in R2 using D1 and Workers](https://developers.cloudflare.com/developer-spotlight/tutorials/custom-access-control-for-files/) | about 1 year ago | 📝 Tutorial | Beginner |
+| [Send form submissions using Astro and Resend](https://developers.cloudflare.com/developer-spotlight/tutorials/handle-form-submission-with-astro-resend/) | about 1 year ago | 📝 Tutorial | Beginner |
+| [Create a sitemap from Sanity CMS with Workers](https://developers.cloudflare.com/developer-spotlight/tutorials/create-sitemap-from-sanity-cms/) | about 1 year ago | 📝 Tutorial | Beginner |
+
+</page>
+
+<page>
+---
+title: Create a sitemap from Sanity CMS with Workers · Cloudflare Developer Spotlight
+description: In this tutorial, you will put together a Cloudflare Worker that
+  creates and serves a sitemap using data from Sanity.io, a headless CMS.
+lastUpdated: 2025-05-16T16:37:37.000Z
+chatbotDeprioritize: false
+tags: CMS
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/tutorials/create-sitemap-from-sanity-cms/
+  md: https://developers.cloudflare.com/developer-spotlight/tutorials/create-sitemap-from-sanity-cms/index.md
+---
+
+In this tutorial, you will put together a Cloudflare Worker that creates and serves a sitemap using data from [Sanity.io](https://www.sanity.io), a headless CMS.
+
+The high-level workflow of the solution you are going to build in this tutorial is the following:
+
+1. A URL on your domain (for example, `cms.example.com/sitemap.xml`) will be routed to a Cloudflare Worker.
+2. The Worker will fetch your CMS data such as slugs and last modified dates.
+3. The Worker will use that data to assemble a sitemap.
+4. Finally, The Worker will return the XML sitemap ready for search engines.
+
+## Before you begin
+
+Before you start, make sure you have:
+
+* A Cloudflare account. If you do not have one, [sign up](https://dash.cloudflare.com/sign-up/workers-and-pages) before continuing.
+* A domain added to your Cloudflare account using a [full setup](https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/), that is, using Cloudflare for your authoritative DNS nameservers.
+* [npm](https://docs.npmjs.com/getting-started) and [Node.js](https://nodejs.org/en/) installed on your machine.
+
+## Create a new Worker
+
+Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure.
+
+While you can create Workers in the Cloudflare dashboard, it is a best practice to create them locally, where you can use version control and [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), the Workers command-line interface, to deploy them.
+
+Create a new Worker project using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (`create-cloudflare` CLI):
+
+* npm
+
+  ```sh
+  npm create cloudflare@latest
+  ```
+
+* yarn
+
+  ```sh
+  yarn create cloudflare
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm create cloudflare@latest
+  ```
+
+In this tutorial, the Worker will be named `cms-sitemap`.
+
+Select the options in the command-line interface (CLI) that work best for you, such as using JavaScript or TypeScript. The starter template you choose does not matter as this tutorial provides all the required code for you to paste in your project.
+
+Next, require the `@sanity/client` package.
+
+* npm
+
+  ```sh
+  npm i @sanity/client@latest
+  ```
+
+* yarn
+
+  ```sh
+  yarn add @sanity/client@latest
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm add @sanity/client@latest
+  ```
+
+## Configure Wrangler
+
+A default `wrangler.jsonc` was generated in the previous step.
+
+The Wrangler file is a configuration file used to specify project settings and deployment configurations in a structured format.
+
+For this tutorial your [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/) should be similar to the following:
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "name": "cms-sitemap",
+    "main": "src/index.ts",
+    "compatibility_date": "2024-04-19",
+    "minify": true,
+    "vars": {
+      "SITEMAP_BASE": "https://example.com",
+      "SANITY_PROJECT_ID": "5z5j5z5j",
+      "SANITY_DATASET": "production"
+    }
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  name = "cms-sitemap"
+  main = "src/index.ts"
+  compatibility_date = "2024-04-19"
+  minify = true
+
+
+  [vars]
+  # The CMS will return relative URLs, so we need to know the base URL of the site.
+  SITEMAP_BASE = "https://example.com"
+  # Modify to match your project ID.
+  SANITY_PROJECT_ID = "5z5j5z5j"
+  SANITY_DATASET = "production"
+  ```
+
+You must update the `[vars]` section to match your needs. See the inline comments to understand the purpose of each entry.
+
+Warning
+
+Secrets do not belong in [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/)s. If you need to add secrets, use `.dev.vars` for local secrets and the `wranger secret put` command for deploying secrets. For more information, refer to [Secrets](https://developers.cloudflare.com/workers/configuration/secrets/).
+
+## Add code
+
+In this step you will add the boilerplate code that will get you close to the complete solution.
+
+For the purpose of this tutorial, the code has been condensed into two files:
+
+* `index.ts|js`: Serves as the entry point for requests to the Worker and routes them to the proper place.
+* `Sitemap.ts|js`: Retrieves the CMS data that will be turned into a sitemap. For a better separation of concerns and organization, the CMS logic should be in a separate file.
+
+Paste the following code into the existing `index.ts|js` file:
+
+```ts
+/**
+ * Welcome to Cloudflare Workers!
+ *
+ * - Run `npm run dev` in your terminal to start a development server
+ * - Open a browser tab at http://localhost:8787/ to see your worker in action
+ * - Run `npm run deploy` to publish your worker
+ *
+ * Bind resources to your worker in Wrangler config file. After adding bindings, a type definition for the
+ * `Env` object can be regenerated with `npm run cf-typegen`.
+ *
+ * Learn more at https://developers.cloudflare.com/workers/
+ */
+
+
+import { Sitemap } from "./Sitemap";
+
+
+// Export a default object containing event handlers.
+export default {
+  // The fetch handler is invoked when this worker receives an HTTPS request
+  // and should return a Response (optionally wrapped in a Promise).
+  async fetch(request, env, ctx): Promise<Response> {
+    const url = new URL(request.url);
+
+
+    // You can get pretty far with simple logic like if/switch-statements.
+    // If you need more complex routing, consider Hono https://hono.dev/.
+    if (url.pathname === "/sitemap.xml") {
+      const handleSitemap = new Sitemap(request, env, ctx);
+      return handleSitemap.fetch();
+    }
+
+
+    return new Response(`Try requesting /sitemap.xml`, {
+      headers: { "Content-Type": "text/html" },
+    });
+  },
+} satisfies ExportedHandler<Env>;
+```
+
+You do not need to modify anything in this file after pasting the above code.
+
+Next, create a new file named `Sitemap.ts|js` and paste the following code:
+
+```ts
+import { createClient, SanityClient } from "@sanity/client";
+
+
+export class Sitemap {
+  private env: Env;
+  private ctx: ExecutionContext;
+
+
+  constructor(request: Request, env: Env, ctx: ExecutionContext) {
+    this.env = env;
+    this.ctx = ctx;
+  }
+
+
+  async fetch(): Promise<Response> {
+    // Modify the query to use your CMS's schema.
+    //
+    // Request these:
+    // - "slug": The slug of the post.
+    // - "lastmod": When the post was updated.
+    //
+    // Notes:
+    // - The slugs are prefixed to help form the full relative URL in the sitemap.
+    // - Order the slugs to ensure the sitemap is in a consistent order.
+    const query = `*[defined(postFields.slug.current)] {
+      _type == 'articlePost' => {
+        'slug': '/posts/' + postFields.slug.current,
+        'lastmod': _updatedAt,
+      },
+      _type == 'examplesPost' => {
+        'slug': '/examples/' + postFields.slug.current,
+        'lastmod': _updatedAt,
+      },
+      _type == 'templatesPost' => {
+        'slug': '/templates/' + postFields.slug.current,
+        'lastmod': _updatedAt,
+      }
+    } | order(slug asc)`;
+
+
+    const dataForSitemap = await this.fetchCmsData(query);
+
+
+    if (!dataForSitemap) {
+      console.error(
+        "Error fetching data for sitemap",
+        JSON.stringify(dataForSitemap),
+      );
+      return new Response("Error fetching data for sitemap", { status: 500 });
+    }
+
+
+    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${dataForSitemap
+        .filter(Boolean)
+        .map(
+          (item: any) => `
+      <url>
+        <loc>${this.env.SITEMAP_BASE}${item.slug}</loc>
+        <lastmod>${item.lastmod}</lastmod>
+      </url>
+      `,
+        )
+        .join("")}
+    </urlset>`;
+
+
+    return new Response(sitemapXml, {
+      headers: {
+        "content-type": "application/xml",
+      },
+    });
+  }
+
+
+  private async fetchCmsData(query: string) {
+    const client: SanityClient = createClient({
+      projectId: this.env.SANITY_PROJECT_ID,
+      dataset: this.env.SANITY_DATASET,
+      useCdn: true,
+      apiVersion: "2024-01-01",
+    });
+
+
+    try {
+      const data = await client.fetch(query);
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
+```
+
+In steps 4 and 5 you will modify the code you pasted into `src/Sitemap.ts` according to your needs.
+
+## Query CMS data
+
+The following query in `src/Sitemap.ts` defines which data will be retrieved from the CMS. The exact query depends on your schema:
+
+```ts
+const query = `*[defined(postFields.slug.current)] {
+  _type == 'articlePost' => {
+    'slug': '/posts/' + postFields.slug.current,
+    'lastmod': _updatedAt,
+  },
+  _type == 'examplesPost' => {
+    'slug': '/examples/' + postFields.slug.current,
+    'lastmod': _updatedAt,
+  },
+  _type == 'templatesPost' => {
+    'slug': '/templates/' + postFields.slug.current,
+    'lastmod': _updatedAt,
+  }
+} | order(slug asc)`;
+```
+
+If necessary, adapt the provided query to your specific schema, taking the following into account:
+
+* The query must return two properties: `slug` and `lastmod`, as these properties are referenced when creating the sitemap. [GROQ](https://www.sanity.io/docs/how-queries-work) (Graph-Relational Object Queries) and [GraphQL](https://www.sanity.io/docs/graphql) enable naming properties — for example, `"lastmod": _updatedAt` — allowing you to map custom field names to the required properties.
+* You will likely need to prefix each slug with the base path. For `www.example.com/posts/my-post`, the slug returned is `my-post`, but the base path (`/posts/`) is what needs to be prefixed (the domain is automatically added).
+* Add a sort to the query to provide a consistent order (`order(slug asc)` in the provided tutorial code).
+
+The data returned by the query will be used to generate an XML sitemap.
+
+## Create the sitemap from the CMS data
+
+The relevant code from `src/Sitemap.ts` generating the sitemap and returning it with the correct content type is the following:
+
+```ts
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${dataForSitemap
+    .filter(Boolean)
+    .map(
+      (item: any) => `
+  <url>
+    <loc>${this.env.SITEMAP_BASE}${item.slug}</loc>
+    <lastmod>${item.lastmod}</lastmod>
+  </url>
+  `,
+    )
+    .join("")}
+</urlset>`;
+
+
+return new Response(sitemapXml, {
+  headers: {
+    "content-type": "application/xml",
+  },
+});
+```
+
+The URL (`loc`) and last modification date (`lastmod`) are the only two properties added to the sitemap because, [according to Google](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#additional-notes-about-xml-sitemaps), other properties such as `priority` and `changefreq` will be ignored.
+
+Finally, the sitemap is returned with the content type of `application/xml`.
+
+At this point, you can test the Worker locally by running the following command:
+
+```sh
+wrangler dev
+```
+
+This command will output a localhost URL in the terminal. Open this URL with `/sitemap.xml` appended to view the sitemap in your browser. If there are any errors, they will be shown in the terminal output.
+
+Once you have confirmed the sitemap is working, move on to the next step.
+
+## Deploy the Worker
+
+Now that your project is working locally, there are two steps left:
+
+1. Deploy the Worker.
+2. Bind it to a domain.
+
+To deploy the Worker, run the following command in your terminal:
+
+```sh
+wrangler deploy
+```
+
+The terminal will log information about the deployment, including a new custom URL in the format `{worker-name}.{account-subdomain}.workers.dev`. While you could use this hostname to obtain your sitemap, it is a best practice to host the sitemap on the same domain your content is on.
+
+## Route a URL to the Worker
+
+In this step, you will make the Worker available on a new subdomain using a built-in Cloudflare feature.
+
+One of the benefits of using a subdomain is that you do not have to worry about this sitemap conflicting with your root domain's sitemap, since both are probably using the `/sitemap.xml` path.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
+
+2. In Account Home, select **Workers & Pages**, and then select your Worker.
+
+3. Go to **Settings** > **Triggers** > **Custom Domains** > **Add Custom Domain**.
+
+4. Enter the domain or subdomain you want to configure for your Worker.
+
+   For this tutorial, use a subdomain on the domain that is in your sitemap. For example, if your sitemap outputs URLs like `www.example.com` then a suitable subdomain is `cms.example.com`.
+
+5. Select **Add Custom Domain**.
+
+   After adding the subdomain, Cloudflare automatically adds the proper DNS record binding the Worker to the subdomain.
+
+6. To verify your configuration, go to your new subdomain and append `/sitemap.xml`. For example:
+
+   ```txt
+   cms.example.com/sitemap.xml
+   ```
+
+The browser should show the sitemap as when you tested locally.
+
+You now have a sitemap for your headless CMS using a highly maintainable and serverless setup.
+
+</page>
+
+<page>
+---
+title: Recommend products on e-commerce sites using Workers AI and Stripe ·
+  Cloudflare Developer Spotlight
+description: Create APIs for related product searches and recommendations using
+  Workers AI and Stripe.
+lastUpdated: 2025-07-11T16:03:39.000Z
+chatbotDeprioritize: false
+tags: AI,Hono,Stripe
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/tutorials/creating-a-recommendation-api/
+  md: https://developers.cloudflare.com/developer-spotlight/tutorials/creating-a-recommendation-api/index.md
+---
+
+E-commerce and media sites often work on increasing the average transaction value to boost profitability. One of the strategies to increase the average transaction value is "cross-selling," which involves recommending related products. Cloudflare offers a range of products designed to build mechanisms for retrieving data related to the products users are viewing or requesting. In this tutorial, you will experience developing functionalities necessary for cross-selling by creating APIs for related product searches and product recommendations.
+
+## Goals
+
+In this workshop, you will develop three REST APIs.
+
+1. An API to search for information highly related to a specific product.
+2. An API to suggest products in response to user inquiries.
+3. A Webhook API to synchronize product information with external e-commerce applications.
+
+By developing these APIs, you will learn about the resources needed to build cross-selling and recommendation features for e-commerce sites.
+
+You will also learn how to use the following Cloudflare products:
+
+* [**Cloudflare Workers**](https://developers.cloudflare.com/workers/): Execution environment for API applications
+* [**Cloudflare Vectorize**](https://developers.cloudflare.com/vectorize/): Vector DB used for related product searches
+* [**Cloudflare Workers AI**](https://developers.cloudflare.com/workers-ai/): Used for vectorizing data and generating recommendation texts
+
+## Before you start
+
+All of the tutorials assume you have already completed the [Get started guide](https://developers.cloudflare.com/workers/get-started/guide/), which gets you set up with a Cloudflare Workers account, [C3](https://github.com/cloudflare/workers-sdk/tree/main/packages/create-cloudflare), and [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/).
+
+1. Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up/workers-and-pages).
+2. Install [`Node.js`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Node.js version manager
+
+Use a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues and change Node.js versions. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), discussed later in this guide, requires a Node version of `16.17.0` or later.
+
+### Prerequisites
+
+This tutorial involves the use of several Cloudflare products. Some of these products have free tiers, while others may incur minimal charges. Please review the following billing information carefully.
+
+Workers AI local development usage charges
+
+Using Workers AI always accesses your Cloudflare account in order to run AI models and will incur usage charges even in local development.
+
+## 1. Create a new Worker project
+
+First, let's create a Cloudflare Workers project.
+
+[C3 (create-cloudflare-cli)](https://github.com/cloudflare/workers-sdk/tree/main/packages/create-cloudflare) is a command-line tool designed to help you set up and deploy new applications to Cloudflare. In addition to speed, it leverages officially developed templates for Workers and framework-specific setup guides to ensure each new application that you set up follows Cloudflare and any third-party best practices for deployment on the Cloudflare network.
+
+To efficiently create and manage multiple APIs, let's use [`Hono`](https://hono.dev). Hono is an open-source application framework released by a Cloudflare Developer Advocate. It is lightweight and allows for the creation of multiple API paths, as well as efficient request and response handling. Open your command line interface (CLI) and run the following command:
+
+* npm
+
+  ```sh
+  npm create cloudflare@latest -- cross-sell-api --framework=hono
+  ```
+
+* yarn
+
+  ```sh
+  yarn create cloudflare cross-sell-api --framework=hono
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm create cloudflare@latest cross-sell-api --framework=hono
+  ```
+
+If this is your first time running the `C3` command, you will be asked whether you want to install it. Confirm that the package name for installation is `create-cloudflare` and answer `y`.
+
+```sh
+Need to install the following packages:
+create-cloudflare@latest
+Ok to proceed? (y)
+```
+
+During the setup, you will be asked if you want to manage your project source code with `Git`. It is recommended to answer `Yes` as it helps in recording your work and rolling back changes. You can also choose `No`, which will not affect the tutorial progress.
+
+```sh
+╰ Do you want to use git for version control?
+  Yes / No
+```
+
+Finally, you will be asked if you want to deploy the application to your Cloudflare account. For now, select `No` and start development locally.
+
+```sh
+╭ Deploy with Cloudflare Step 3 of 3
+│
+╰ Do you want to deploy your application?
+  Yes / No
+```
+
+If you see a message like the one below, the project setup is complete. You can open the `cross-sell-api` directory in your preferred IDE to start development.
+
+```sh
+├  APPLICATION CREATED  Deploy your application with npm run deploy
+│
+│ Navigate to the new directory cd cross-sell-api
+│ Run the development server npm run dev
+│ Deploy your application npm run deploy
+│ Read the documentation https://developers.cloudflare.com/workers
+│ Stuck? Join us at https://discord.cloudflare.com
+│
+╰ See you again soon!
+```
+
+Cloudflare Workers applications can be developed and tested in a local environment. On your CLI, change directory into your newly created Workers and run `npx wrangler dev` to start the application. Using `Wrangler`, the application will start, and you'll see a URL beginning with `localhost`.
+
+```sh
+ ⛅️ wrangler 3.60.1
+-------------------
+
+
+⎔ Starting local server...
+[wrangler:inf] Ready on http://localhost:8787
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ [b] open a browser, [d] open Devtools, [l] turn off local mode, [c] clear console, [x] to exit            │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
+
+You can send a request to the API using the `curl` command. If you see the text `Hello Hono!`, the API is running correctly.
+
+```sh
+curl http://localhost:8787
+```
+
+```sh
+Hello Hono!
+```
+
+So far, we've covered how to create a Cloudflare Worker project and introduced tools and open-source projects like the `C3` command and the `Hono` framework that streamline development with Cloudflare. Leveraging these features will help you develop applications on Cloudflare Workers more smoothly.
+
+## 2. Create an API to import product information
+
+Now, we will start developing the three APIs that will be used in our cross-sell system. First, let's create an API to synchronize product information with an existing e-commerce application. In this example, we will set up a system where product registrations in [Stripe](https://stripe.com) are synchronized with the cross-sell system.
+
+This API will receive product information sent from an external service like Stripe as a Webhook event. It will then extract the necessary information for search purposes and store it in a database for related product searches. Since vector search will be used, we also need to implement a process that converts strings to vector data using an Embedding model provided by Cloudflare Workers AI.
+
+The process flow is illustrated as follows:
+
+```mermaid
+sequenceDiagram
+    participant Stripe
+
+    box Cloudflare
+        participant CF_Workers
+        participant CF_Workers_AI
+        participant CF_Vectorize
+    end
+
+    Stripe->>CF_Workers: Send product registration event
+    CF_Workers->>CF_Workers_AI: Request product information vectorization
+    CF_Workers_AI->>CF_Workers: Send back vector data result
+    CF_Workers->>CF_Vectorize: Save vector data
+```
+
+Let's start implementing step-by-step.
+
+### Bind Workers AI and Vectorize to your Worker
+
+This API requires the use of Workers AI and Vectorize. To use these resources from a Worker, you will need to first create the resources then [bind](https://developers.cloudflare.com/workers/runtime-apis/bindings/#what-is-a-binding) them to a Worker. First, let's create a Vectorize index with Wrangler using the command `wrangler vectorize create {index_name} --dimensions={number_of_dimensions} --metric={similarity_metric}`. The values for `dimensions` and `metric` depend on the type of [Text Embedding Model](https://developers.cloudflare.com/workers-ai/models/) you are using for data vectorization (Embedding). For example, if you are using the `bge-large-en-v1.5` model, the command is:
+
+```sh
+npx wrangler vectorize create stripe-products --dimensions=1024 --metric=cosine
+```
+
+When this command executes successfully, you will see a message like the following. It provides the items you need to add to the [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/) to bind the Vectorize index with your Worker application.
+
+```sh
+✅ Successfully created a new Vectorize index: 'stripe-products'
+📋 To start querying from a Worker, add the following binding configuration into your Wrangler configuration file:
+
+
+[[vectorize]]
+binding = "VECTORIZE_INDEX"
+index_name = "stripe-products"
+```
+
+To use the created Vectorize index from your Worker, let's add the binding. Open the [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/) and add the copied lines.
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "name": "cross-sell-api",
+    "main": "src/index.ts",
+    "compatibility_date": "2024-06-05",
+    "vectorize": [
+      {
+        "binding": "VECTORIZE_INDEX",
+        "index_name": "stripe-products"
+      }
+    ]
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  name = "cross-sell-api"
+  main = "src/index.ts"
+  compatibility_date = "2024-06-05"
+
+
+  [[vectorize]]
+  binding = "VECTORIZE_INDEX"
+  index_name = "stripe-products"
+  ```
+
+Additionally, let's add the configuration to use Workers AI in the [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/).
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "name": "cross-sell-api",
+    "main": "src/index.ts",
+    "compatibility_date": "2024-06-05",
+    "vectorize": [
+      {
+        "binding": "VECTORIZE_INDEX",
+        "index_name": "stripe-products"
+      }
+    ],
+    "ai": {
+      "binding": "AI"
+    }
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  name = "cross-sell-api"
+  main = "src/index.ts"
+  compatibility_date = "2024-06-05"
+
+
+  [[vectorize]]
+  binding = "VECTORIZE_INDEX"
+  index_name = "stripe-products"
+
+
+  [ai]
+  binding = "AI" # available in your Worker on env.AI
+  ```
+
+When handling bound resources from your application, you can generate TypeScript type definitions to develop more safely. Run the `npm run cf-typegen` command. This command updates the `worker-configuration.d.ts` file, allowing you to use both Vectorize and Workers AI in a type-safe manner.
+
+```sh
+npm run cf-typegen
+```
+
+```sh
+> cf-typegen
+> wrangler types --env-interface CloudflareBindings
+
+
+ ⛅️ wrangler 3.60.1
+-------------------
+
+
+interface CloudflareBindings {
+        VECTORIZE_INDEX: VectorizeIndex;
+        AI: Ai;
+}
+```
+
+Once you save these changes, the respective resources and APIs will be available for use in the Workers application. You can access these properties from `env`. In this example, you can use them as follows:
+
+```ts
+app.get("/", (c) => {
+  c.env.AI; // Workers AI SDK
+  c.env.VECTORIZE_INDEX; // Vectorize SDK
+  return c.text("Hello Hono!");
+});
+```
+
+Finally, rerun the `npx wrangler dev` command with the `--remote` option. This is necessary because Vectorize indexes are not supported in local mode. If you see the message, `Vectorize bindings are not currently supported in local mode. Please use --remote if you are working with them.`, rerun the command with the `--remote` option added.
+
+```sh
+npx wrangler dev --remote
+```
+
+### Create a webhook API to handle product registration events
+
+You can receive notifications about product registration and information via POST requests using webhooks. Let's create an API that accepts POST requests. Open your `src/index.ts` file and add the following code:
+
+```ts
+app.post("/webhook", async (c) => {
+  const body = await c.req.json();
+  if (body.type === "product.created") {
+    const product = body.data.object;
+    console.log(JSON.stringify(product, null, 2));
+  }
+  return c.text("ok", 200);
+});
+```
+
+This code implements an API that processes POST requests to the `/webhook` endpoint. The data sent by Stripe's Webhook events is included in the request body in JSON format. Therefore, we use `c.req.json()` to extract the data. There are multiple types of Webhook events that Stripe can send, so we added a conditional to only process events when a product is newly added, as indicated by the `type`.
+
+### Add Stripe's API Key to the project
+
+When developing a webhook API, you need to ensure that requests from unauthorized sources are rejected. To prevent unauthorized API requests from causing unintended behavior or operational confusion, you need a mechanism to verify the source of API requests. When integrating with Stripe, you can protect the API by generating a signing secret used for webhook verification.
+
+1. Refer to the [Stripe documentation](https://docs.stripe.com/keys) to get a [secret API key for the test environment](https://docs.stripe.com/keys#reveal-an-api-secret-key-for-test-mode).
+2. Save the obtained API key in a `.dev.vars` file.
+
+```plaintext
+STRIPE_SECRET_API_KEY=sk_test_XXXX
+```
+
+1. Follow the [guide](https://docs.stripe.com/stripe-cli) to install Stripe CLI.
+2. Use the following Stripe CLI command to forward Webhook events from Stripe to your local application.
+
+```sh
+stripe listen --forward-to http://localhost:8787/webhook --events product.created
+```
+
+1. Copy the signing secret that starts with `whsec_` from the Stripe CLI command output.
+
+```plaintext
+> Ready! You are using Stripe API Version [2024-06-10]. Your webhook signing secret is
+whsec_xxxxxx (^C to quit)
+```
+
+1. Save the obtained signing secret in the `.dev.vars` file.
+
+```plaintext
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxx
+```
+
+1. Run `npm run cf-typegen` to update the type definitions in `worker-configuration.d.ts`.
+2. Run `npm install stripe` to add the Stripe SDK to your application.
+3. Restart the `npm run dev -- --remote` command to import the API key into your application.
+
+Finally, modify the source code of `src/index.ts` as follows to ensure that the webhook API cannot be used from sources other than your Stripe account.
+
+````ts
+import { Hono } from "hono";
+import { env } from "hono/adapter";
+import Stripe from "stripe";
+
+
+type Bindings = {
+  [key in keyof CloudflareBindings]: CloudflareBindings[key];
+};
+
+
+const app = new Hono<{
+  Bindings: Bindings;
+  Variables: {
+    stripe: Stripe;
+  };
+}>();
+
+
+/**
+ * Initialize Stripe SDK client
+ * We can use this SDK without initializing on each API route,
+ * just get it by the following example:
+ * ```
+ * const stripe = c.get('stripe')
+ * ```
+ */
+app.use("*", async (c, next) => {
+  const { STRIPE_SECRET_API_KEY } = env(c);
+  const stripe = new Stripe(STRIPE_SECRET_API_KEY);
+  c.set("stripe", stripe);
+  await next();
+});
+
+
+app.post("/webhook", async (c) => {
+  const { STRIPE_WEBHOOK_SECRET } = env(c);
+  const stripe = c.get("stripe");
+  const signature = c.req.header("stripe-signature");
+  if (!signature || !STRIPE_WEBHOOK_SECRET || !stripe) {
+    return c.text("", 400);
+  }
+  try {
+    const body = await c.req.text();
+    const event = await stripe.webhooks.constructEventAsync(
+      body,
+      signature,
+      STRIPE_WEBHOOK_SECRET,
+    );
+    if (event.type === "product.created") {
+      const product = event.data.object;
+      console.log(JSON.stringify(product, null, 2));
+    }
+    return c.text("", 200);
+  } catch (err) {
+    const errorMessage = `⚠️  Webhook signature verification failed. ${err instanceof Error ? err.message : "Internal server error"}`;
+    console.log(errorMessage);
+    return c.text(errorMessage, 400);
+  }
+});
+
+
+export default app;
+````
+
+This ensures that an HTTP 400 error is returned if the Webhook API is called directly by unauthorized sources.
+
+```sh
+curl -XPOST http://localhost:8787/webhook -I
+```
+
+```sh
+HTTP/1.1 400 Bad Request
+Content-Length: 0
+Content-Type: text/plain; charset=UTF-8
+```
+
+Use the Stripe CLI command to test sending events from Stripe.
+
+```sh
+stripe trigger product.created
+```
+
+```sh
+Setting up fixture for: product
+Running fixture for: product
+Trigger succeeded! Check dashboard for event details.
+```
+
+The product information added on the Stripe side is recorded as a log on the terminal screen where `npm run dev` is executed.
+
+```plaintext
+{
+  id: 'prod_QGw9VdIqVCNABH',
+  object: 'product',
+  active: true,
+  attributes: [],
+  created: 1718087602,
+  default_price: null,
+  description: '(created by Stripe CLI)',
+  features: [],
+  images: [],
+  livemode: false,
+  marketing_features: [],
+  metadata: {},
+  name: 'myproduct',
+  package_dimensions: null,
+  shippable: null,
+  statement_descriptor: null,
+  tax_code: null,
+  type: 'service',
+  unit_label: null,
+  updated: 1718087603,
+  url: null
+}
+[wrangler:inf] POST /webhook 201 Created (14ms)
+```
+
+## 3. Convert text into vector data using Workers AI
+
+We've prepared to ingest product information, so let's start implementing the preprocessing needed to create an index for search. In vector search using Cloudflare Vectorize, text data must be converted to numerical data before indexing. By storing data as numerical sequences, we can search based on the similarity of these vectors, allowing us to retrieve highly similar data.
+
+In this step, we'll first implement the process of converting externally sent data into text data. This is necessary because the information to be converted into vector data is in text form. If you want to include product names, descriptions, and metadata as search targets, add the following processing.
+
+```ts
+if (event.type === "product.created") {
+  const product = event.data.object;
+  const productData = [
+    `## ${product.name}`,
+    product.description,
+    "### metadata",
+    Object.entries(product.metadata)
+      .map(([key, value]) => `- ${key}: ${value}`)
+      .join("\n"),
+  ].join("\n");
+  console.log(JSON.stringify(productData, null, 2));
+}
+```
+
+By adding this processing, you convert product information in JSON format into a simple Markdown format product introduction text.
+
+```sh
+## product name
+product description.
+### metadata
+- key: value
+```
+
+Now that we've converted the data to text, let's convert it to vector data. By using the Text Embedding model of Workers AI, we can convert text into vector data of any desired dimension.
+
+```ts
+const productData = [
+  `## ${product.name}`,
+  product.description,
+  "### metadata",
+  Object.entries(product.metadata)
+    .map(([key, value]) => `- ${key}: ${value}`)
+    .join("\n"),
+].join("\n");
+const embeddings = await c.env.AI.run("@cf/baai/bge-large-en-v1.5", {
+  text: productData,
+});
+console.log(JSON.stringify(embeddings, null, 2));
+```
+
+When using Workers AI, execute the `c.env.AI.run()` function. Specify the model you want to use as the first argument. In the second argument, input text data about the text you want to convert using the Text Embedding model or the instructions for the generated images or text. If you want to save the converted vector data using Vectorize, make sure to select a model that matches the number of `dimensions` specified in the `npx wrangler vectorize create` command. If the numbers do not match, there is a possibility that the converted vector data cannot be saved.
+
+### Save vector data to Vectorize
+
+Finally, let's save the created data to Vectorize. Edit `src/index.ts` to implement the indexing process using the `VECTORIZE_INDEX` binding. Since the data to be saved will be vector data, save the pre-conversion text data as metadata.
+
+```ts
+if (event.type === "product.created") {
+  const product = event.data.object;
+  const productData = [
+    `## ${product.name}`,
+    product.description,
+    "### metadata",
+    Object.entries(product.metadata)
+      .map(([key, value]) => `- ${key}: ${value}`)
+      .join("\n"),
+  ].join("\n");
+  console.log(JSON.stringify(productData, null, 2));
+  const embeddings = await c.env.AI.run("@cf/baai/bge-large-en-v1.5", {
+    text: productData,
+  });
+  await c.env.VECTORIZE_INDEX.insert([
+    {
+      id: product.id,
+      values: embeddings.data[0],
+      metadata: {
+        name: product.name,
+        description: product.description || "",
+        product_metadata: product.metadata,
+      },
+    },
+  ]);
+}
+```
+
+With this, we have established a mechanism to synchronize the product data with the database for recommendations. Use Stripe CLI commands to save some product data.
+
+```bash
+stripe products create --name="Smartphone X" \
+  --description="Latest model with cutting-edge features" \
+  -d "default_price_data[currency]=usd" \
+  -d "default_price_data[unit_amount]=79900" \
+  -d "metadata[category]=electronics"
+```
+
+```bash
+stripe products create --name="Ultra Notebook" \
+  --description="Lightweight and powerful notebook computer" \
+  -d "default_price_data[currency]=usd" \
+  -d "default_price_data[unit_amount]=129900" \
+  -d "metadata[category]=computers"
+```
+
+```bash
+stripe products create --name="Wireless Earbuds Pro" \
+  --description="High quality sound with noise cancellation" \
+  -d "default_price_data[currency]=usd" \
+  -d "default_price_data[unit_amount]=19900" \
+  -d "metadata[category]=audio"
+```
+
+```bash
+stripe products create --name="Smartwatch 2" \
+  --description="Stay connected with the latest smartwatch" \
+  -d "default_price_data[currency]=usd" \
+  -d "default_price_data[unit_amount]=29900" \
+  -d "metadata[category]=wearables"
+```
+
+```bash
+stripe products create --name="Tablet Pro" \
+  --description="Versatile tablet for work and play" \
+  -d "default_price_data[currency]=usd" \
+  -d "default_price_data[unit_amount]=49900" \
+  -d "metadata[category]=computers"
+```
+
+If the save is successful, you will see logs like `[200] POST` in the screen where you are running the `stripe listen` command.
+
+```sh
+2024-06-11 16:41:42   --> product.created [evt_1PQPKsL8xlxrZ26gst0o1DK3]
+2024-06-11 16:41:45  <--  [200] POST http://localhost:8787/webhook [evt_1PQPKsL8xlxrZ26gst0o1DK3]
+2024-06-11 16:41:47   --> product.created [evt_1PQPKxL8xlxrZ26gGk90TkcK]
+2024-06-11 16:41:49  <--  [200] POST http://localhost:8787/webhook [evt_1PQPKxL8xlxrZ26gGk90TkcK]
+```
+
+If you confirm one log entry for each piece of registered data, the save process is complete. Next, we will implement the API for related product searches.
+
+## 4. Create a related products search API using Vectorize
+
+Now that we have prepared the index for searching, the next step is to implement an API to search for related products. By utilizing a vector index, we can perform searches based on how similar the data is. Let's implement an API that searches for product data similar to the specified product ID using this method.
+
+In this API, the product ID is received as a part of the API path. Using the received ID, vector data is retrieved from Vectorize using `c.env.VECTORIZE_INDEX.getByIds()`. The return value of this process includes vector data, which is then passed to `c.env.VECTORIZE_INDEX.query()` to conduct a similarity search. To quickly check which products are recommended, we set `returnMetadata` to `true` to obtain the stored metadata information as well. The `topK` parameter specifies the number of data items to retrieve. Change this value if you want to obtain less than 2 or more than 4 data items.
+
+```ts
+app.get("/products/:product_id", async (c) => {
+  // Get the product ID from API path parameters
+  const productId = c.req.param("product_id");
+
+
+  // Retrieve the indexed data by the product ID
+  const [product] = await c.env.VECTORIZE_INDEX.getByIds([productId]);
+
+
+  // Search similar products by using the embedding data
+  const similarProducts = await c.env.VECTORIZE_INDEX.query(product.values, {
+    topK: 3,
+    returnMetadata: true,
+  });
+
+
+  return c.json({
+    product: {
+      ...product.metadata,
+    },
+    similarProducts,
+  });
+});
+```
+
+Let's run this API. Use a product ID that starts with `prod_`, which can be obtained from the result of running the `stripe products crate` command or the `stripe products list` command.
+
+```sh
+curl http://localhost:8787/products/prod_xxxx
+```
+
+If you send a request using a product ID that exists in the Vectorize index, the data for that product and two related products will be returned as follows.
+
+```json
+{
+  "product": {
+    "name": "Tablet Pro",
+    "description": "Versatile tablet for work and play",
+    "product_metadata": {
+      "category": "computers"
+    }
+  },
+  "similarProducts": {
+    "count": 3,
+    "matches": [
+      {
+        "id": "prod_QGxFoHEpIyxHHF",
+        "metadata": {
+          "name": "Tablet Pro",
+          "description": "Versatile tablet for work and play",
+          "product_metadata": {
+            "category": "computers"
+          }
+        },
+        "score": 1
+      },
+      {
+        "id": "prod_QGxFEgfmOmy5Ve",
+        "metadata": {
+          "name": "Ultra Notebook",
+          "description": "Lightweight and powerful notebook computer",
+          "product_metadata": {
+            "category": "computers"
+          }
+        },
+        "score": 0.724717327
+      },
+      {
+        "id": "prod_QGwkGYUcKU2UwH",
+        "metadata": {
+          "name": "demo product",
+          "description": "aaaa",
+          "product_metadata": {
+            "test": "hello"
+          }
+        },
+        "score": 0.635707003
+      }
+    ]
+  }
+}
+```
+
+Looking at the `score` in `similarProducts`, you can see that there is data with a `score` of `1`. This means it is exactly the same as the query used to search. By looking at the metadata, it is evident that the data is the same as the product ID sent in the request. Since we want to search for related products, let's add a `filter` to prevent the same product from being included in the search results. Here, a filter is added to exclude data with the same product name using the `metadata` name.
+
+```ts
+app.get("/products/:product_id", async (c) => {
+  const productId = c.req.param("product_id");
+  const [product] = await c.env.VECTORIZE_INDEX.getByIds([productId]);
+  const similarProducts = await c.env.VECTORIZE_INDEX.query(product.values, {
+    topK: 3,
+    returnMetadata: true,
+    filter: {
+      name: {
+        $ne: product.metadata?.name.toString(),
+      },
+    },
+  });
+
+
+  return c.json({
+    product: {
+      ...product.metadata,
+    },
+    similarProducts,
+  });
+});
+```
+
+After adding this process, if you run the API, you will see that there is no data with a `score` of `1`.
+
+```json
+{
+  "product": {
+    "name": "Tablet Pro",
+    "description": "Versatile tablet for work and play",
+    "product_metadata": {
+      "category": "computers"
+    }
+  },
+  "similarProducts": {
+    "count": 3,
+    "matches": [
+      {
+        "id": "prod_QGxFEgfmOmy5Ve",
+        "metadata": {
+          "name": "Ultra Notebook",
+          "description": "Lightweight and powerful notebook computer",
+          "product_metadata": {
+            "category": "computers"
+          }
+        },
+        "score": 0.724717327
+      },
+      {
+        "id": "prod_QGwkGYUcKU2UwH",
+        "metadata": {
+          "name": "demo product",
+          "description": "aaaa",
+          "product_metadata": {
+            "test": "hello"
+          }
+        },
+        "score": 0.635707003
+      },
+      {
+        "id": "prod_QGxFEafrNDG88p",
+        "metadata": {
+          "name": "Smartphone X",
+          "description": "Latest model with cutting-edge features",
+          "product_metadata": {
+            "category": "electronics"
+          }
+        },
+        "score": 0.632409942
+      }
+    ]
+  }
+}
+```
+
+In this way, you can implement a system to search for related product information using Vectorize.
+
+## 5. Create a recommendation API that answers user questions.
+
+Recommendations can be more than just displaying related products; they can also address user questions and concerns. The final API will implement a process to answer user questions using Vectorize and Workers AI.
+
+This API will implement the following processes:
+
+1. Vectorize the user's question using the Text Embedding Model from Workers AI.
+2. Use Vectorize to search and retrieve highly relevant products.
+3. Convert the search results into a string in Markdown format.
+4. Utilize the Text Generation Model from Workers AI to generate a response based on the search results.
+
+This method realizes a text generation mechanism called Retrieval Augmented Generation (RAG) using Cloudflare. The bindings and other preparations are already completed, so let's add the API.
+
+```ts
+app.post("/ask", async (c) => {
+  const { question } = await c.req.json();
+  if (!question) {
+    return c.json({
+      message: "Please tell me your question.",
+    });
+  }
+  /**
+   * Convert the question to the vector data
+   */
+  const embeddedQuestion = await c.env.AI.run("@cf/baai/bge-large-en-v1.5", {
+    text: question,
+  });
+
+
+  /**
+   * Query similarity data from Vectorize index
+   */
+  const similarProducts = await c.env.VECTORIZE_INDEX.query(
+    embeddedQuestion.data[0],
+    {
+      topK: 3,
+      returnMetadata: true,
+    },
+  );
+
+
+  /**
+   * Convert the JSON data to the Markdown text
+   **/
+  const contextData = similarProducts.matches.reduce((prev, current) => {
+    if (!current.metadata) return prev;
+    const productTexts = Object.entries(current.metadata).map(
+      ([key, value]) => {
+        switch (key) {
+          case "name":
+            return `## ${value}`;
+          case "product_metadata":
+            return `- ${key}: ${JSON.stringify(value)}`;
+          default:
+            return `- ${key}: ${value}`;
+        }
+      },
+    );
+    const productTextData = productTexts.join("\n");
+    return `${prev}\n${productTextData}`;
+  }, "");
+
+
+  /**
+   * Generate the answer
+   */
+  const response = await c.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
+    messages: [
+      {
+        role: "system",
+        content: `You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know.\n#Context: \n${contextData} `,
+      },
+      {
+        role: "user",
+        content: question,
+      },
+    ],
+  });
+
+
+  return c.json(response);
+});
+```
+
+Let's use the created API to consult on a product. You can send your question in the body of a POST request. For example, if you want to ask about getting a new PC, you can execute the following command:
+
+```sh
+curl -X POST "http://localhost:8787/ask" -H "Content-Type: application/json" -d '{"question": "I want to get a new PC"}'
+```
+
+When the question is sent, a recommendation text will be generated as introduced earlier. In this example, the `Ultra Notebook` product was recommended. This is because it has a `notebook compucoter` description, which means it received a relatively high score in the Vectorize search.
+
+```json
+{
+  "response": "Exciting! You're looking to get a new PC! Based on the context I retrieved, I'd recommend considering the \"Ultra Notebook\" since it's described as a lightweight and powerful notebook computer, which fits the category of \"computers\". Would you like to know more about its specifications or features?"
+}
+```
+
+The text generation model generates new text each time based on the input prompt (questions or product search results). Therefore, even if you send the same request to this API, the response text may differ slightly. When developing for production, use features like logging or caching in the [AI Gateway](https://developers.cloudflare.com/ai-gateway/) to set up proper control and debugging.
+
+## 6. Deploy the application
+
+Before deploying the application, we need to make sure your Worker project has access to the Stripe API keys we created earlier. Since the API keys of external services are defined in `.dev.vars`, this information also needs to be set in your Worker project. To save API keys and secrets, run the `npx wrangler secret put <KEY>` command. In this tutorial, you'll execute the command twice, referring to the values set in `.dev.vars`.
+
+```sh
+npx wrangler secret put STRIPE_SECRET_API_KEY
+npx wrangler secret put STRIPE_WEBHOOK_SECRET
+```
+
+Then, run `npx wrangler deploy`. This will deploy the application on Cloudflare, making it publicly accessible.
+
+## Conclusion
+
+As you can see, using Cloudflare Workers, Workers AI, and Vectorize allows you to easily implement related product or product recommendation APIs. Even if product data is managed on external services like Stripe, you can incorporate them by adding a webhook API. Additionally, though not introduced in this tutorial, you can save information such as user preferences and interested categories in Workers KV or D1. By using this stored information as text generation prompts, you can provide more accurate recommendation functions.
+
+Use the experience from this tutorial to enhance your e-commerce site with new ideas.
+
+</page>
+
+<page>
+---
+title: Custom access control for files in R2 using D1 and Workers · Cloudflare
+  Developer Spotlight
+description: This tutorial gives you an overview on how to create a
+  TypeScript-based Cloudflare Worker which allows you to control file access
+  based on a simple username and password authentication. To achieve this, we
+  will use a D1 database for user management and an R2 bucket for file storage.
+lastUpdated: 2025-03-19T09:17:37.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/tutorials/custom-access-control-for-files/
+  md: https://developers.cloudflare.com/developer-spotlight/tutorials/custom-access-control-for-files/index.md
+---
+
+This tutorial gives you an overview on how to create a TypeScript-based Cloudflare Worker which allows you to control file access based on a simple username and password authentication. To achieve this, we will use a [D1 database](https://developers.cloudflare.com/d1/) for user management and an [R2 bucket](https://developers.cloudflare.com/r2/) for file storage.
+
+The following sections will guide you through the process of creating a Worker using the Cloudflare CLI, creating and setting up a D1 database and R2 bucket, and then implementing the functionality to securely upload and fetch files from the created R2 bucket.
+
+## Prerequisites
+
+1. Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up/workers-and-pages).
+2. Install [`Node.js`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Node.js version manager
+
+Use a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues and change Node.js versions. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), discussed later in this guide, requires a Node version of `16.17.0` or later.
+
+## 1. Create a new Worker application
+
+To get started developing your Worker you will use the [`create-cloudflare` CLI](https://github.com/cloudflare/workers-sdk/tree/main/packages/create-cloudflare). To do this, open a terminal window and run the following command:
+
+* npm
+
+  ```sh
+  npm create cloudflare@latest -- custom-access-control
+  ```
+
+* yarn
+
+  ```sh
+  yarn create cloudflare custom-access-control
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm create cloudflare@latest custom-access-control
+  ```
+
+For setup, select the following options:
+
+* For *What would you like to start with?*, choose `Hello World example`.
+* For *Which template would you like to use?*, choose `Worker only`.
+* For *Which language do you want to use?*, choose `TypeScript`.
+* For *Do you want to use git for version control?*, choose `Yes`.
+* For *Do you want to deploy your application?*, choose `No` (we will be making some changes before deploying).
+
+Then, move into your newly created Worker:
+
+```sh
+cd custom-access-control
+```
+
+## 2. Create a new D1 database and binding
+
+Now that you have created your Worker, next you will need to create a D1 database. This can be done through the Cloudflare Portal or the Wrangler CLI. For this tutorial, we will use the Wrangler CLI for simplicity.
+
+To create a D1 database, just run the following command. If you get asked to install wrangler, just confirm by pressing `y` and then press `Enter`.
+
+```sh
+npx wrangler d1 create <YOUR_DATABASE_NAME>
+```
+
+Replace `<YOUR_DATABASE_NAME>` with the name you want to use for your database. Keep in mind that this name can't be changed later on.
+
+After the database is successfully created, you will see the data for the binding displayed as an output. The binding declaration will start with `[[d1_databases]]` and contain the binding name, database name and ID. To use the database in your worker, you will need to add the binding to your Wrangler file, by copying the declaration and pasting it into the wrangler file, as shown in the example below.
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "<YOUR_DATABASE_NAME>",
+        "database_id": "<YOUR_DATABASE_ID>"
+      }
+    ]
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  [[d1_databases]]
+  binding = "DB"
+  database_name = "<YOUR_DATABASE_NAME>"
+  database_id = "<YOUR_DATABASE_ID>"
+  ```
+
+## 3. Create R2 bucket and binding
+
+Now that the D1 database is created, you also need to create an R2 bucket which will be used to store the uploaded files. This step can also be done through the Cloudflare Portal, but as before, we will use the Wrangler CLI for this tutorial. To create an R2 bucket, run the following command:
+
+```sh
+npx wrangler r2 bucket create <YOUR_BUCKET_NAME>
+```
+
+This works similar to the D1 database creation, where you will need to replace `<YOUR_BUCKET_NAME>` with the name you want to use for your bucket. To do this, go to the Wrangler file again and then add the following lines:
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "r2_buckets": [
+      {
+        "binding": "BUCKET",
+        "bucket_name": "<YOUR_BUCKET_NAME>"
+      }
+    ]
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  [[r2_buckets]]
+  binding = "BUCKET"
+  bucket_name = "<YOUR_BUCKET_NAME>"
+  ```
+
+Now that you have prepared the Wrangler configuration, you should update the `worker-configuration.d.ts` file to include the new bindings. This file will then provide TypeScript with the correct type definitions for the bindings, which allows for type checking and code completion in your editor. You could either update it manually or run the following command in the directory of your project to update it automatically based on the [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/) (recommended).
+
+```sh
+npm run cf-typegen
+```
+
+## 4. Database preparation
+
+Before you can start developing the Worker, you need to prepare the D1 database.
+
+For this you need to
+
+1. Create a table in the database which will then be used to store the user data
+2. Create a unique index on the username column, which will speed up database queries and ensure that the username is unique
+3. Insert a test user into the table, so you can test your code later on
+
+As this operation only needs to be done once, this will be done through the Wrangler CLI and not in the Worker's code. Copy the commands listed below, replace the placeholders and then run them in order to prepare the database. For this tutorial you can replace the `<YOUR_USERNAME>` and `<YOUR_HASHED_PASSWORD>` placeholders with `admin` and `5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8` respecively. And `<YOUR_DATABASE_NAME>` should be replaced with the name you used to create the database.
+
+```sh
+npx wrangler d1 execute <YOUR_DATABASE_NAME> --command "CREATE TABLE user (id INTEGER PRIMARY KEY NOT NULL, username STRING NOT NULL, password STRING NOT NULL)" --remote
+npx wrangler d1 execute <YOUR_DATABASE_NAME> --command "CREATE UNIQUE INDEX user_username ON user (username)"  --remote
+npx wrangler d1 execute <YOUR_DATABASE_NAME> --command "INSERT INTO user (username, password) VALUES ('<YOUR_USERNAME>', '<YOUR_HASHED_PASSWORD>')"  --remote
+```
+
+## 5. Implement authentication in the Worker
+
+Now that the database and bucket are all set up, you can start to develop the Worker application. The first thing you will need to do is to implement the authentication for the requests.
+
+This tutorial will use a simple username and password authentication, where the username and password (hashed) are stored in the D1 database. The requests will contain the username and password as a base64 encoded string, which is also called Basic Authentication. Depending on the request method, this string will be retrieved from the `Authorization` header for POST requests or the `Authorization` search parameter for GET requests.
+
+To handle the authentication, you will need to replace the current code within `index.ts` file with the following code:
+
+```ts
+export default {
+  async fetch(
+    request: Request,
+    env: Env,
+    ctx: ExecutionContext,
+  ): Promise<Response> {
+    try {
+      const url = new URL(request.url);
+      let authBase64;
+      if (request.method === "POST") {
+        authBase64 = request.headers.get("Authorization");
+      } else if (request.method === "GET") {
+        authBase64 = url.searchParams.get("Authorization");
+      } else {
+        return new Response("Method Not Allowed!", { status: 405 });
+      }
+      if (!authBase64 || authBase64.substring(0, 6) !== "Basic ") {
+        return new Response("Unauthorized!", { status: 401 });
+      }
+
+
+      const authString = atob(authBase64.substring(6));
+      const [username, password] = authString.split(":");
+      if (!username || !password) {
+        return new Response("Unauthorized!", { status: 401 });
+      }
+
+
+      // TODO: Check if the username and password are correct
+    } catch (error) {
+      console.error("An error occurred!", error);
+      return new Response("Internal Server Error!", { status: 500 });
+    }
+  },
+};
+```
+
+The code above currently extracts the username and password from the request, but does not yet check if the username and password are correct.
+
+To check the username and password, you will need to hash the password and then query the D1 database table `user` with the given username and hashed password. If the username and password are correct, you will retrieve a record from D1. If the username or password is incorrect, undefined will be returned and a `401 Unauthorized` response will be sent. To add this functionality, you will need to add the following code to the `fetch` function by replacing the TODO comment from the last code snippet:
+
+```ts
+const passwordHashBuffer = await crypto.subtle.digest(
+  { name: "SHA-256" },
+  new TextEncoder().encode(password),
+);
+const passwordHashArray = Array.from(new Uint8Array(passwordHashBuffer));
+const passwordHashString = passwordHashArray
+  .map((b) => b.toString(16).padStart(2, "0"))
+  .join("");
+
+
+const user = await env.DB.prepare(
+  "SELECT id FROM user WHERE username = ? AND password = ? LIMIT 1",
+)
+  .bind(username, passwordHashString)
+  .first<{ id: number }>();
+if (!user) {
+  return new Response("Unauthorized!", { status: 401 });
+}
+
+
+// TODO: Implement upload functionality
+```
+
+This code will now ensure that every request is authenticated before it can be processed further.
+
+## 6. Upload a file through the Worker
+
+Now that the authentication is set up, you can start to implement the functionality for uploading a file through the Worker. To do this, you will need to add a new code path that handles HTTP `POST` requests. Then within it, you will need to get the data from the request, which is sent within the body of the request, by using the `request.blob()` function. After that, you can upload the data to the R2 bucket by using the `env.BUCKET.put` function. And finally, you will return a `200 OK` response to the client.
+
+To implement this functionality, you will need to replace the TODO comment from the last code snippet with the following code:
+
+```ts
+if (request.method === "POST") {
+  // Upload the file to the R2 bucket with the user id followed by a slash as the prefix and then the path of the URL
+  await env.BUCKET.put(`${user.id}/${url.pathname}`, request.body);
+  return new Response("OK", { status: 200 });
+}
+// TODO: Implement GET request handling
+```
+
+This code will now allow you to upload a file through the Worker, which will be stored in your R2 bucket.
+
+## 7. Fetch from the R2 bucket
+
+To round up the Worker application, you will need to implement the functionality to fetch files from the R2 bucket. This can be done by adding a new code path that handles `GET` requests. Within this code path, you will need to extract the URL pathname and then retrieve the asset from the R2 bucket by using the `env.BUCKET.get` function.
+
+To finalize the code, just replace the TODO comment for handling GET requests from the last code snippet with the following code:
+
+```ts
+if (request.method === "GET") {
+  const file = await env.BUCKET.get(`${user.id}/${url.pathname.slice(1)}`);
+  if (!file) {
+    return new Response("Not Found!", { status: 404 });
+  }
+  const headers = new Headers();
+  file.writeHttpMetadata(headers);
+  return new Response(file.body, { headers });
+}
+return new Response("Method Not Allowed!", { status: 405 });
+```
+
+This code now allows you to fetch and return data from the R2 bucket when a `GET` request is made to the Worker application.
+
+## 8. Deploy your Worker
+
+After completing the code for this Cloudflare Worker tutorial, you will need to deploy it to Cloudflare. To do this open the terminal in the directory created for your application, and then run:
+
+```sh
+npx wrangler deploy
+```
+
+You might get asked to authenticate (if not logged in already) and select an account. After that, the Worker will be deployed to Cloudflare. When the deployment finished successfully, you will see a success message with the URL where your Worker is now accessible.
+
+## 9. Test your Worker (optional)
+
+To finish this tutorial, you should test your Worker application by sending a `POST` request to upload a file and after that a `GET` request to fetch the file. This can be done by using a tool like `curl` or `Postman`, but for simplicity, this will describe the usage of `curl`.
+
+Copy the following command which can be used to upload a simple JSON file with the content `{"Hello": "Worker!"}`. Replace `<YOUR_API_SECRET>` with the base64 encoded username and password combination and then run the command. For this example you can use `YWRtaW46cGFzc3dvcmQ=`, which can be decoded to `admin` and `test`, for the api secret placeholder.
+
+```sh
+curl --location '<YOUR_WORKER_URL>/myFile.json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic <YOUR_API_SECRET>' \
+--data '{
+    "Hello": "Worker!"
+}'
+```
+
+Then run the next command, or simply open the URL in your browser, to fetch the file you just uploaded:
+
+```sh
+curl --location '<YOUR_WORKER_URL>/myFile.json?Authorization=Basic%20YWRtaW46cGFzc3dvcmQ%3D'
+```
+
+## Next steps
+
+If you want to learn more about Cloudflare Workers, R2, or D1 you can check out the following documentation:
+
+* [Cloudflare Workers](https://developers.cloudflare.com/workers/)
+* [Cloudflare R2](https://developers.cloudflare.com/r2/)
+* [Cloudflare D1](https://developers.cloudflare.com/d1/)
+
+</page>
+
+<page>
+---
+title: Setup Fullstack Authentication with Next.js, Auth.js, and Cloudflare D1 ·
+  Cloudflare Developer Spotlight
+description: In this tutorial, you will build a Next.js app with authentication
+  powered by Auth.js, Resend, and Cloudflare D1.
+lastUpdated: 2025-06-05T13:25:05.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/tutorials/fullstack-authentication-with-next-js-and-cloudflare-d1/
+  md: https://developers.cloudflare.com/developer-spotlight/tutorials/fullstack-authentication-with-next-js-and-cloudflare-d1/index.md
+---
+
+In this tutorial, you will build a [Next.js app](https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/) with authentication powered by Auth.js, Resend, and [Cloudflare D1](https://developers.cloudflare.com/d1/).
+
+Before continuing, make sure you have a Cloudflare account and have installed and [authenticated Wrangler](https://developers.cloudflare.com/workers/wrangler/commands/#login). Some experience with HTML, CSS, and JavaScript/TypeScript is helpful but not required. In this tutorial, you will learn:
+
+* How to create a Next.js application and run it on Cloudflare Workers
+* How to bind a Cloudflare D1 database to your Next.js app and use it to store authentication data
+* How to use Auth.js to add serverless fullstack authentication to your Next.js app
+
+You can find the finished code for this project on [GitHub](https://github.com/mackenly/auth-js-d1-example).
+
+## Prerequisites
+
+1. Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up/workers-and-pages).
+2. Install [`Node.js`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Node.js version manager
+
+Use a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues and change Node.js versions. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), discussed later in this guide, requires a Node version of `16.17.0` or later.
+
+1. Create or login to a [Resend account](https://resend.com/signup) and get an [API key](https://resend.com/docs/dashboard/api-keys/introduction#add-api-key).
+2. [Install and authenticate Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/).
+
+## 1. Create a Next.js app using Workers
+
+From within the repository or directory where you want to create your project run:
+
+* npm
+
+  ```sh
+  npm create cloudflare@latest -- auth-js-d1-example --framework=next
+  ```
+
+* yarn
+
+  ```sh
+  yarn create cloudflare auth-js-d1-example --framework=next
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm create cloudflare@latest auth-js-d1-example --framework=next
+  ```
+
+For setup, select the following options:
+
+* For *What would you like to start with?*, choose `Framework Starter`.
+* For *Which development framework do you want to use?*, choose `Next.js`.
+* Complete the framework's own CLI wizard.
+* For *Do you want to use git for version control?*, choose `Yes`.
+* For *Do you want to deploy your application?*, choose `No` (we will be making some changes before deploying).
+
+This will create a new Next.js project using [OpenNext](https://opennext.js.org/) that will run in a Worker using [Workers Static Assets](#static-assets).
+
+Before we get started, open your project's `tsconfig.json` file and modify the following to the `compilerOptions` object to allow for top level await needed to let our application get the Cloudflare context:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+  }
+}
+```
+
+Throughout this tutorial, we'll add several values to Cloudflare Secrets. For [local development](https://developers.cloudflare.com/workers/configuration/secrets/#local-development-with-secrets), add those same values to a file in the top level of your project called `.dev.vars` and make sure it is not committed into version control. This will let you work with Secret values locally. Go ahead and copy and paste the following into `.dev.vars` for now and replace the values as we go.
+
+```sh
+AUTH_SECRET = "<replace-me>"
+AUTH_RESEND_KEY = "<replace-me>"
+AUTH_EMAIL_FROM = "onboarding@resend.dev"
+AUTH_URL = "http://localhost:8787/"
+```
+
+Manually set URL
+
+Within the Workers environment, the `AUTH_URL` doesn't always get picked up automatically by Auth.js, hence why we're specifying it manually here (we'll need to do the same for prod later).
+
+## 2. Install Auth.js
+
+Following the [installation instructions](https://authjs.dev/getting-started/installation?framework=Next.js) from Auth.js, begin by installing Auth.js:
+
+* npm
+
+  ```sh
+  npm i next-auth@beta
+  ```
+
+* yarn
+
+  ```sh
+  yarn add next-auth@beta
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm add next-auth@beta
+  ```
+
+Now run the following to generate an `AUTH_SECRET`:
+
+```sh
+npx auth secret
+```
+
+Now, deviating from the standard Auth.js setup, locate your generated secret (likely in a file named `.env.local`) and [add the secret to your Workers application](https://developers.cloudflare.com/workers/configuration/secrets/#adding-secrets-to-your-project) by running the following and completing the steps to add a secret's value that we just generated:
+
+```sh
+npx wrangler secret put AUTH_SECRET
+```
+
+If you have not deployed yet that's fine. Allow wrangler to create the worker for you.
+
+After adding the secret, update your `.dev.vars` file to include an `AUTH_SECRET` value (this secret should be different from the one you generated earlier for security purposes):
+
+```sh
+# ...
+AUTH_SECRET = "<replace-me>"
+# ...
+```
+
+Next, go into `cloudflare-env.d.ts` file and add the following to the CloudflareEnv interface:
+
+```ts
+interface CloudflareEnv {
+  AUTH_SECRET: string;
+}
+```
+
+## 3. Install Cloudflare D1 Adapter
+
+Now, install the Auth.js D1 adapter by running:
+
+* npm
+
+  ```sh
+  npm i @auth/d1-adapter
+  ```
+
+* yarn
+
+  ```sh
+  yarn add @auth/d1-adapter
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm add @auth/d1-adapter
+  ```
+
+Create a D1 database using the following command:
+
+```sh
+npx wrangler d1 create auth-js-d1-example-db
+```
+
+When finished you should see instructions to add the database binding to your [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/). Example binding:
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "auth-js-d1-example-db",
+        "database_id": "<unique-ID-for-your-database>"
+      }
+    ]
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  [[d1_databases]]
+  binding = "DB"
+  database_name = "auth-js-d1-example-db"
+  database_id = "<unique-ID-for-your-database>"
+  ```
+
+Now, within your `cloudflare-env.d.ts`, add your D1 binding, like:
+
+```ts
+interface CloudflareEnv {
+  DB: D1Database;
+  AUTH_SECRET: string;
+}
+```
+
+## 4. Configure Credentials Provider
+
+Auth.js provides integrations for many different [credential providers](https://authjs.dev/getting-started/authentication) such as Google, GitHub, etc. For this tutorial we're going to use [Resend for magic links](https://authjs.dev/getting-started/authentication/email). You should have already created a Resend account and have an [API key](https://resend.com/docs/dashboard/api-keys/introduction#add-api-key).
+
+Using either a [Resend verified domain email address](https://resend.com/docs/dashboard/domains/introduction) or `onboarding@resend.dev`, add a new Secret to your Worker containing the email your magic links will come from:
+
+```sh
+npx wrangler secret put AUTH_EMAIL_FROM
+```
+
+Next, ensure the `AUTH_EMAIL_FROM` environment variable is updated in your `.dev.vars` file with the email you just added as a secret:
+
+```sh
+# ...
+AUTH_EMAIL_FROM = "onboarding@resend.dev"
+# ...
+```
+
+Now [create a Resend API key](https://resend.com/docs/dashboard/api-keys/introduction) with `Sending access` and add it to your Worker's Secrets:
+
+```sh
+npx wrangler secret put AUTH_RESEND_KEY
+```
+
+As with previous secrets, update your `.dev.vars` file with the new secret value for `AUTH_RESEND_KEY` to use in local development:
+
+```sh
+# ...
+AUTH_RESEND_KEY = "<replace-me>"
+# ...
+```
+
+After adding both of those Secrets, your `cloudflare-env.d.ts` should now include the following:
+
+```ts
+interface CloudflareEnv {
+  DB: D1Database;
+  AUTH_SECRET: string;
+  AUTH_RESEND_KEY: string;
+  AUTH_EMAIL_FROM: string;
+}
+```
+
+Credential providers and database adapters are provided to Auth.js through a configuration file called `auth.ts`. Create a file within your `src/app/` directory called `auth.ts` with the following contents:
+
+* JavaScript
+
+  ```js
+  import NextAuth from "next-auth";
+  import { NextAuthResult } from "next-auth";
+  import { D1Adapter } from "@auth/d1-adapter";
+  import Resend from "next-auth/providers/resend";
+  import { getCloudflareContext } from "@opennextjs/cloudflare";
+
+
+  const authResult = async () => {
+    return NextAuth({
+      providers: [
+        Resend({
+          apiKey: (await getCloudflareContext({ async: true })).env
+            .AUTH_RESEND_KEY,
+          from: (await getCloudflareContext({ async: true })).env.AUTH_EMAIL_FROM,
+        }),
+      ],
+      adapter: D1Adapter((await getCloudflareContext({ async: true })).env.DB),
+    });
+  };
+
+
+  export const { handlers, signIn, signOut, auth } = await authResult();
+  ```
+
+* TypeScript
+
+  ```ts
+  import NextAuth from "next-auth";
+  import { NextAuthResult } from "next-auth";
+  import { D1Adapter } from "@auth/d1-adapter";
+  import Resend from "next-auth/providers/resend";
+  import { getCloudflareContext } from "@opennextjs/cloudflare";
+
+
+  const authResult = async (): Promise<NextAuthResult> => {
+    return NextAuth({
+      providers: [
+        Resend({
+          apiKey: (await getCloudflareContext({async: true})).env.AUTH_RESEND_KEY,
+          from: (await getCloudflareContext({async: true})).env.AUTH_EMAIL_FROM,
+        }),
+      ],
+      adapter: D1Adapter((await getCloudflareContext({async: true})).env.DB),
+    });
+  };
+
+
+  export const { handlers, signIn, signOut, auth } = await authResult();
+  ```
+
+Now, lets add the route handler and middleware used to authenticate and persist sessions.
+
+Create a new directory structure and route handler within `src/app/api/auth/[...nextauth]` called `route.ts`. The file should contain:
+
+* JavaScript
+
+  ```js
+  import { handlers } from "../../../auth";
+
+
+  export const { GET, POST } = handlers;
+  ```
+
+* TypeScript
+
+  ```ts
+  import { handlers } from "../../../auth";
+
+
+  export const { GET, POST } = handlers;
+  ```
+
+Now, within the `src/` directory, create a `middleware.ts` file. If you do not have a `src/` directory, create a `middleware.ts` file in the root of your project. This will persist session data.
+
+* JavaScript
+
+  ```js
+  export { auth as middleware } from "./app/auth";
+  ```
+
+* TypeScript
+
+  ```ts
+  export { auth as middleware } from "./app/auth";
+  ```
+
+## 5. Create Database Tables
+
+The D1 adapter requires that tables be created within your database. It [recommends](https://authjs.dev/getting-started/adapters/d1#migrations) using the exported `up()` method to complete this. Within `src/app/api/` create a directory called `setup` containing a file called `route.ts`. Within this route handler, add the following code:
+
+* JavaScript
+
+  ```js
+  import { up } from "@auth/d1-adapter";
+  import { getCloudflareContext } from "@opennextjs/cloudflare";
+
+
+  export async function GET() {
+    try {
+      await up((await getCloudflareContext({ async: true })).env.DB);
+    } catch (e) {
+      if (e instanceof Error) {
+        const causeMessage =
+          e.cause instanceof Error ? e.cause.message : String(e.cause);
+        console.log(causeMessage, e.message);
+      }
+    }
+    return new Response("Migration completed");
+  }
+  ```
+
+* TypeScript
+
+  ```ts
+  import { up } from "@auth/d1-adapter";
+  import { getCloudflareContext } from "@opennextjs/cloudflare";
+
+
+  export async function GET() {
+      try {
+          await up((await getCloudflareContext({async: true})).env.DB)
+      } catch (e: unknown) {
+          if (e instanceof Error) {
+              const causeMessage = e.cause instanceof Error ? e.cause.message : String(e.cause);
+              console.log(causeMessage, e.message)
+          }
+      }
+      return new Response('Migration completed');
+  }
+  ```
+
+You'll need to run this once on your production database to create the necessary tables. If you're following along with this tutorial, we'll run it together in a few steps.
+
+Clean up
+
+Running this multiple times won't hurt anything since the tables are only created if they do not already exist, but it's a good idea to remove this route from your production code once you've run it since you won't need it anymore.
+
+Before we go further, make sure you've created all of the necessary files:
+
+## 6. Build Sign-in Interface
+
+We've completed the backend steps for our application. Now, we need a way to sign in. First, let's install [shadcn](https://ui.shadcn.com/):
+
+```sh
+npx shadcn@latest init -d
+```
+
+Next, run the following to add a few components:
+
+```sh
+npx shadcn@latest add button input card avatar label
+```
+
+To make it easy, we've provided a basic sign-in interface for you below that you can copy into your app. You will likely want to customize this to fit your needs, but for now, this will let you sign in, see your account details, and update your user's name.
+
+Replace the contents of `page.ts` from within the `app/` directory with the following:
+
+```ts
+import { redirect } from 'next/navigation';
+import { signIn, signOut, auth } from './auth';
+import { updateRecord } from '@auth/d1-adapter';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Label } from '@/components/ui/label';
+
+
+async function updateName(formData: FormData): Promise<void> {
+  'use server';
+  const session = await auth();
+  if (!session?.user?.id) {
+    return;
+  }
+  const name = formData.get('name') as string;
+  if (!name) {
+    return;
+  }
+  const query = `UPDATE users SET name = $1 WHERE id = $2`;
+  await updateRecord((await getCloudflareContext({async: true})).env.DB, query, [name, session.user.id]);
+  redirect('/');
+}
+
+
+export default async function Home() {
+  const session = await auth();
+  return (
+    <main className="flex items-center justify-center min-h-screen bg-background">
+      <Card className="w-full max-w-md">
+        <CardHeader className="space-y-1">
+          <CardTitle className="text-2xl font-bold text-center">{session ? 'User Profile' : 'Login'}</CardTitle>
+          <CardDescription className="text-center">
+            {session ? 'Manage your account' : 'Welcome to the auth-js-d1-example demo'}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {session ? (
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <Avatar>
+                  <AvatarImage src={session.user?.image || ''} alt={session.user?.name || ''} />
+                  <AvatarFallback>{session.user?.name?.[0] || 'U'}</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-medium">{session.user?.name || 'No name set'}</p>
+                  <p className="text-sm text-muted-foreground">{session.user?.email}</p>
+                </div>
+              </div>
+              <div>
+                <p className="text-sm font-medium">User ID: {session.user?.id}</p>
+              </div>
+              <form action={updateName} className="space-y-2">
+                <Label htmlFor="name">Update Name</Label>
+                <Input id="name" name="name" placeholder="Enter new name" />
+                <Button type="submit" className="w-full">
+                  Update Name
+                </Button>
+              </form>
+            </div>
+          ) : (
+            <form
+              action={async (formData) => {
+                'use server';
+                await signIn('resend', { email: formData.get('email') as string });
+              }}
+              className="space-y-4"
+            >
+              <div className="space-y-2">
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  autoCapitalize="none"
+                  autoComplete="email"
+                  autoCorrect="off"
+                  required
+                />
+              </div>
+              <Button className="w-full" type="submit">
+                Sign in with Resend
+              </Button>
+            </form>
+          )}
+        </CardContent>
+        {session && (
+          <CardFooter>
+            <form
+              action={async () => {
+                'use server';
+                await signOut();
+                Response.redirect('/');
+              }}
+            >
+              <Button type="submit" variant="outline" className="w-full">
+                Sign out
+              </Button>
+            </form>
+          </CardFooter>
+        )}
+      </Card>
+    </main>
+  );
+}
+```
+
+## 7. Preview and Deploy
+
+Now, it's time to preview our app. Run the following to preview your application:
+
+* npm
+
+  ```sh
+  npm run preview
+  ```
+
+* yarn
+
+  ```sh
+  yarn run preview
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm run preview
+  ```
+
+Windows support
+
+OpenNext has [limited Windows support](https://opennext.js.org/cloudflare#windows-support) and recommends using WSL2 if developing on Windows.
+
+Also, you may need to comment out the `@import "tw-animate-css"` line in the `globals.css` file.
+
+You should see our login form. But wait, we're not done yet. Remember to create your database tables by visiting `/api/setup`. You should see `Migration completed`. This means your database is ready to go.
+
+Navigate back to your application's homepage. Enter your email and sign in (use the same email as your Resend account if you used the `onboarding@resend.dev` address). You should receive an email in your inbox (check spam). Follow the link to sign in. If everything is configured correctly, you should now see a basic user profile letting your update your name and sign out.
+
+Now let's deploy our application to production. From within the project's directory run:
+
+* npm
+
+  ```sh
+  npm run deploy
+  ```
+
+* yarn
+
+  ```sh
+  yarn run deploy
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm run deploy
+  ```
+
+This will build and deploy your application as a Worker. Note that you may need to select which account you want to deploy your Worker to. After your app is deployed, Wrangler should give you the URL on which it was deployed. It might look something like this: `https://auth-js-d1-example.example.workers.dev`. Add your URL to your Worker using:
+
+```sh
+npx wrangler secret put AUTH_URL
+```
+
+After the changes are deployed, you should now be able to access and try out your new application.
+
+D1 Database Creation
+
+You will need to hit the `/api/setup` on your deployed URL to create the necessary tables in your D1 database. It will create 4 tables if they don’t already exist: `accounts`, `sessions`, `users`, and `verification_tokens`. If the `api/setup` route is not working, you can also initialize your tables manually. Look in [migrations.ts](https://github.com/nextauthjs/next-auth/blob/main/packages/adapter-d1/src/migrations.ts) of the Auth.js D1 adapter for the relevant SQL.
+
+You have successfully created, configured, and deployed a fullstack Next.js application with authentication powered by Auth.js, Resend, and Cloudflare D1.
+
+## Related resources
+
+To build more with Workers, refer to [Tutorials](https://developers.cloudflare.com/workers/tutorials/).
+
+Find more information about the tools and services used in this tutorial at:
+
+* [Auth.js](https://authjs.dev/getting-started)
+* [Resend](https://resend.com/)
+* [Cloudflare D1](https://developers.cloudflare.com/d1/)
+
+If you have any questions, need assistance, or would like to share your project, join the Cloudflare Developer community on [Discord](https://discord.cloudflare.com) to connect with other developers and the Cloudflare team.
+
+</page>
+
+<page>
+---
+title: Send form submissions using Astro and Resend · Cloudflare Developer Spotlight
+description: This tutorial will instruct you on how to send emails from Astro
+  and Cloudflare Workers (via Cloudflare SSR Adapter) using Resend.
+lastUpdated: 2025-03-13T16:14:30.000Z
+chatbotDeprioritize: false
+tags: Forms,Astro
+source_url:
+  html: https://developers.cloudflare.com/developer-spotlight/tutorials/handle-form-submission-with-astro-resend/
+  md: https://developers.cloudflare.com/developer-spotlight/tutorials/handle-form-submission-with-astro-resend/index.md
+---
+
+This tutorial will instruct you on how to send emails from [Astro](https://astro.build/) and Cloudflare Workers (via Cloudflare SSR Adapter) using [Resend](https://resend.com/).
+
+## Prerequisites
+
+Make sure you have the following set up before proceeding with this tutorial:
+
+* A [Cloudflare account](https://dash.cloudflare.com/sign-up/workers-and-pages)
+* Installed [npm](https://docs.npmjs.com/getting-started).
+* A [Resend account](https://resend.com/signup).
+
+## 1. Create a new Astro project and install Cloudflare Adapter:
+
+Open your terminal and run the below command:
+
+```bash
+npm create cloudflare@latest my-astro-app -- --framework=astro
+```
+
+Follow the prompts to configure your project, selecting your preferred options for TypeScript usage, TypeScript strictness, version control, and deployment.
+
+After the initial installation change into the newly created project directory `my-astro-app` and run the following to add the Cloudflare adapter:
+
+```bash
+npm run astro add cloudflare
+```
+
+The [`@astrojs/cloudflare` adapter](https://github.com/withastro/adapters/tree/main/packages/cloudflare#readme) allows Astro's Server-Side Rendered (SSR) sites and components to work on Cloudflare Pages and converts Astro's endpoints into Cloudflare Workers endpoints.
+
+## 2. Add your domain to Resend
+
+Note
+
+If you do not have a domain and just want to test you can skip to step 4 of this section.
+
+1. **Add Your Domain from Cloudflare to Resend:**
+
+   * After signing up for Resend, navigate to the side menu and click `Domains`.
+   * Look for the button to add a new domain and click it.
+   * A pop-up will appear where you can type in your domain. Do so, then choose a region and click the `add` button.
+   * After clicking the add button Resend will provide you with a list of DNS records (DKIM, SPF, and DMARC).
+
+2. **Copy DNS Records from Resend to Cloudflare:**
+
+   * Go back to your Cloudflare dashboard.
+   * Select the domain you want to use and find the "DNS" section.
+   * Copy and paste the DNS records from Resend to Cloudflare.
+
+3. **Verify Your Domain:**
+
+   * Return to Resend and click on the "Verify DNS Records" button.
+   * If everything is set up correctly, your domain status will change to "Verified."
+
+4. **Create an API Key:**
+
+   * In Resend, find the "API Keys" option in the side menu and click it.
+   * Create a new API key with a descriptive name and give Full Access permission.
+
+5. **Save the API key for Local Development and Deployed Worker**
+
+   * For local development, create an .env in the root folder of your Astro project and save the API key as RESEND\_API\_KEY='Api key here' (no quotes).
+   * For a deployed Worker, run the following in your CLI and follow the instructions.
+
+```bash
+npx wrangler secret put RESEND_API_KEY
+```
+
+## 3. Create an Astro endpoint
+
+In the `src/pages` directory, create a new folder called `api`. Inside the `api` folder, create a new file called `sendEmail.json.ts`. This will create an endpoint at `/api/sendEmail.json`.
+
+Copy the following code into the `sendEmail.json.ts` file. This code sets up a POST route that handles form submissions, and validates the form data.
+
+```ts
+export const prerender = false; //This will not work without this line
+
+
+import type { APIRoute } from "astro";
+
+
+export const POST: APIRoute = async ({ request }) => {
+  const data = await request.formData();
+  const name = data.get("name");
+  const email = data.get("email");
+  const message = data.get("message"); // Validate the data - making sure values are not empty
+
+
+  if (!name || !email || !message) {
+    return new Response(null, {
+      status: 404,
+      statusText: "Did not provide the right data",
+    });
+  }
+};
+```
+
+## 4. Send emails using Resend
+
+Next you will need to install the Resend SDK.
+
+```bash
+npm i resend
+```
+
+Once the SDK is installed you can add in the rest of the code that sends an email using the Resend's API, and conditionally checks if the Resend response was successful or not.
+
+```ts
+export const prerender = false; //This will not work without this line
+
+
+import type { APIRoute } from "astro";
+import { Resend } from "resend";
+
+
+const resend = new Resend(import.meta.env.RESEND_API_KEY);
+
+
+export const POST: APIRoute = async ({ request }) => {
+  const data = await request.formData();
+  const name = data.get("name");
+  const email = data.get("email");
+  const message = data.get("message"); // Validate the data - making sure values are not empty
+
+
+  if (!name || !email || !message) {
+    return new Response(
+      JSON.stringify({
+        message: `Fill out all fields.`,
+      }),
+      {
+        status: 404,
+        statusText: "Did not provide the right data",
+      },
+    );
+  } // Sending information to Resend
+
+
+  const sendResend = await resend.emails.send({
+    from: "support@resend.dev",
+    to: "delivered@resend.dev",
+    subject: `Sumbission from ${name}`,
+    html: `<p>Hi ${name},</p><p>Your message was received.</p>`,
+  }); // If the message was sent successfully, return a 200 response
+
+
+  if (sendResend.data) {
+    return new Response(
+      JSON.stringify({
+        message: `Message successfully sent!`,
+      }),
+      {
+        status: 200,
+        statusText: "OK",
+      },
+    ); // If there was an error sending the message, return a 500 response
+  } else {
+    return new Response(
+      JSON.stringify({
+        message: `Message failed to send: ${sendResend.error}`,
+      }),
+      {
+        status: 500,
+        statusText: `Internal Server Error: ${sendResend.error}`,
+      },
+    );
+  }
+};
+```
+
+Note
+
+Make sure to change the 'to' property in 'resend.emails.send' function, if you set up your own domain in step 2. If you skipped that step, keep the value '<delivered@resend.dev>'; otherwise, Resend will throw an error.
+
+## 5. Create an Astro Form Component
+
+In the `src` directory, create a new folder called `components`. Inside the `components` folder, create a new file `AstroForm.astro` and copy the provided code into it.
+
+```typescript
+---
+export const prerender = false;
+
+
+type formData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+    const response = await fetch(Astro.url + "/api/sendEmail.json", {
+      method: "POST",
+      body: formData,
+    });
+
+
+    const data: formData = await response.json();
+
+
+    if (response.status === 200) {
+      console.log(data.message);
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(`Error: ${error.message}`);
+    }
+  }
+}
+---
+
+
+<form method="POST">
+    <label>
+        Name
+        <input type="text" id="name" name="name" required />
+    </label>
+    <label>
+        Email
+        <input type="email" id="email" name="email" required />
+    </label>
+    <label>
+        Message
+        <textarea id="message" name="message" required />
+    </label>
+    <button>Send</button>
+</form>
+```
+
+This code creates an Astro component that renders a form and handles the form submission. When the form is submitted, the component will send a POST request to the `/api/sendEmail.json` endpoint created in the previous step with the form data.
+
+File Extension
+
+Astro requires an absolute URL, which is why you should use `Astro.url + "/api/sendEmail.json`. If you use a relative path the post request will fail.
+
+Additionally, adding the `export const prerender = false;` will enable SSR; otherwise, the component will be static and unable to send a post request. If you don't enable it inside the component then you will need to enable SSR via the [template directive](https://docs.astro.build/en/reference/directives-reference/).
+
+After creating the `AstroForm` component, add the component to your main index file located in the `src/pages` directory. Below is an example of how the main index file should look with the `AstroForm` component added.
+
+```typescript
+---
+import AstroForm from '../components/AstroForm.astro'
+---
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <AstroForm />
+  </body>
+</html>
+```
+
+## 6. Conclusion
+
+You now have an Astro form component that sends emails via Resend and Cloudflare Workers. You can view your project locally via `npm run preview`, or you can deploy it live via `npm run deploy`.
+
+</page>
+

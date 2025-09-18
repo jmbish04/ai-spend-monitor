@@ -1,0 +1,2219 @@
+# --- METADATA ---
+# Source-URL: https://developers.cloudflare.com/pipelines/llms-full.txt
+# Category: ai_and_rag
+# Service: pipelines (Pipelines)
+# Artifact: llms-full — LLM-optimized full context export of the docs
+# Retrieved-At: 2025-08-10T22:45:12.284156-07:00
+# Content-SHA256: 435eb47d49079a028afcd417931c44d922356416dba6768ac898dea4dd0ee5c4
+# --- END METADATA ---
+
+<page>
+---
+title: Pipelines · Cloudflare Pipelines Docs
+description: Cloudflare Pipelines lets you ingest high volumes of real time
+  data, without managing any infrastructure. Ingested data is automatically
+  batched, written to output files, and delivered to an R2 bucket in your
+  account. You can use Pipelines to build a data lake of clickstream data, or to
+  store events from a Worker.
+lastUpdated: 2025-05-27T15:16:17.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/
+  md: https://developers.cloudflare.com/pipelines/index.md
+---
+
+Ingest real time data streams and load into R2, using Cloudflare Pipelines.
+
+Available on Paid plans
+
+Cloudflare Pipelines lets you ingest high volumes of real time data, without managing any infrastructure. Ingested data is automatically batched, written to output files, and delivered to an [R2 bucket](https://developers.cloudflare.com/r2/) in your account. You can use Pipelines to build a data lake of clickstream data, or to store events from a Worker.
+
+## Create your first pipeline
+
+You can setup a pipeline to ingest data via HTTP, and deliver output to R2, with a single command:
+
+```sh
+$ npx wrangler@latest pipelines create my-clickstream-pipeline --r2-bucket my-bucket
+
+
+🌀 Authorizing R2 bucket "my-bucket"
+🌀 Creating pipeline named "my-clickstream-pipeline"
+✅ Successfully created pipeline my-clickstream-pipeline
+
+
+Id:    0e00c5ff09b34d018152af98d06f5a1xvc
+Name:  my-clickstream-pipeline
+Sources:
+  HTTP:
+    Endpoint:        https://0e00c5ff09b34d018152af98d06f5a1xvc.pipelines.cloudflare.com/
+    Authentication:  off
+    Format:          JSON
+  Worker:
+    Format:  JSON
+Destination:
+  Type:         R2
+  Bucket:       my-bucket
+  Format:       newline-delimited JSON
+  Compression:  GZIP
+Batch hints:
+  Max bytes:     100 MB
+  Max duration:  300 seconds
+  Max records:   100,000
+
+
+🎉 You can now send data to your pipeline!
+
+
+Send data to your pipeline's HTTP endpoint:
+curl "https://0e00c5ff09b34d018152af98d06f5a1xvc.pipelines.cloudflare.com/" -d '[{ ...JSON_DATA... }]'
+
+
+To send data to your pipeline from a Worker, add the following configuration to your config file:
+{
+  "pipelines": [
+    {
+      "pipeline": "my-clickstream-pipeline",
+      "binding": "PIPELINE"
+    }
+  ]
+}
+```
+
+Refer to the [getting started guide](https://developers.cloudflare.com/pipelines/getting-started) to start building with pipelines.
+
+Note
+
+While in beta, you will not be billed for Pipelines usage. You will be billed only for [R2 usage](https://developers.cloudflare.com/r2/pricing/).
+
+***
+
+## Features
+
+### HTTP as a source
+
+Each pipeline generates a globally scalable HTTP endpoint, which supports authentication and CORS settings.
+
+[Use HTTP as a source](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http)
+
+### Workers API
+
+Send data to a pipeline directly from a Cloudflare Worker.
+
+[Use Workers API](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/workers-apis/)
+
+### Customize output settings
+
+Define batch sizes and enable compression to generate output files that are efficient to query.
+
+[Use Customize output settings](https://developers.cloudflare.com/pipelines/build-with-pipelines/output-settings)
+
+***
+
+## Related products
+
+**[R2](https://developers.cloudflare.com/r2/)**
+
+Cloudflare R2 Object Storage allows developers to store large amounts of unstructured data without the costly egress bandwidth fees associated with typical cloud storage services.
+
+**[Workers](https://developers.cloudflare.com/workers/)**
+
+Cloudflare Workers allows developers to build serverless applications and deploy instantly across the globe for exceptional performance, reliability, and scale.
+
+***
+
+## More resources
+
+[Limits](https://developers.cloudflare.com/pipelines/platform/limits/)
+
+Learn about pipelines limits.
+
+[@CloudflareDev](https://x.com/cloudflaredev)
+
+Follow @CloudflareDev on Twitter to learn about product announcements, and what is new in Cloudflare Workers.
+
+[Developer Discord](https://discord.cloudflare.com)
+
+Connect with the Workers community on Discord to ask questions, show what you are building, and discuss the platform with other developers.
+
+</page>
+
+<page>
+---
+title: 404 - Page Not Found · Cloudflare Pipelines Docs
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/404/
+  md: https://developers.cloudflare.com/pipelines/404/index.md
+---
+
+# 404
+
+Check the URL, try using our [search](https://developers.cloudflare.com/search/) or try our LLM-friendly [llms.txt directory](https://developers.cloudflare.com/llms.txt).
+
+</page>
+
+<page>
+---
+title: Build with Pipelines · Cloudflare Pipelines Docs
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/pipelines/build-with-pipelines/
+  md: https://developers.cloudflare.com/pipelines/build-with-pipelines/index.md
+---
+
+
+</page>
+
+<page>
+---
+title: Concepts · Cloudflare Pipelines Docs
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/pipelines/concepts/
+  md: https://developers.cloudflare.com/pipelines/concepts/index.md
+---
+
+
+</page>
+
+<page>
+---
+title: Getting started wih Pipelines · Cloudflare Pipelines Docs
+description: Cloudflare Pipelines allows you to ingest load high volumes of real
+  time streaming data, and load into R2 Object Storage, without managing any
+  infrastructure.
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/getting-started/
+  md: https://developers.cloudflare.com/pipelines/getting-started/index.md
+---
+
+Cloudflare Pipelines allows you to ingest load high volumes of real time streaming data, and load into [R2 Object Storage](https://developers.cloudflare.com/r2/), without managing any infrastructure.
+
+By following this guide, you will:
+
+1. Setup an R2 bucket.
+2. Create a pipeline, with HTTP as a source, and an R2 bucket as a sink.
+3. Send data to your pipeline's HTTP ingestion endpoint.
+4. Verify the output delivered to R2.
+
+Note
+
+Pipelines is in **public beta**, and any developer with a [paid Workers plan](https://developers.cloudflare.com/workers/platform/pricing/#workers) can start using Pipelines immediately.
+
+***
+
+## Prerequisites
+
+To use Pipelines, you will need:
+
+1. Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up/workers-and-pages).
+2. Install [`Node.js`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Node.js version manager
+
+Use a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues and change Node.js versions. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), discussed later in this guide, requires a Node version of `16.17.0` or later.
+
+## 1. Set up an R2 bucket
+
+Create a bucket by following the [get started guide for R2](https://developers.cloudflare.com/r2/get-started/), or by running the command below:
+
+```sh
+npx wrangler r2 bucket create my-bucket
+```
+
+Save the bucket name for the next step.
+
+## 2. Create a Pipeline
+
+To create a pipeline using Wrangler, run the following command in a terminal, and specify:
+
+* The name of your pipeline
+* The name of the R2 bucket you created in step 1
+
+```sh
+npx wrangler pipelines create my-clickstream-pipeline --r2-bucket my-bucket --batch-max-seconds 5 --compression none
+```
+
+After running this command, you will be prompted to authorize Cloudflare Workers Pipelines to create an R2 API token on your behalf. These tokens used by your pipeline when loading data into your bucket. You can approve the request through the browser link which will open automatically.
+
+Choosing a pipeline name
+
+When choosing a name for your pipeline:
+
+* Ensure it is descriptive and relevant to the type of events you intend to ingest. You cannot change the name of the pipeline after creating it.
+* The pipeline name must be between 1 and 63 characters long.
+* The name cannot contain special characters outside dashes (`-`).
+* The name must start and end with a letter or a number.
+
+You will notice two optional flags are set while creating the pipeline: `--batch-max-seconds` and `--compression`. These flags are added to make it faster for you to see the output of your first pipeline. For production use cases, we recommend keeping the default settings.
+
+Once you create your pipeline, you will receive a summary of your pipeline's configuration, as well as an HTTP endpoint which you can post data to:
+
+```sh
+🌀 Authorizing R2 bucket "my-bucket"
+🌀 Creating pipeline named "my-clickstream-pipeline"
+✅ Successfully created pipeline my-clickstream-pipeline
+
+
+Id:    [PIPELINE-ID]
+Name:  my-clickstream-pipeline
+Sources:
+  HTTP:
+    Endpoint:        https://[PIPELINE-ID].pipelines.cloudflare.com/
+    Authentication:  off
+    Format:          JSON
+  Worker:
+    Format:  JSON
+Destination:
+  Type:         R2
+  Bucket:       my-bucket
+  Format:       newline-delimited JSON
+  Compression:  GZIP
+Batch hints:
+  Max bytes:     100 MB
+  Max duration:  300 seconds
+  Max records:   100,000
+
+
+🎉 You can now send data to your Pipeline!
+
+
+Send data to your Pipeline's HTTP endpoint:
+curl "https://[PIPELINE-ID].pipelines.cloudflare.com/" -d '[{ ...JSON_DATA... }]'
+
+
+To send data to your Pipeline from a Worker, add the following configuration to your config file:
+{
+  "pipelines": [
+    {
+      "pipeline": "my-clickstream-pipeline",
+      "binding": "PIPELINE"
+    }
+  ]
+}
+```
+
+## 3. Post data to your pipeline
+
+Use a curl command in your terminal to post an array of JSON objects to the endpoint you received in step 1.
+
+```sh
+curl -H "Content-Type:application/json" \
+    -d '[{"event":"viewedCart", "timestamp": "2025-04-03T15:42:30Z"},{"event":"cartAbandoned", "timestamp": "2025-04-03T15:42:37Z"}]' \
+    <HTTP-ENDPOINT>
+```
+
+Once the pipeline successfully accepts the data, you will receive a success message.
+
+You can continue posting data to the pipeline. The pipeline will automatically buffer ingested data. Based on the batch settings (`--batch-max-seconds`) specified in step 2, a batch will be generated every 5 seconds, turned into a file, and written out to your R2 bucket.
+
+## 4. Verify in R2
+
+Open the [R2 dashboard](https://dash.cloudflare.com/?to=/:account/r2/overview), and navigate to the R2 bucket you created in step 1. You will see a directory, labeled with today's date (such as `event_date=2025-04-05`). Click on the directory, and you'll see a sub-directory with the current hour (such as `hr=04`). You should see a newline delimited JSON file, containing the data you posted in step 3. Download the file, and open it in a text editor of your choice, to verify that the data posted in step 2 is present.
+
+***
+
+## Next steps
+
+* Learn about how to [setup authentication, or CORS settings](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http), on your HTTP endpoint.
+* Send data to your Pipeline from a Cloudflare Worker using the [Workers API documentation](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/workers-apis).
+
+If you have any feature requests or notice any bugs, share your feedback directly with the Cloudflare team by joining the [Cloudflare Developers community on Discord](https://discord.cloudflare.com).
+
+</page>
+
+<page>
+---
+title: Observability · Cloudflare Pipelines Docs
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/pipelines/observability/
+  md: https://developers.cloudflare.com/pipelines/observability/index.md
+---
+
+* [Metrics and analytics](https://developers.cloudflare.com/pipelines/observability/metrics/)
+
+</page>
+
+<page>
+---
+title: Pipelines REST API · Cloudflare Pipelines Docs
+lastUpdated: 2025-04-09T20:22:15.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/pipelines-api/
+  md: https://developers.cloudflare.com/pipelines/pipelines-api/index.md
+---
+
+
+</page>
+
+<page>
+---
+title: Platform · Cloudflare Pipelines Docs
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/pipelines/platform/
+  md: https://developers.cloudflare.com/pipelines/platform/index.md
+---
+
+* [Pricing](https://developers.cloudflare.com/pipelines/platform/pricing/)
+* [Limits](https://developers.cloudflare.com/pipelines/platform/limits/)
+* [Wrangler commands](https://developers.cloudflare.com/pipelines/platform/wrangler-commands/)
+
+</page>
+
+<page>
+---
+title: Tutorials · Cloudflare Pipelines Docs
+description: View tutorials to help you get started with Pipelines.
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/tutorials/
+  md: https://developers.cloudflare.com/pipelines/tutorials/index.md
+---
+
+View tutorials to help you get started with Pipelines.
+
+| Name | Last Updated | Type | Difficulty |
+| - | - | - | - |
+| [Ingest data from a Worker, and analyze using MotherDuck](https://developers.cloudflare.com/pipelines/tutorials/query-data-with-motherduck/) | 3 months ago | 📝 Tutorial | Intermediate |
+| [Create a data lake of clickstream data](https://developers.cloudflare.com/pipelines/tutorials/send-data-from-client/) | 3 months ago | 📝 Tutorial | Intermediate |
+
+</page>
+
+<page>
+---
+title: Configure output settings · Cloudflare Pipelines Docs
+description: Pipelines convert a stream of records into output files and deliver
+  the files to an R2 bucket in your account. This guide details how you can
+  change the output destination and customize batch settings to generate query
+  ready files.
+lastUpdated: 2025-04-21T13:42:38.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/build-with-pipelines/output-settings/
+  md: https://developers.cloudflare.com/pipelines/build-with-pipelines/output-settings/index.md
+---
+
+Pipelines convert a stream of records into output files and deliver the files to an R2 bucket in your account. This guide details how you can change the output destination and customize batch settings to generate query ready files.
+
+## Configure an R2 bucket as a destination
+
+To create or update a pipeline using Wrangler, run the following command in a terminal:
+
+```sh
+npx wrangler pipelines create [PIPELINE-NAME] --r2-bucket [R2-BUCKET-NAME]
+```
+
+After running this command, you will be prompted to authorize Cloudflare Workers Pipelines to create an R2 API token on your behalf. Your pipeline uses the R2 API token to load data into your bucket. You can approve the request through the browser link which will open automatically.
+
+If you prefer not to authenticate this way, you can pass your [R2 API Token](https://developers.cloudflare.com/r2/api/tokens/) to Wrangler:
+
+```sh
+npx wrangler pipelines create [PIPELINE-NAME] --r2 [R2-BUCKET-NAME] --r2-access-key-id [ACCESS-KEY-ID] --r2-secret-access-key [SECRET-ACCESS-KEY]
+```
+
+## File format and compression
+
+Output files are generated as Newline Delimited JSON files (`ndjson`). Each line in an output file maps to a single record.
+
+By default, output files are compressed in the `gzip` format. Compression can be turned off using the `--compression` flag:
+
+```sh
+npx wrangler pipelines update [PIPELINE-NAME] --compression none
+```
+
+Output files are named using a [ULID](https://github.com/ulid/spec) slug, followed by an extension.
+
+## Customize batch behavior
+
+When configuring your pipeline, you can define how records are batched before they are delivered to R2. Batches of records are written out to a single output file.
+
+Batching can:
+
+* Reduce the number of output files written to R2 and thus reduce the [cost of writing data to R2](https://developers.cloudflare.com/r2/pricing/#class-a-operations).
+* Increase the size of output files making them more efficient to query.
+
+There are three ways to define how ingested data is batched:
+
+1. `batch-max-mb`: The maximum amount of data that will be batched in megabytes. Default, and maximum, is `100 MB`.
+2. `batch-max-rows`: The maximum number of rows or events in a batch before data is written. Default, and maximum, is `10,000,000` rows.
+3. `batch-max-seconds`: The maximum duration of a batch before data is written in seconds. Default, and maximum, is `300 seconds`.
+
+Batch definitions are hints. A pipeline will follow these hints closely, but batches might not be exact.
+
+All three batch definitions work together and whichever limit is reached first triggers the delivery of a batch.
+
+For example, a `batch-max-mb` = 100 MB and a `batch-max-seconds` = 100 means that if 100 MB of events are posted to the pipeline, the batch will be delivered. However, if it takes longer than 100 seconds for 100 MB of events to be posted, a batch of all the messages that were posted during those 100 seconds will be created.
+
+### Defining batch settings using Wrangler
+
+You can use the following batch settings flags while creating or updating a pipeline:
+
+* `--batch-max-mb`
+* `--batch-max-rows`
+* `--batch-max-seconds`
+
+For example:
+
+```sh
+npx wrangler pipelines update [PIPELINE-NAME] --batch-max-mb 100 --batch-max-rows 10000 --batch-max-seconds 300
+```
+
+### Batch size limits
+
+| Setting | Default | Minimum | Maximum |
+| - | - | - | - |
+| Maximum Batch Size `batch-max-mb` | 100 MB | 1 MB | 100 MB |
+| Maximum Batch Timeout `batch-max-seconds` | 300 seconds | 1 second | 300 seconds |
+| Maximum Batch Rows `batch-max-rows` | 10,000,000 rows | 1 row | 10,000,000 rows |
+
+## Deliver partitioned data
+
+Partitioning organizes data into directories based on specific fields to improve query performance. Partitions reduce the amount of data scanned for queries, enabling faster reads.
+
+Note
+
+By default, Pipelines partition data by event date and time. This will be customizable in the future.
+
+Output files are prefixed with event date and hour. For example, the output from a Pipeline in your R2 bucket might look like this:
+
+```sh
+- event_date=2025-04-01/hr=15/01JQWBZCZBAQZ7RJNZHN38JQ7V.json.gz
+- event_date=2025-04-01/hr=15/01JQWC16FXGP845EFHMG1C0XNW.json.gz
+```
+
+## Deliver data to a prefix
+
+You can specify an optional prefix for all the output files stored in your specified R2 bucket, using the flag `--r2-prefix`.
+
+For example:
+
+```sh
+npx wrangler pipelines update [PIPELINE-NAME] --r2-prefix test
+```
+
+After running the above command, the output files generated by your pipeline will be stored under the prefix `test`. Files will remain partitioned. Your output will look like this:
+
+```sh
+- test/event_date=2025-04-01/hr=15/01JQWBZCZBAQZ7RJNZHN38JQ7V.json.gz
+- test/event_date=2025-04-01/hr=15/01JQWC16FXGP845EFHMG1C0XNW.json.gz
+```
+
+</page>
+
+<page>
+---
+title: Increase pipeline throughput · Cloudflare Pipelines Docs
+description: A pipeline's maximum throughput can be increased by increasing the
+  shard count. A single shard can handle approximately 7,000 requests per
+  second, or can ingest 7 MB/s of data.
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/build-with-pipelines/shards/
+  md: https://developers.cloudflare.com/pipelines/build-with-pipelines/shards/index.md
+---
+
+A pipeline's maximum throughput can be increased by increasing the shard count. A single shard can handle approximately 7,000 requests per second, or can ingest 7 MB/s of data.
+
+By default, each pipeline is configured with two shards. To set the shard count, use the `--shard-count` flag while creating or updating a pipeline:
+
+```sh
+$ npx wrangler pipelines update [PIPELINE-NAME] --shard-count 10
+```
+
+Note
+
+The default shard count will be set to `auto` in the future, with support for automatic horizontal scaling.
+
+## How shards work
+
+![Pipeline shards](https://developers.cloudflare.com/_astro/shards.CQ5Dnw1U_ZLRW1M.webp)
+
+Each pipeline is composed of stateless, independent shards. These shards are spun up when a pipeline is created. Each shard is composed of layers of [Durable Objects](https://developers.cloudflare.com/durable-objects). The Durable Objects buffer data, replicate for durability, handle compression, and delivery to R2.
+
+When a record is sent to a pipeline:
+
+1. The Pipelines [Worker](https://developers.cloudflare.com/workers) receives the record.
+2. The record is routed to to one of the shards.
+3. The record is handled by a set of Durable Objects, which commit the record to storage and replicate for durability.
+4. Records accumulate until the [batch definitions](https://developers.cloudflare.com/pipelines/build-with-pipelines/output-settings/#customize-batch-behavior) are met.
+5. The batch is written to an output file and optionally compressed.
+6. The output file is delivered to the configured R2 bucket.
+
+Increasing the number of shards will increase the maximum throughput of a pipeline, as well as the number of output files created.
+
+### Example
+
+Your workload might require making 5,000 requests per second to a pipeline. If you create a pipeline with a single shard, all 5,000 requests will be routed to the same shard. If your pipeline has been configured with a maximum batch duration of 1 second, every second, all 5,000 requests will be batched, and a single file will be delivered.
+
+Increasing the shard count to 2 will double the number of output files. The 5,000 requests will be split into 2,500 requests to each shard. Every second, each shard will create a batch of data, and deliver to R2.
+
+## Considerations while increasing the shard count
+
+Increasing the shard count also increases the number of output files that your pipeline generates. This in turn increases the [cost of writing data to R2](https://developers.cloudflare.com/r2/pricing/#class-a-operations), as each file written to R2 counts as a single class A operation. Additionally, smaller files are slower, and more expensive, to query. Rather than setting the maximum, choose a shard count based on your workload needs.
+
+## Determine the right number of shards
+
+Choose a shard count based on these factors:
+
+* The number of requests per second you will make to your pipeline
+* The amount of data per second you will send to your pipeline
+
+Each shard is capable of handling approximately 7,000 requests per second, or ingesting 7 MB/s of data. Either factor might act as the bottleneck, so choose the shard count based on the higher number.
+
+For example, if you estimate that you will ingest 70 MB/s, making 70,000 requests per second, setup a pipeline with 10 shards. However, if you estimate that you will ingest 70 MB/s while making 100,000 requests per second, setup a pipeline with 15 shards.
+
+## Limits
+
+| Setting | Default | Minimum | Maximum |
+| - | - | - | - |
+| Shards per pipeline `shard-count` | 2 | 1 | 15 |
+
+</page>
+
+<page>
+---
+title: Sources · Cloudflare Pipelines Docs
+description: "Pipelines let you ingest data from the following sources:"
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/
+  md: https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/index.md
+---
+
+Pipelines let you ingest data from the following sources:
+
+* [HTTP Clients](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http), with optional authentication and CORS settings
+* [Cloudflare Workers](https://developers.cloudflare.com/workers/), using the [Pipelines Workers API](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/workers-apis)
+
+Multiple sources can be active on a single pipeline simultaneously. For example, you can create a pipeline which accepts data from Workers and via HTTP. There is no limit to the number of source clients. Multiple Workers can be configured to send data to the same pipeline.
+
+Each pipeline can ingest up to 100 MB/s of data or accept up to 100,000 requests per second, aggregated across all sources.
+
+## Configuring allowed sources
+
+By default, ingestion via HTTP and from Workers is turned on. You can configure the allowed sources by using the `--source` flag while creating or updating a pipeline.
+
+For example, to create a pipeline which only accepts data via a Worker, you can run this command:
+
+```sh
+$ npx wrangler pipelines create [PIPELINE-NAME] --r2-bucket [R2-BUCKET-NAME] --source worker
+```
+
+## Accepted data formats
+
+Pipelines accept arrays of valid JSON objects. You can send multiple objects in a single request, provided the total data volume is within the [documented limits](https://developers.cloudflare.com/pipelines/platform/limits). Sending data in a different format will result in an error.
+
+</page>
+
+<page>
+---
+title: How Pipelines work · Cloudflare Pipelines Docs
+description: Cloudflare Pipelines let you ingest data from a source and deliver
+  to a sink. It is built for high volume, real time data streams. Each pipeline
+  can ingest up to 100 MB/s of data, via HTTP or a Worker, and load the data as
+  files in an R2 bucket.
+lastUpdated: 2025-05-27T15:16:17.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/concepts/how-pipelines-work/
+  md: https://developers.cloudflare.com/pipelines/concepts/how-pipelines-work/index.md
+---
+
+Cloudflare Pipelines let you ingest data from a source and deliver to a sink. It is built for high volume, real time data streams. Each pipeline can ingest up to 100 MB/s of data, via HTTP or a Worker, and load the data as files in an R2 bucket.
+
+![Pipelines Architecture](https://developers.cloudflare.com/_astro/architecture.K-Ylbw7m_2tyAUE.webp)
+
+## Supported sources, data formats, and sinks
+
+### Sources
+
+Pipelines supports the following sources:
+
+* [HTTP Clients](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http), with optional authentication and CORS settings
+* [Cloudflare Workers](https://developers.cloudflare.com/workers/), using the [Pipelines Workers API](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/workers-apis)
+
+Multiple sources can be active on a single pipeline simultaneously. For example, you can create a pipeline which accepts data from Workers and via HTTP. Multiple workers can be configured to send data to the same pipeline. There is no limit to the number of source clients.
+
+### Data format
+
+Pipelines can ingest JSON serializable records.
+
+### Sinks
+
+Pipelines supports delivering data into [R2 Object Storage](https://developers.cloudflare.com/r2/). Ingested data is delivered as newline delimited JSON files (`ndjson`) with optional compression. Multiple pipelines can be configured to deliver data to the same R2 bucket.
+
+## Data durability
+
+Pipelines are designed to be reliable. Any data which is successfully ingested will be delivered, at least once, to the configured R2 bucket, provided that the [R2 API credentials associated with a pipeline](https://developers.cloudflare.com/r2/api/tokens/) remain valid. Ordering of records is best effort.
+
+Each pipeline maintains a storage buffer. Requests to send data to a pipeline receive a successful response only after the data is committed to this storage buffer.
+
+Ingested data accumulates, until a sufficiently [large batch of data](https://developers.cloudflare.com/pipelines/build-with-pipelines/output-settings/#customize-batch-behavior) has been filled. Once the batch reaches its target size, the entire batch of data is converted to a file and delivered to R2.
+
+Transient failures, such as network connectivity issues, are automatically retried.
+
+However, if the [R2 API credentials associated with a pipeline](https://developers.cloudflare.com/r2/api/tokens/) expire or are revoked, data delivery will fail. In this scenario, some data might continue to accumulate in the buffers, but the pipeline will eventually start rejecting requests once the buffers are full.
+
+## Updating a pipeline
+
+Pipelines update without dropping records. Updating an existing pipeline creates a new instance of the pipeline. Requests are gracefully re-routed to the new instance. The old instance continues to write data into the configured sink. Once the old instance is fully drained, it is spun down.
+
+This means that updates might take a few minutes to go into effect. For example, if you update a pipeline's sink, previously ingested data might continue to be delivered into the old sink.
+
+## Backpressure behavior
+
+If you send too much data, the pipeline will communicate backpressure by returning a 429 response to HTTP requests, or throwing an error if using the Workers API. Refer to the [limits](https://developers.cloudflare.com/pipelines/platform/limits) to learn how much volume a single pipeline can support. You might see 429 responses if you are sending too many requests or sending too much data.
+
+If you are consistently seeing backpressure from your pipeline, consider the following strategies:
+
+* Increase the [shard count](https://developers.cloudflare.com/pipelines/build-with-pipelines/shards) to increase the maximum throughput of your pipeline.
+* Send data to a second pipeline if you receive an error. You can set up multiple pipelines to write to the same R2 bucket.
+
+</page>
+
+<page>
+---
+title: Metrics and analytics · Cloudflare Pipelines Docs
+description: Pipelines expose metrics which allow you to measure data ingested,
+  requests made, and data delivered.
+lastUpdated: 2025-05-14T00:02:06.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/observability/metrics/
+  md: https://developers.cloudflare.com/pipelines/observability/metrics/index.md
+---
+
+Pipelines expose metrics which allow you to measure data ingested, requests made, and data delivered.
+
+The metrics displayed in the [Cloudflare dashboard](https://dash.cloudflare.com/) are queried from Cloudflare’s [GraphQL Analytics API](https://developers.cloudflare.com/analytics/graphql-api/). You can access the metrics [programmatically](#query-via-the-graphql-api) via GraphQL or HTTP client.
+
+## Metrics
+
+### Ingestion
+
+Pipelines export the below metrics within the `pipelinesIngestionAdaptiveGroups` dataset.
+
+| Metric | GraphQL Field Name | Description |
+| - | - | - |
+| Ingestion Events | `count` | Number of ingestion events, or requests made, to a pipeline. |
+| Ingested Bytes | `ingestedBytes` | Total number of bytes ingested |
+| Ingested Records | `ingestedRecords` | Total number of records ingested |
+
+The `pipelinesIngestionAdaptiveGroups` dataset provides the following dimensions for filtering and grouping queries:
+
+* `pipelineId` - ID of the pipeline
+* `datetime` - Timestamp of the ingestion event
+* `date` - Timestamp of the ingestion event, truncated to the start of a day
+* `datetimeHour` - Timestamp of the ingestion event, truncated to the start of an hour
+* `datetimeMinute` - Timestamp of the ingestion event, truncated to the start of a minute
+
+### Delivery
+
+Pipelines export the below metrics within the `pipelinesDeliveryAdaptiveGroups` dataset.
+
+| Metric | GraphQL Field Name | Description |
+| - | - | - |
+| Ingestion Events | `count` | Number of delivery events to an R2 bucket |
+| Delivered Bytes | `deliveredBytes` | Total number of bytes ingested |
+
+The `pipelinesDeliverynAdaptiveGroups` dataset provides the following dimensions for filtering and grouping queries:
+
+* `pipelineId` - ID of the pipeline
+* `datetime` - Timestamp of the delivery event
+* `date` - Timestamp of the delivery event, truncated to the start of a day
+* `datetimeHour` - Timestamp of the delivery event, truncated to the start of an hour
+* `datetimeMinute` - Timestamp of the delivery event, truncated to the start of a minute
+
+## Query via the GraphQL API
+
+You can programmatically query analytics for your pipelines via the [GraphQL Analytics API](https://developers.cloudflare.com/analytics/graphql-api/). This API queries the same datasets as the Cloudflare dashboard and supports GraphQL [introspection](https://developers.cloudflare.com/analytics/graphql-api/features/discovery/introspection/).
+
+Pipelines GraphQL datasets require an `accountTag` filter with your Cloudflare account ID.
+
+### Measure total bytes & records ingested over time period
+
+```graphql
+query PipelineIngestion(
+  $accountTag: string!
+  $pipelineId: string!
+  $datetimeStart: Time!
+  $datetimeEnd: Time!
+) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      pipelinesIngestionAdaptiveGroups(
+        limit: 10000
+        filter: {
+          pipelineId: $pipelineId
+          datetime_geq: $datetimeStart
+          datetime_leq: $datetimeEnd
+        }
+      ) {
+        sum {
+          ingestedBytes
+          ingestedRecords
+        }
+      }
+    }
+  }
+}
+```
+
+[Run in GraphQL API Explorer](https://graphql.cloudflare.com/explorer?query=I4VwpgTgngBACgSwA5gDYIHZgJIYOZgDOALggPYYAUAUDDACQCGAxs2SBsQCqN4BcMEhEx4AhLQZJkaTDgAmAoSPF16cxsTCkAtmADKxRhGICuCXSobrNOsAFEMCmGYvUAlDADeEgG4IwAO6QXhJ0LGwcxISUAGYIqJoQAp4w4eycPPwMaZGZMAC+Ht50JTBSKOhYhLgEJOQYAILqSKQ+YADiEOxI0aGlMOjaCCYwAIwADJPjfaVxCZDJM-3lMljYTvQrlfJLpdZa5mAA+gTAAmoaB7oGRsS7Jfu2R6hgZ1aXtg5y9-lLRfeEEDaEL9foiIiaOQAISgmkI9zo4JIYDkACUwGwIHJ4aC6L9QfiSoTfvkgA\&variables=N4IghgxhD2CuB2AXAKmA5iAXCAggYTwHkBVAOWQH0BJAERABoQAHASyYFMAbF+dqgEywgASgFEACgBl8oigHUqyABLU6jfmETtELALbsAyojAAnREIBMABgsBWALRWA7PYCMANmRWAHJlsBOPwsALQYQDS0dfVF4QWxrO0cXD2RXABY-QNsQkABfIA)
+
+### Measure volume of data delivered
+
+```graphql
+query PipelineDelivery(
+  $accountTag: string!
+  $pipelineId: string!
+  $datetimeStart: Time!
+  $datetimeEnd: Time!
+) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      pipelinesDeliveryAdaptiveGroups(
+        limit: 10000
+        filter: {
+          pipelineId: $pipelineId
+          datetime_geq: $datetimeStart
+          datetime_leq: $datetimeEnd
+        }
+      ) {
+        sum {
+          deliveredBytes
+        }
+      }
+    }
+  }
+}
+```
+
+[Run in GraphQL API Explorer](https://graphql.cloudflare.com/explorer?query=I4VwpgTgngBACgSwA5gDYIHZgCJoQN0igAoAoGGAEgEMBjWgexAwBcAVagcwC4YBnFhEycAhOSpJkeLAEkAJrwFCMo8ZTnUWYFggC2YAMotqEFrzZ6wYius3bLAUQwKYF-WICUMAN7j8CMAB3SB9xCjpGZhY+YgAzBFQtCF5vGAimVg4eKnSorJgAXy9fClKYSRR0LD5cdEJoAEENJB1CAHEIJiQYsLKYdF0EMxgARgAGCbHesvjEyBTpvorpMHleSmWq1blFso0tHX0AfU4wYHX9+30jExZd0svDsCPUM4u7J6cdvtKCxeL7nwQLpQj89nh6mA5AAhKBaPj3P4-JG-cR-ApAA\&variables=N4IghgxhD2CuB2AXAKmA5iAXCAggYTwHkBVAOWQH0BJAERABoQAHASyYFMAbF+dqgEywgASgFEACgBl8oigHUqyABLU6jfmETtELALbsAyojAAnREIBMABgsBWALRWA7PYCMANmRWAHJlsBOPwsALQYQDS0dfVF4QWxrO0cXD2RXABY-QNsQkABfIA)
+
+</page>
+
+<page>
+---
+title: Limits · Cloudflare Pipelines Docs
+description: If you consistently exceed the requests per second or throughput
+  limits, your pipeline might not be able to keep up with the load. The pipeline
+  will communicate backpressure by returning a 429 response to HTTP requests or
+  throwing an error if using the Workers API.
+lastUpdated: 2025-04-10T15:21:35.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/platform/limits/
+  md: https://developers.cloudflare.com/pipelines/platform/limits/index.md
+---
+
+| Feature | Limit |
+| - | - |
+| Maximum requests per second, per pipeline | 14,000 default (configurable up to 100,000) |
+| Maximum payload per request | 1 MB |
+| Maximum data throughput per pipeline | 14 MB/s default (configurable up to 100 MB/s) |
+| Shards per pipeline | 2 default (configurable up to 15) |
+| Maximum batch size | 100 MB |
+| Maximum batch records | 10,000,000 |
+| Maximum batch duration | 300s |
+
+## Exceeding requests per second or throughput limits
+
+If you consistently exceed the requests per second or throughput limits, your pipeline might not be able to keep up with the load. The pipeline will communicate backpressure by returning a 429 response to HTTP requests or throwing an error if using the Workers API.
+
+If you are consistently seeing backpressure from your pipeline, consider the following strategies:
+
+* Increase the [shard count](https://developers.cloudflare.com/pipelines/build-with-pipelines/shards) to increase the maximum throughput of your pipeline.
+* Send data to a second pipeline if you receive an error. You can setup multiple pipelines to write to the same R2 bucket.
+
+</page>
+
+<page>
+---
+title: Cloudflare Pipelines - Pricing · Cloudflare Pipelines Docs
+description: During the first phase of the Pipelines open beta, you will not be
+  billed for Pipelines usage. You will be billed only for R2 usage.
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/platform/pricing/
+  md: https://developers.cloudflare.com/pipelines/platform/pricing/index.md
+---
+
+Note
+
+Pipelines requires a [Workers paid](https://developers.cloudflare.com/workers/platform/pricing/#workers) plan to use.
+
+During the first phase of the Pipelines open beta, you will not be billed for Pipelines usage. You will be billed only for [R2 usage](https://developers.cloudflare.com/r2/pricing).
+
+We plan to price based on the volume of data ingested into and delivered from Pipelines. We expect to begin charging by September 15, 2025, and will provide at least 30 days' notice beforehand.
+
+| | Workers Paid Users |
+| - | - |
+| Ingestion | 50 GB / month included + $0.02 / additional GB |
+| Delivery to R2 | 50 GB / month included + $0.02 / additional GB |
+
+</page>
+
+<page>
+---
+title: Wrangler commands · Cloudflare Pipelines Docs
+description: Create a new pipeline
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/platform/wrangler-commands/
+  md: https://developers.cloudflare.com/pipelines/platform/wrangler-commands/index.md
+---
+
+Note
+
+Pipelines is currently in open beta. Report Pipelines bugs in [GitHub](https://github.com/cloudflare/workers-sdk/issues/new/choose).
+
+### `create`
+
+Create a new pipeline
+
+```txt
+wrangler pipelines create <name> --r2 <r2-bucket-name> [OPTIONS]
+```
+
+* `name` string required
+  * The name of the pipeline to create
+* `--source` array optional
+  * List of allowed sources. Options: `http` or `worker`
+* `--require-http-auth` boolean optional
+  * Require Cloudflare API token to authenticate with the HTTPS endpoint. Defaults to `false`.
+* `--cors-origins` array optional
+  * CORS Origin allowlist for HTTP endpoint. Allows `*`. Defaults to an empty array.
+* `--batch-max-mb` number optional
+  * The maximum size of a batch in megabytes before data is written. Defaults to `100`. Must be between `1` and `100`.
+* `--batch-max-rows` number optional
+  * The maximum number of rows in a batch before data is written. Defaults to `10000000`. Must be between `1` and `10000000`.
+* `--batch-max-seconds` number optional
+  * The maximum duration of a batch before data is written in seconds. Defaults to `300`. Must be between `1` and `300`.
+* `--r2-bucket` string required
+  * The name of the R2 bucket used as the destination to store the data.
+* `--r2-bucket-access-key-id` string optional
+  * Access key ID used to authenticate with R2. Leave empty for oauth confirmation.
+* `--r2-bucket-secret-access-key` string optional
+  * Secret access key ID used to authenticate with R2. Leave empty for oauth confirmation.
+* `--r2-prefix` string optional
+  * Prefix for storing files in the destination bucket.
+* `--compression` string optional
+  * Type of compression to apply to output files. Choices: `none`, `gzip`, `deflate`
+* `--shard-count` number optional
+  * Number of pipeline shards. More shards handle higher request volume; fewer shards produce larger output files. Defaults to `2`. Must be between `1` and `15`.
+
+### `update`
+
+Update an existing pipeline
+
+```txt
+wrangler pipelines update <name> [OPTIONS]
+```
+
+* `name` string required
+  * The name of the pipeline to create
+* `--source` array optional
+  * List of allowed sources. Options: `http` or `worker`
+* `--require-http-auth` boolean optional
+  * Require Cloudflare API token to authenticate with the HTTPS endpoint. Defaults to `false`.
+* `--cors-origins` array optional
+  * CORS Origin allowlist for HTTP endpoint. Allows `*`. Defaults to an empty array.
+* `--batch-max-mb` number optional
+  * The maximum size of a batch in megabytes before data is written. Defaults to `100`. Must be between `1` and `100`.
+* `--batch-max-rows` number optional
+  * The maximum number of rows in a batch before data is written. Defaults to `10000000`. Must be between `1` and `10000000`.
+* `--batch-max-seconds` number optional
+  * The maximum duration of a batch before data is written in seconds. Defaults to `300`. Must be between `1` and `300`.
+* `--r2-bucket` string required
+  * The name of the R2 bucket used as the destination to store the data.
+* `--r2-bucket-access-key-id` string optional
+  * Access key ID used to authenticate with R2. Leave empty for oauth confirmation.
+* `--r2-bucket-secret-access-key` string optional
+  * Secret access key ID used to authenticate with R2. Leave empty for oauth confirmation.
+* `--r2-prefix` string optional
+  * Prefix for storing files in the destination bucket.
+* `--compression` string optional
+  * Type of compression to apply to output files. Choices: `none`, `gzip`, `deflate`
+* `--shard-count` number optional
+  * Number of pipeline shards. More shards handle higher request volume; fewer shards produce larger output files. Defaults to `2`. Must be between `1` and `15`.
+
+### `get`
+
+Get the configuration for an existing pipeline.
+
+```txt
+wrangler pipelines get <name> [OPTIONS]
+```
+
+* `name` string required
+  * The name of the pipeline to inspect
+
+### `delete`
+
+Deletes an existing pipeline
+
+```txt
+wrangler pipelines delete <name> [OPTIONS]
+```
+
+* `name` string required
+  * The name of the pipeline to delete
+
+### `list`
+
+Lists all pipelines in your account.
+
+```txt
+wrangler pipelines list [OPTIONS]
+```
+
+## Global commands
+
+The following global flags work on every command:
+
+* `--help` boolean
+  * Show help.
+* `--config` string (not supported by Pages)
+  * Path to your [Wrangler configuration file](https://developers.cloudflare.com/workers/wrangler/configuration/).
+* `--cwd` string
+  * Run as if Wrangler was started in the specified directory instead of the current working directory.
+
+</page>
+
+<page>
+---
+title: Ingest data from a Worker, and analyze using MotherDuck · Cloudflare
+  Pipelines Docs
+description: In this tutorial, you will learn how to ingest clickstream data to
+  a R2 bucket using Pipelines. You will use the Pipeline binding to send the
+  clickstream data to the R2 bucket from your Worker. You will also learn how to
+  connect the bucket to MotherDuck. You will then query the data using
+  MotherDuck.
+lastUpdated: 2025-04-30T09:59:18.000Z
+chatbotDeprioritize: false
+tags: MotherDuck
+source_url:
+  html: https://developers.cloudflare.com/pipelines/tutorials/query-data-with-motherduck/
+  md: https://developers.cloudflare.com/pipelines/tutorials/query-data-with-motherduck/index.md
+---
+
+In this tutorial, you will learn how to ingest clickstream data to a [R2 bucket](https://developers.cloudflare.com/r2) using Pipelines. You will use the Pipeline binding to send the clickstream data to the R2 bucket from your Worker. You will also learn how to connect the bucket to MotherDuck. You will then query the data using MotherDuck.
+
+For this tutorial, you will build a landing page of an e-commerce website. A user can click on the view button to view the product details or click on the add to cart button to add the product to their cart.
+
+## Prerequisites
+
+1. A [MotherDuck](https://motherduck.com/) account.
+2. Install [`Node.js`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Node.js version manager
+
+Use a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues and change Node.js versions. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), discussed later in this guide, requires a Node version of `16.17.0` or later.
+
+## 1. Create a new project
+
+You will create a new Worker project that will use [Static Assets](https://developers.cloudflare.com/workers/static-assets/) to serve the HTML file.
+
+Create a new Worker project by running the following commands:
+
+* npm
+
+  ```sh
+  npm create cloudflare@latest -- e-commerce-pipelines
+  ```
+
+* yarn
+
+  ```sh
+  yarn create cloudflare e-commerce-pipelines
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm create cloudflare@latest e-commerce-pipelines
+  ```
+
+For setup, select the following options:
+
+* For *What would you like to start with?*, choose `Hello World example`.
+* For *Which template would you like to use?*, choose `SSR / full-stack app`.
+* For *Which language do you want to use?*, choose `TypeScript`.
+* For *Do you want to use git for version control?*, choose `Yes`.
+* For *Do you want to deploy your application?*, choose `No` (we will be making some changes before deploying).
+
+Navigate to the `e-commerce-pipelines` directory:
+
+```sh
+cd e-commerce-pipelines
+```
+
+## 2. Update the frontend
+
+Using Static Assets, you can serve the frontend of your application from your Worker. The above step creates a new Worker project with a default `public/index.html` file. Update the `public/index.html` file with the following HTML code:
+
+Select to view the HTML code
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>E-commerce Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold"> E-Commerce Demo </a>
+        <div class="space-x-4 text-gray-800">
+          <a href="#">
+            <button class="border border-input bg-white h-10 px-4 py-2 rounded-md">Cart</button>
+          </a>
+          <a href="#">
+            <button class="border border-input bg-white h-10 px-4 py-2 rounded-md">Login</button>
+          </a>
+          <a href="#">
+            <button class="border border-input bg-white h-10 px-4 py-2 rounded-md">Signup</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-6">Our Products</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="products">
+        <!-- This section repeats for each product -->
+
+
+          <!-- End of product section -->
+        </div>
+      </div>
+
+
+      <script>
+        // demo products
+        const products = [
+          {
+            id: 1,
+            name: 'Smartphone X',
+            desc: 'Latest model with advanced features',
+            cost: 799,
+          },
+          {
+            id: 2,
+            name: 'Laptop Pro',
+            desc: 'High-performance laptop for professionals',
+            cost: 1299,
+          },
+          {
+            id: 3,
+            name: 'Wireless Earbuds',
+            desc: 'True wireless earbuds with noise cancellation',
+            cost: 149,
+          },
+          {
+            id: 4,
+            name: 'Smart Watch',
+            desc: 'Fitness tracker and smartwatch combo',
+            cost: 199,
+          },
+          {
+            id: 5,
+            name: '4K TV',
+            desc: 'Ultra HD smart TV with HDR',
+            cost: 599,
+          },
+          {
+            id: 6,
+            name: 'Gaming Console',
+            desc: 'Next-gen gaming system',
+            cost: 499,
+          },
+        ];
+
+
+        // function to render products
+        function renderProducts() {
+          console.log('Rendering products...');
+          const productContainer = document.getElementById('products');
+          productContainer.innerHTML = ''; // Clear existing content
+          products.forEach((product) => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('rounded-lg', 'border', 'bg-card', 'text-card-foreground', 'shadow-sm');
+            productElement.innerHTML = `
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h2 class="text-2xl font-semibold leading-none tracking-tight">${product.name}</h2>
+            </div>
+            <div class="p-6 pt-0">
+              <p>${product.desc}</p>
+              <p class="font-bold mt-2">$${product.cost}</p>
+            </div>
+            <div class="flex items-center p-6 pt-0 flex justify-between">
+              <button class="border px-4 py-2 rounded-md" onclick="handleClick('product_view', ${product.id})" name="">View Details</button>
+              <button class="border px-4 py-2 rounded-md" onclick="handleClick('add_to_cart', ${product.id})">Add to Cart</button>
+            </div>
+          `;
+            productContainer.appendChild(productElement);
+          });
+        }
+        renderProducts();
+
+
+        // function to handle click events
+        async function handleClick(action, id) {
+          console.log(`Clicked ${action} for product with id ${id}`);
+        }
+      </script>
+    </body>
+
+
+</html>
+```
+
+The above code does the following:
+
+* Uses Tailwind CSS to style the page.
+* Renders a list of products.
+* Adds a button to view the details of a product.
+* Adds a button to add a product to the cart.
+* Contains a `handleClick` function to handle the click events. This function logs the action and the product ID. In the next steps, you will add the logic to send the click events to your pipeline.
+
+## 3. Generate clickstream data
+
+You need to send clickstream data like the `timestamp`, `user_id`, `session_id`, and `device_info` to your pipeline. You can generate this data on the client side. Add the following function in the `<script>` tag in your `public/index.html`. This function gets the device information:
+
+```js
+function extractDeviceInfo(userAgent) {
+  let browser = "Unknown";
+  let os = "Unknown";
+  let device = "Unknown";
+
+
+  // Extract browser
+  if (userAgent.includes("Firefox")) {
+    browser = "Firefox";
+  } else if (userAgent.includes("Chrome")) {
+    browser = "Chrome";
+  } else if (userAgent.includes("Safari")) {
+    browser = "Safari";
+  } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+    browser = "Opera";
+  } else if (userAgent.includes("Edge")) {
+    browser = "Edge";
+  } else if (userAgent.includes("MSIE") || userAgent.includes("Trident/")) {
+    browser = "Internet Explorer";
+  }
+
+
+  // Extract OS
+  if (userAgent.includes("Win")) {
+    os = "Windows";
+  } else if (userAgent.includes("Mac")) {
+    os = "MacOS";
+  } else if (userAgent.includes("Linux")) {
+    os = "Linux";
+  } else if (userAgent.includes("Android")) {
+    os = "Android";
+  } else if (userAgent.includes("iOS")) {
+    os = "iOS";
+  }
+
+
+  // Extract device
+  const mobileKeywords = [
+    "Android",
+    "webOS",
+    "iPhone",
+    "iPad",
+    "iPod",
+    "BlackBerry",
+    "Windows Phone",
+  ];
+  device = mobileKeywords.some((keyword) => userAgent.includes(keyword))
+    ? "Mobile"
+    : "Desktop";
+
+
+  return { browser, os, device };
+}
+```
+
+Next, update the `handleClick` function to make a `POST` request to the `/api/clickstream` endpoint with the data:
+
+```js
+async function handleClick(action, id) {
+  console.log(`Clicked ${action} for product with id ${id}`);
+
+
+  const userAgent = window.navigator.userAgent;
+  const timestamp = new Date().toISOString();
+  const { browser, os, device } = extractDeviceInfo(userAgent);
+
+
+  const data = {
+    timestamp,
+    session_id: "1234567890abcdef", // For production use a unique session ID
+    user_id: "user" + Math.floor(Math.random() * 1000), // For production use a unique user ID
+    event_data: {
+      event_id: Math.floor(Math.random() * 1000),
+      event_type: action,
+      page_url: window.location.href,
+      timestamp,
+      product_id: id,
+    },
+    device_info: {
+      browser,
+      os,
+      device,
+      userAgent,
+    },
+    referrer: document.referrer,
+  };
+  try {
+    const response = await fetch("/api/clickstream", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ data }),
+    });
+    if (!response.ok) {
+      throw new Error("Failed to send data to pipeline");
+    }
+  } catch (error) {
+    console.error("Error sending data to pipeline:", error);
+  }
+}
+```
+
+The `handleClick` function does the following:
+
+* Gets the device information using the `extractDeviceInfo` function.
+* Creates a `POST` request to the `/api/clickstream` endpoint with the data.
+* Logs any errors that occur.
+
+## 4. Create an R2 bucket
+
+You will create a new R2 bucket to use as the sink for our pipeline. Create a new r2 bucket `clickstream-data` using the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/):
+
+```sh
+npx wrangler r2 bucket create clickstream-data
+```
+
+## 5. Create a pipeline
+
+You need to create a new pipeline and connect it to the R2 bucket you created in the previous step.
+
+Create a new pipeline `clickstream-pipeline` using the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/):
+
+```sh
+npx wrangler pipelines create clickstream-pipeline --r2-bucket clickstream-data --compression none --batch-max-seconds 5
+```
+
+When you run the command, you will be prompted to authorize Cloudflare Workers Pipelines to create R2 API tokens on your behalf. These tokens are required by your Pipeline. Your Pipeline uses these tokens when loading data into your bucket. You can approve the request through the browser link which will open automatically.
+
+Note
+
+The above command creates a pipeline using two optional flags: `--compression none`, and `--batch-max-seconds 5`.
+
+With these flags, your pipeline will deliver an uncompressed file of data to your R2 bucket every 5 seconds.
+
+These flags are useful for testing, but we recommend keeping the default settings in a production environment.
+
+```txt
+✅ Successfully created Pipeline "clickstream-pipeline" with ID <PIPELINE_ID>
+
+
+Id:    <PIPELINE_ID>
+Name:  clickstream-pipeline
+Sources:
+  HTTP:
+    Endpoint:        https://<PIPELINE_ID>.pipelines.cloudflare.com
+    Authentication:  off
+    Format:          JSON
+  Worker:
+    Format:  JSON
+Destination:
+  Type:         R2
+  Bucket:       clickstream-data
+  Format:       newline-delimited JSON
+  Compression:  NONE
+  Batch hints:
+    Max bytes:     100 MB
+    Max duration:  300 seconds
+    Max records:   10,000,000
+
+
+🎉 You can now send data to your Pipeline!
+
+
+Send data to your Pipeline's HTTP endpoint:
+
+
+curl "https://<PIPELINE_ID>.pipelines.cloudflare.com" -d '[{"foo": "bar"}]'
+```
+
+## 5. Send clickstream data to your pipeline
+
+You have setup the frontend of your application to make a call to the `/api/clickstream` route, everytime the user clicks on one of the buttons. The application makes a call to the `/api/clickstream` endpoint to send the clickstream data to your pipeline. The `/api/clickstream` endpoint is handled by a Worker in the `src/index.ts` file.
+
+You will use the pipelines binding to send the clickstream data to your pipeline. In your `wrangler` file, add the following bindings:
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "pipelines": [
+      {
+        "binding": "PIPELINE",
+        "pipeline": "clickstream-pipeline"
+      }
+    ]
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  [[pipelines]]
+  binding = "PIPELINE"
+  pipeline = "clickstream-pipeline"
+  ```
+
+Next, update the type in the `worker-configuration.d.ts` file. Add the following type:
+
+```ts
+interface Env {
+  PIPELINE: Pipeline;
+}
+```
+
+Update the `src/index.ts` file to handle the `POST` request:
+
+```ts
+export default {
+  async fetch(request, env, ctx): Promise<Response> {
+    const pathname = new URL(request.url).pathname;
+    const method = request.method;
+    if (pathname === "/api/clickstream" && method === "POST") {
+      const body = (await request.json()) as { data: any };
+      try {
+        await env.PIPELINE.send([body.data]);
+        return new Response("OK", { status: 200 });
+      } catch (error) {
+        console.error(error);
+        return new Response("Internal Server Error", { status: 500 });
+      }
+    }
+    return new Response("Hello World!");
+  },
+} satisfies ExportedHandler<Env>;
+```
+
+The `src/index.ts` file does the following:
+
+* Checks if the request is a `POST` request to the `/api/clickstream` endpoint.
+* Extracts the data from the request body.
+* Sends the data to your Pipeline.
+* Returns a response to the client.
+
+## 6. Deploy the application
+
+You can run the local server to the test the application. However, the data will be not be sent to the production pipeline. You will need to deploy the application to send the data to the pipeline.
+
+To start the development server execute the below command and naviagte to `http://localhost:8787`:
+
+```sh
+npm run dev
+```
+
+When you click on the `View Details` or the `Add to Cart` button, the `handleClick` function calls the `/api/clickstream` endpoint. This endpoint uses the pipelines bindinding and sends the clickstream data. Note that no actual data is sent to the pipeline when running the application locally.
+
+To deploy the application, run the following command:
+
+```sh
+npm run deploy
+```
+
+This will deploy the application to the Cloudflare Workers platform.
+
+```txt
+🌀 Building list of assets...
+🌀 Starting asset upload...
+🌀 Found 1 new or modified static asset to upload. Proceeding with upload...
++ /index.html
+Uploaded 1 of 1 assets
+✨ Success! Uploaded 1 file (2.37 sec)
+
+
+Total Upload: 25.73 KiB / gzip: 6.17 KiB
+Worker Startup Time: 15 ms
+Uploaded e-commerce-clickstream (11.79 sec)
+Deployed e-commerce-clickstream triggers (7.60 sec)
+  https://<URL>.workers.dev
+Current Version ID: <VERSION_ID>
+```
+
+You can access the application at the URL provided in the output of the command. Now when you click on the `View Details` or `Add to Cart` button, the clickstream data will be sent to your pipeline.
+
+## 7. Connect the R2 bucket to MotherDuck
+
+Your application sends clickstream data to the R2 bucket using pipelines. In this step, you will connect the R2 bucket to MotherDuck.
+
+You can connect the bucket to MotherDuck in several ways, which you can learn about from the [MotherDuck documentation](https://motherduck.com/docs/integrations/cloud-storage/cloudflare-r2/). In this tutorial, you will connect the bucket to MotherDuck using the MotherDuck dashboard.
+
+Before connecting the bucket to MotherDuck, you need to obtain the Access Key ID and Secret Access Key for the R2 bucket. You can find the instructions to obtain the keys in the [R2 API documentation](https://developers.cloudflare.com/r2/api/tokens/).
+
+1. Log in to the MotherDuck dashboard and select your profile.
+
+2. Navigate to the **Secrets** page.
+
+3. Select the **Add Secret** button and enter the following information:
+
+   * **Secret Name**: `Clickstream pipeline`
+   * **Secret Type**: `Cloudflare R2`
+   * **Access Key ID**: `ACCESS_KEY_ID` (replace with the Access Key ID)
+   * **Secret Access Key**: `SECRET_ACCESS_KEY` (replace with the Secret Access Key)
+
+4. Select the **Add Secret** button to save the secret.
+
+## 8. Query the data
+
+In this step, you will query the data stored in the R2 bucket using MotherDuck.
+
+1. Navigate back to the MotherDuck dashboard and select the **+** icon to add a new Notebook.
+
+2. Select the **Add Cell** button to add a new cell to the notebook.
+
+3. In the cell, enter the following query and select the **Run** button to execute the query:
+
+```sql
+SELECT * FROM read_json_auto('r2://<BUCKET_NAME>/**/*');
+```
+
+Replace the `<BUCKET_NAME>` placeholder with the name of the R2 bucket.
+
+The query will return the data stored in the R2 bucket.
+
+## Conclusion
+
+You have successfully built an e-commerce application that leverages Cloudflare's Pipelines, R2, and Workers. Through this tutorial, you've gained hands-on experience in:
+
+1. Creating a Workers project with a static frontend
+2. Generating and capturing clickstream data
+3. Setting up a Cloudflare Pipelines to ingest data into R2
+4. Connecting your R2 bucket to MotherDuck for advanced querying capabilities
+
+This project serves as a foundation for building scalable, data-driven applications. You can now expand on this knowledge to create more complex e-commerce features, implement advanced analytics, or explore other Cloudflare products to enhance your application further.
+
+For your next steps, consider exploring more advanced querying techniques with MotherDuck, implementing real-time analytics, or integrating additional Cloudflare services to further optimize your application's performance and security.
+
+You can find the source code of the application in the [GitHub repository](https://github.com/harshil1712/cf-pipelines-bindings-demo).
+
+</page>
+
+<page>
+---
+title: Create a data lake of clickstream data · Cloudflare Pipelines Docs
+description: In this tutorial, you will learn how to build a data lake of
+  website interaction events (clickstream data), using Pipelines.
+lastUpdated: 2025-06-05T13:25:05.000Z
+chatbotDeprioritize: false
+tags: MotherDuck
+source_url:
+  html: https://developers.cloudflare.com/pipelines/tutorials/send-data-from-client/
+  md: https://developers.cloudflare.com/pipelines/tutorials/send-data-from-client/index.md
+---
+
+In this tutorial, you will learn how to build a data lake of website interaction events (clickstream data), using Pipelines.
+
+Data lakes are a way to store large volumes of raw data in an object storage service such as [R2](https://developers.cloudflare.com/r2). You can run queries over a data lake to analyze the raw events.
+
+For this tutorial, you will build a landing page for an e-commerce website. Users can click on the website, to view products or add them to the cart. When a user clicks on buttons on the page, events will be sent to a pipeline. These events are sent from the client-side (directly from the user's browser). Your pipeline will automatically batch the ingested data, build output files, and deliver them to an [R2 bucket](https://developers.cloudflare.com/r2) to build your data lake.
+
+## Prerequisites
+
+1. Install [`Node.js`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Node.js version manager
+
+Use a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues and change Node.js versions. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/), discussed later in this guide, requires a Node version of `16.17.0` or later.
+
+## 1. Create a new Workers project
+
+You will create a new Worker project that will use [Static Assets](https://developers.cloudflare.com/workers/static-assets/) to serve the HTML file. While you can use any front-end framework, this tutorial uses plain HTML and JavaScript to keep things simple. If you are interested in learning how to build and deploy a web application on Workers with Static Assets, you can refer to the [Frameworks](https://developers.cloudflare.com/workers/framework-guides/) documentation.
+
+Create a new Worker project by running the following commands:
+
+* npm
+
+  ```sh
+  npm create cloudflare@latest -- e-commerce-pipelines-client-side
+  ```
+
+* yarn
+
+  ```sh
+  yarn create cloudflare e-commerce-pipelines-client-side
+  ```
+
+* pnpm
+
+  ```sh
+  pnpm create cloudflare@latest e-commerce-pipelines-client-side
+  ```
+
+For setup, select the following options:
+
+* For *What would you like to start with?*, choose `Hello World example`.
+* For *Which template would you like to use?*, choose `SSR / full-stack app`.
+* For *Which language do you want to use?*, choose `TypeScript`.
+* For *Do you want to use git for version control?*, choose `Yes`.
+* For *Do you want to deploy your application?*, choose `No` (we will be making some changes before deploying).
+
+Navigate to the `e-commerce-pipelines-client-side` directory:
+
+```sh
+cd e-commerce-pipelines-client-side
+```
+
+## 2. Update the website frontend
+
+Using Static Assets, you can serve the frontend of your application from your Worker. The above step creates a new Worker project with a default `public/index.html` file. Update the `public/index.html` file with the following HTML code:
+
+Select to view the HTML code
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>E-commerce Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <nav class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold"> E-Commerce Demo </a>
+        <div class="space-x-4 text-gray-800">
+          <a href="#">
+            <button class="border border-input bg-white h-10 px-4 py-2 rounded-md">Cart</button>
+          </a>
+          <a href="#">
+            <button class="border border-input bg-white h-10 px-4 py-2 rounded-md">Login</button>
+          </a>
+          <a href="#">
+            <button class="border border-input bg-white h-10 px-4 py-2 rounded-md">Signup</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-6">Our Products</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="products">
+        <!-- This section repeats for each product -->
+
+
+          <!-- End of product section -->
+        </div>
+      </div>
+
+
+      <script>
+        // demo products
+        const products = [
+          {
+            id: 1,
+            name: 'Smartphone X',
+            desc: 'Latest model with advanced features',
+            cost: 799,
+          },
+          {
+            id: 2,
+            name: 'Laptop Pro',
+            desc: 'High-performance laptop for professionals',
+            cost: 1299,
+          },
+          {
+            id: 3,
+            name: 'Wireless Earbuds',
+            desc: 'True wireless earbuds with noise cancellation',
+            cost: 149,
+          },
+          {
+            id: 4,
+            name: 'Smart Watch',
+            desc: 'Fitness tracker and smartwatch combo',
+            cost: 199,
+          },
+          {
+            id: 5,
+            name: '4K TV',
+            desc: 'Ultra HD smart TV with HDR',
+            cost: 599,
+          },
+          {
+            id: 6,
+            name: 'Gaming Console',
+            desc: 'Next-gen gaming system',
+            cost: 499,
+          },
+        ];
+
+
+        // function to render products
+        function renderProducts() {
+          console.log('Rendering products...');
+          const productContainer = document.getElementById('products');
+          productContainer.innerHTML = ''; // Clear existing content
+          products.forEach((product) => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('rounded-lg', 'border', 'bg-card', 'text-card-foreground', 'shadow-sm');
+            productElement.innerHTML = `
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h2 class="text-2xl font-semibold leading-none tracking-tight">${product.name}</h2>
+            </div>
+            <div class="p-6 pt-0">
+              <p>${product.desc}</p>
+              <p class="font-bold mt-2">$${product.cost}</p>
+            </div>
+            <div class="flex items-center p-6 pt-0 flex justify-between">
+              <button class="border px-4 py-2 rounded-md" onclick="handleClick('product_view', ${product.id})" name="">View Details</button>
+              <button class="border px-4 py-2 rounded-md" onclick="handleClick('add_to_cart', ${product.id})">Add to Cart</button>
+            </div>
+          `;
+            productContainer.appendChild(productElement);
+          });
+        }
+        renderProducts();
+
+
+        // function to handle click events
+        async function handleClick(action, id) {
+          console.log(`Clicked ${action} for product with id ${id}`);
+        }
+      </script>
+    </body>
+
+
+</html>
+```
+
+The above code does the following:
+
+* Uses Tailwind CSS to style the page.
+* Renders a list of products.
+* Adds a button to view the details of a product.
+* Adds a button to add a product to the cart.
+* Contains a `handleClick` function to handle the click events. This function logs the action and the product ID. In the next steps, you will create a pipeline and add the logic to send the click events to this pipeline.
+
+## 3. Create an R2 Bucket
+
+We'll create a new R2 bucket to use as the sink for our pipeline. Create a new r2 bucket `clickstream-bucket` using the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/). Open a terminal window, and run the following command:
+
+```sh
+npx wrangler r2 bucket create clickstream-bucket
+```
+
+## 4. Create a pipeline
+
+You need to create a new pipeline and connect it to your R2 bucket.
+
+Create a new pipeline `clickstream-pipeline-client` using the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/). Open a terminal window, and run the following command:
+
+```sh
+npx wrangler pipelines create clickstream-pipeline-client --r2-bucket clickstream-bucket --compression none --batch-max-seconds 5
+```
+
+When you run the command, you will be prompted to authorize Cloudflare Workers Pipelines to create R2 API tokens on your behalf. These tokens are required by your Pipeline. Your Pipeline uses these tokens when loading data into your bucket. You can approve the request through the browser link which will open automatically.
+
+Note
+
+The above command creates a pipeline using two optional flags: `--compression none`, and `--batch-max-seconds 5`.
+
+With these flags, your pipeline will deliver an uncompressed file of data to your R2 bucket every 5 seconds.
+
+These flags are useful for testing, but we recommend keeping the default settings in a production environment.
+
+```txt
+✅ Successfully created Pipeline "clickstream-pipeline-client" with ID <PIPELINE_ID>
+
+
+Id:    <PIPELINE_ID>
+Name:  clickstream-pipeline-client
+Sources:
+  HTTP:
+    Endpoint:        https://<PIPELINE_ID>.pipelines.cloudflare.com
+    Authentication:  off
+    Format:          JSON
+  Worker:
+    Format:  JSON
+Destination:
+  Type:         R2
+  Bucket:       clickstream-bucket
+  Format:       newline-delimited JSON
+  Compression:  NONE
+  Batch hints:
+    Max bytes:     100 MB
+    Max duration:  300 seconds
+    Max records:   10,000,000
+
+
+🎉 You can now send data to your Pipeline!
+
+
+Send data to your Pipeline's HTTP endpoint:
+
+
+curl "https://<PIPELINE_ID>.pipelines.cloudflare.com" -d '[{"foo": "bar"}]'
+```
+
+Make a note of the URL of the pipeline. You will use this URL to send the clickstream data from the client-side.
+
+## 5. Generate clickstream data
+
+You need to send clickstream data like the `timestamp`, `user_id`, `session_id`, and `device_info` to your pipeline. You can generate this data on the client side. Add the following function in the `<script>` tag in your `public/index.html`. This function gets the device information:
+
+```js
+function extractDeviceInfo(userAgent) {
+  let browser = "Unknown";
+  let os = "Unknown";
+  let device = "Unknown";
+
+
+  // Extract browser
+  if (userAgent.includes("Firefox")) {
+    browser = "Firefox";
+  } else if (userAgent.includes("Chrome")) {
+    browser = "Chrome";
+  } else if (userAgent.includes("Safari")) {
+    browser = "Safari";
+  } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+    browser = "Opera";
+  } else if (userAgent.includes("Edge")) {
+    browser = "Edge";
+  } else if (userAgent.includes("MSIE") || userAgent.includes("Trident/")) {
+    browser = "Internet Explorer";
+  }
+
+
+  // Extract OS
+  if (userAgent.includes("Win")) {
+    os = "Windows";
+  } else if (userAgent.includes("Mac")) {
+    os = "MacOS";
+  } else if (userAgent.includes("Linux")) {
+    os = "Linux";
+  } else if (userAgent.includes("Android")) {
+    os = "Android";
+  } else if (userAgent.includes("iOS")) {
+    os = "iOS";
+  }
+
+
+  // Extract device
+  const mobileKeywords = [
+    "Android",
+    "webOS",
+    "iPhone",
+    "iPad",
+    "iPod",
+    "BlackBerry",
+    "Windows Phone",
+  ];
+  device = mobileKeywords.some((keyword) => userAgent.includes(keyword))
+    ? "Mobile"
+    : "Desktop";
+
+
+  return { browser, os, device };
+}
+```
+
+## 6. Send clickstream data to your pipeline
+
+You will send the clickstream data to the pipline from the client-side. To do that, update the `handleClick` function to make a `POST` request to the pipeline URL with the data. Replace `<PIPELINE_URL>` with the URL of your pipeline.
+
+```js
+async function handleClick(action, id) {
+  console.log(`Clicked ${action} for product with id ${id}`);
+
+
+  const userAgent = window.navigator.userAgent;
+  const timestamp = new Date().toISOString();
+  const { browser, os, device } = extractDeviceInfo(userAgent);
+
+
+  const data = {
+    timestamp,
+    session_id: "1234567890abcdef", // For production use a unique session ID
+    user_id: "user" + Math.floor(Math.random() * 1000), // For production use a unique user ID
+    event_data: {
+      event_id: Math.floor(Math.random() * 1000),
+      event_type: action,
+      page_url: window.location.href,
+      timestamp,
+      product_id: id,
+    },
+    device_info: {
+      browser,
+      os,
+      device,
+      userAgent,
+    },
+    referrer: document.referrer,
+  };
+  try {
+    const response = await fetch("<PIPELINE_URL>", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([data]),
+    });
+    if (!response.ok) {
+      throw new Error("Failed to send data to pipeline");
+    }
+  } catch (error) {
+    console.error("Error sending data to pipeline:", error);
+  }
+}
+```
+
+The `handleClick` function does the following:
+
+* Gets the device information using the `extractDeviceInfo` function.
+* Makes a `POST` request to the pipeline with the data.
+* Logs any errors that occur.
+
+If you start the development server and open the application in the browser, you can see the `handleClick` function gets executed when you click on the `View Details` or `Add to Cart` button.
+
+```sh
+npm run dev
+```
+
+However, no data gets sent to the pipeline. Inspect the browser console to view the error message. The error message you see is for [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). In the next step, you will update the CORS settings to allow the client-side JavaScript to send data to the pipeline.
+
+## 7. Update CORS settings
+
+By default, the HTTP ingestion endpoint for your pipeline does not allow cross-origin requests. You need to update the CORS settings to allow the client-side JavaScript to send data to the pipeline. To update the CORS settings, execute the following command:
+
+```sh
+npx wrangler pipelines update clickstream-pipeline-client --cors-origins http://localhost:8787
+```
+
+Now when you run the development server locally, and open the website in a browser, clickstream data will be successfully sent to the pipeline. You can learn more about the CORS settings in the [Specifying CORS settings](https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http/#specifying-cors-settings) documentation.
+
+## 8. Deploy the application
+
+To deploy the application, run the following command:
+
+```sh
+npm run deploy
+```
+
+This will deploy the application to the Cloudflare Workers platform.
+
+```txt
+🌀 Building list of assets...
+🌀 Starting asset upload...
+🌀 Found 1 new or modified static asset to upload. Proceeding with upload...
++ /index.html
+Uploaded 1 of 1 assets
+✨ Success! Uploaded 1 file (2.37 sec)
+
+
+Total Upload: 25.73 KiB / gzip: 6.17 KiB
+Worker Startup Time: 15 ms
+Uploaded e-commerce-pipelines-client-side (11.79 sec)
+Deployed e-commerce-pipelines-client-side triggers (7.60 sec)
+  https://<URL>.workers.dev
+Current Version ID: <VERSION_ID>
+```
+
+We now need to update the pipeline's CORS settings again. This time, we'll include the URL of our newly deployed application. Run the command below, and replace `<URL>` with the URL of the application.
+
+```sh
+npx wrangler pipelines update clickstream-pipeline-client --cors-origins http://localhost:8787 https://<URL>.workers.dev
+```
+
+Now, you can access the application at the deployed URL. When you click on the `View Details` or `Add to Cart` button, the clickstream data will be sent to your pipeline.
+
+## 9. View the data in R2
+
+You can view the data in the R2 bucket. If you are not signed in to the Cloudflare dashboard, sign in and navigate to the [R2 overview](https://dash.cloudflare.com/?to=/:account/r2/overview) page.
+
+Open the bucket you configured for your pipeline in Step 3. You can see files, representing the clickstream data. These files are newline delimited JSON files. Each row in a file represents one click event. Download one of the files, and open it in your preferred text editor to see the output:
+
+```json
+{"timestamp":"2025-04-06T16:24:29.213Z","session_id":"1234567890abcdef","user_id":"user965","event_data":{"event_id":673,"event_type":"product_view","page_url":"https://<URL>.workers.dev/","timestamp":"2025-04-06T16:24:29.213Z","product_id":2},"device_info":{"browser":"Chrome","os":"Linux","device":"Mobile","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36"},"referrer":""}
+{"timestamp":"2025-04-06T16:24:30.436Z","session_id":"1234567890abcdef","user_id":"user998","event_data":{"event_id":787,"event_type":"product_view","page_url":"https://<URL>.workers.dev/","timestamp":"2025-04-06T16:24:30.436Z","product_id":4},"device_info":{"browser":"Chrome","os":"Linux","device":"Mobile","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36"},"referrer":""}
+{"timestamp":"2025-04-06T16:24:31.330Z","session_id":"1234567890abcdef","user_id":"user22","event_data":{"event_id":529,"event_type":"product_view","page_url":"https://<URL>.workers.dev/","timestamp":"2025-04-06T16:24:31.330Z","product_id":4},"device_info":{"browser":"Chrome","os":"Linux","device":"Mobile","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36"},"referrer":""}
+{"timestamp":"2025-04-06T16:24:31.879Z","session_id":"1234567890abcdef","user_id":"user750","event_data":{"event_id":756,"event_type":"product_view","page_url":"https://<URL>.workers.dev/","timestamp":"2025-04-06T16:24:31.879Z","product_id":4},"device_info":{"browser":"Chrome","os":"Linux","device":"Mobile","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36"},"referrer":""}
+{"timestamp":"2025-04-06T16:24:33.978Z","session_id":"1234567890abcdef","user_id":"user333","event_data":{"event_id":467,"event_type":"product_view","page_url":"https://<URL>.workers.dev/","timestamp":"2025-04-06T16:24:33.978Z","product_id":6},"device_info":{"browser":"Chrome","os":"Linux","device":"Mobile","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36"},"referrer":""}
+```
+
+## 10. Optional: Connect a query engine to your R2 bucket and query the data
+
+Once you have collected the raw events in R2, you might want to query the events, to answer questions such as "how many events occurred?". You can connect a query engine, such as MotherDuck, to your R2 bucket.
+
+You can connect the bucket to MotherDuck in several ways, which you can learn about from the [MotherDuck documentation](https://motherduck.com/docs/integrations/cloud-storage/cloudflare-r2/). In this tutorial, you will connect the bucket to MotherDuck using the MotherDuck dashboard.
+
+### Connect your bucket to MotherDuck
+
+Before connecting the bucket to MotherDuck, you need to obtain the Access Key ID and Secret Access Key for the R2 bucket. You can find the instructions to obtain the keys in the [R2 API documentation](https://developers.cloudflare.com/r2/api/tokens/).
+
+1. Log in to the MotherDuck dashboard and select your profile.
+
+2. Navigate to the **Secrets** page.
+
+3. Select the **Add Secret** button and enter the following information:
+
+   * **Secret Name**: `Clickstream pipeline`
+   * **Secret Type**: `Cloudflare R2`
+   * **Access Key ID**: `ACCESS_KEY_ID` (replace with the Access Key ID)
+   * **Secret Access Key**: `SECRET_ACCESS_KEY` (replace with the Secret Access Key)
+
+4. Select the **Add Secret** button to save the secret.
+
+### Query the data
+
+In this step, you will query the data stored in the R2 bucket using MotherDuck.
+
+1. Navigate back to the MotherDuck dashboard and select the **+** icon to add a new Notebook.
+
+2. Select the **Add Cell** button to add a new cell to the notebook.
+
+3. In the cell, enter the following query and select the **Run** button to execute the query:
+
+```sql
+SELECT count(*) FROM read_json_auto('r2://clickstream-bucket/**/*');
+```
+
+The query will return a count of all the events received.
+
+## Conclusion
+
+You have successfully created a Pipeline and used it to send clickstream data from the client. Through this tutorial, you've gained hands-on experience in:
+
+1. Creating a Workers project, using static assets
+2. Generating and capturing clickstream data
+3. Setting up a pipeline to ingest data into R2
+4. Deploying the application to Workers
+5. Using MotherDuck to query the data
+
+You can find the source code of the application in the [GitHub repository](https://github.com/harshil1712/e-commerce-pipelines-client-side).
+
+</page>
+
+<page>
+---
+title: Configure HTTP endpoint · Cloudflare Pipelines Docs
+description: Pipelines support data ingestion over HTTP. When you create a new
+  pipeline using the default settings you will receive a globally scalable
+  ingestion endpoint. To ingest data, make HTTP POST requests to the endpoint.
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http/
+  md: https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/http/index.md
+---
+
+Pipelines support data ingestion over HTTP. When you create a new pipeline using the default settings you will receive a globally scalable ingestion endpoint. To ingest data, make HTTP POST requests to the endpoint.
+
+```sh
+$ npx wrangler@latest pipelines create my-clickstream-pipeline --r2-bucket my-bucket
+
+
+🌀 Authorizing R2 bucket "my-bucket"
+🌀 Creating pipeline named "my-clickstream-pipeline"
+✅ Successfully created pipeline my-clickstream-pipeline
+
+
+Id:    0e00c5ff09b34d018152af98d06f5a1xvc
+Name:  my-clickstream-pipeline
+Sources:
+  HTTP:
+    Endpoint:        https://0e00c5ff09b34d018152af98d06f5a1xvc.pipelines.cloudflare.com/
+    Authentication:  off
+    Format:          JSON
+  Worker:
+    Format:  JSON
+Destination:
+  Type:         R2
+  Bucket:       my-bucket
+  Format:       newline-delimited JSON
+  Compression:  GZIP
+Batch hints:
+  Max bytes:     100 MB
+  Max duration:  300 seconds
+  Max records:   100,000
+
+
+🎉 You can now send data to your pipeline!
+
+
+Send data to your pipeline's HTTP endpoint:
+curl "https://0e00c5ff09b34d018152af98d06f5a1xvc.pipelines.cloudflare.com/" -d '[{ ...JSON_DATA... }]'
+```
+
+## Authentication
+
+You can secure your HTTP ingestion endpoint using Cloudflare API tokens. By default, authentication is turned off. To configure authentication, use the `--require-http-auth` flag while creating or updating a pipeline.
+
+```sh
+$ npx wrangler pipelines create [PIPELINE-NAME] --r2-bucket [R2-BUCKET-NAME] --require-http-auth true
+```
+
+Once authentication is turned on, you will need to include a Cloudflare API token in your request headers.
+
+### Get API token
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
+2. Navigate to your [API Keys](https://dash.cloudflare.com/profile/api-tokens).
+3. Select **Create Token**.
+4. Choose the template for Workers Pipelines. Select **Continue to summary** > **Create token**. Make sure to copy the API token and save it securely.
+
+### Making authenticated requests
+
+Include the API token you created in the previous step in the headers for your request:
+
+```sh
+curl https://<PIPELINE-ID>.pipelines.cloudflare.com
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ${API_TOKEN}" \
+  -d '[{"foo":"bar"}, {"foo":"bar"}, {"foo":"bar"}]'
+```
+
+## Specifying CORS Settings
+
+If you want to use your pipeline to ingest client side data, such as website clicks, you will need to configure your [Cross-Origin Resource Sharing (CORS) settings](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+
+Without setting your CORS settings, browsers will restrict requests made to your pipeline endpoint. For example, if your website domain is `https://my-website.com`, and you want to post client side data to your pipeline at `https://<PIPELINE-ID>.pipelines.cloudflare.com`, without CORS settings, the request will fail.
+
+To fix this, you need to configure your pipeline to accept requests from `https://my-website.com`. You can do so while creating or updating a pipeline, using the flag `--cors-origins`. You can specify multiple domains separated by a space.
+
+```sh
+$ npx wrangler pipelines update [PIPELINE-NAME] --cors-origins https://mydomain.com http://localhost:8787
+```
+
+You can specify that all cross origin requests are accepted. We recommend only using this option in development, and not for production use cases.
+
+```sh
+$ npx wrangler pipelines update [PIPELINE-NAME] --cors-origins "*"
+```
+
+After the `--cors-origins` have been set on your pipeline, your pipeline will respond to preflight requests and `POST` requests with the appropriate `Access-Control-Allow-Origin` headers set.
+
+</page>
+
+<page>
+---
+title: Workers API · Cloudflare Pipelines Docs
+description: Pipelines exposes an API directly to your Workers scripts via the
+  bindings concept. Bindings allow you to securely send data to a pipeline
+  without having to manage API keys or clients. Sending data via a Worker is
+  enabled by default.
+lastUpdated: 2025-04-09T16:06:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/workers-apis/
+  md: https://developers.cloudflare.com/pipelines/build-with-pipelines/sources/workers-apis/index.md
+---
+
+Pipelines exposes an API directly to your [Workers](https://developers.cloudflare.com/workers) scripts via the [bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/#what-is-a-binding) concept. Bindings allow you to securely send data to a pipeline without having to manage API keys or clients. Sending data via a Worker is enabled by default.
+
+## Send data from a Worker
+
+### Setup a binding
+
+Bind to a pipeline by defining a `pipelines` binding within your Wrangler configuration. For example:
+
+* wrangler.jsonc
+
+  ```jsonc
+  {
+    "name": "pipeline-starter",
+    "main": "src/index.ts",
+    "compatibility_date": "2025-04-01",
+    "pipelines": [
+      {
+        "pipeline": "<MY-PIPELINE-NAME>",
+        "binding": "PIPELINE"
+      }
+    ]
+  }
+  ```
+
+* wrangler.toml
+
+  ```toml
+  #:schema node_modules/wrangler/config-schema.json
+  name = "pipeline-starter"
+  main = "src/index.ts"
+  compatibility_date = "2025-04-01"
+
+
+  [[pipelines]]
+  pipeline = "<MY-PIPELINE-NAME>" # The name of your Pipeline
+  binding = "PIPELINE" # The binding name, accessed using env.MY_PIPELINE
+  ```
+
+You can bind multiple pipelines to a Worker.
+
+### Send data
+
+The Pipelines binding exposes a `send()` method. For example, to log inbound HTTP requests to your Worker:
+
+```ts
+export default {
+  async fetch(request, env, ctx): Promise<Response> {
+    let log = {
+      url: request.url,
+      method: request.method,
+      headers: Object.fromEntries(request.headers),
+      };
+    await env.PIPELINE.send([log]);
+    return new Response('Hello World!');
+  },
+} satisfies ExportedHandler<Env>;
+```
+
+## Workers API
+
+### `Pipeline`
+
+A binding which allows a Worker to send messages to a pipeline.
+
+```ts
+interface Pipeline<PipelineRecord> {
+  send(records: PipelineRecord[]): Promise<void>;
+}
+```
+
+* `send(records)`: `Promise<void>`
+
+  * Sends records to the pipeline. The body must be an array of objects which are JSON serializable.
+  * When the promise resolves, the records are confirmed to be ingested.
+
+Note
+
+When running your Worker locally, pipelines are partially simulated. Worker code which sends data to a pipeline will execute successfully. However, the full pipeline, including batching & writing to R2, will not be executed locally.
+
+</page>
+

@@ -1,0 +1,3544 @@
+# --- METADATA ---
+# Source-URL: https://developers.cloudflare.com/zaraz/llms-full.txt
+# Category: integrations_and_routing
+# Service: zaraz (Zaraz)
+# Artifact: llms-full — LLM-optimized full context export of the docs
+# Retrieved-At: 2025-08-10T22:45:14.247430-07:00
+# Content-SHA256: 1f0a8220a987250b345f62e9353d33f04aae54b07980459116ffb19eee6084ad
+# --- END METADATA ---
+
+<page>
+---
+title: Overview · Cloudflare Zaraz docs
+description: Cloudflare Zaraz gives you complete control over third-party tools
+  and services for your website, and allows you to offload them to Cloudflare's
+  edge, improving the speed and security of your website. With Cloudflare Zaraz
+  you can load tools such as analytics tools, advertising pixels and scripts,
+  chatbots, marketing automation tools, and more, in the most optimized way.
+lastUpdated: 2025-03-14T16:33:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/
+  md: https://developers.cloudflare.com/zaraz/index.md
+---
+
+Offload third-party tools and services to the cloud and improve the speed and security of your website.
+
+Available on all plans
+
+Cloudflare Zaraz gives you complete control over third-party tools and services for your website, and allows you to offload them to Cloudflare's edge, improving the speed and security of your website. With Cloudflare Zaraz you can load tools such as analytics tools, advertising pixels and scripts, chatbots, marketing automation tools, and more, in the most optimized way.
+
+Cloudflare Zaraz is built for speed, privacy, and security, and you can use it to load as many tools as you need, with a near-zero performance hit.
+
+***
+
+## Features
+
+### Third-party tools
+
+You can add many third-party tools to Zaraz, and offload them from your website.
+
+[Use Third-party tools](https://developers.cloudflare.com/zaraz/get-started/)
+
+### Custom Managed Components
+
+You can add Custom Managed Components to Zaraz and run them as a tool.
+
+[Use Custom Managed Components](https://developers.cloudflare.com/zaraz/advanced/load-custom-managed-component/)
+
+### Web API
+
+Zaraz provides a client-side web API that you can use anywhere inside the `<body>` tag of a page.
+
+[Use Web API](https://developers.cloudflare.com/zaraz/web-api/)
+
+### Consent management
+
+Zaraz provides a Consent Management platform to help you address and manage required consents.
+
+[Use Consent management](https://developers.cloudflare.com/zaraz/consent-management/)
+
+***
+
+## More resources
+
+[Discord Channel](https://discord.cloudflare.com)
+
+If you have any comments, questions, or bugs to report, contact the Zaraz team on their Discord channel.
+
+[Community Forum](https://community.cloudflare.com/c/developers/zaraz/67)
+
+Engage with other users and the Zaraz team on Cloudflare support forum.
+
+</page>
+
+<page>
+---
+title: 404 - Page Not Found · Cloudflare Zaraz docs
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/404/
+  md: https://developers.cloudflare.com/zaraz/404/index.md
+---
+
+# 404
+
+Check the URL, try using our [search](https://developers.cloudflare.com/search/) or try our LLM-friendly [llms.txt directory](https://developers.cloudflare.com/llms.txt).
+
+</page>
+
+<page>
+---
+title: Advanced options · Cloudflare Zaraz docs
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/
+  md: https://developers.cloudflare.com/zaraz/advanced/index.md
+---
+
+* [Load Zaraz selectively](https://developers.cloudflare.com/zaraz/advanced/load-selectively/)
+* [Blocking Triggers](https://developers.cloudflare.com/zaraz/advanced/blocking-triggers/)
+* [Data layer compatibility mode](https://developers.cloudflare.com/zaraz/advanced/datalayer-compatibility/)
+* [Domains not proxied by Cloudflare](https://developers.cloudflare.com/zaraz/advanced/domains-not-proxied/)
+* [Google Consent Mode](https://developers.cloudflare.com/zaraz/advanced/google-consent-mode/)
+* [Load Zaraz manually](https://developers.cloudflare.com/zaraz/advanced/load-zaraz-manually/)
+* [Configuration Import & Export](https://developers.cloudflare.com/zaraz/advanced/import-export/)
+* [Context Enricher](https://developers.cloudflare.com/zaraz/advanced/context-enricher/)
+* [Using JSONata](https://developers.cloudflare.com/zaraz/advanced/using-jsonata/)
+* [Logpush](https://developers.cloudflare.com/zaraz/advanced/logpush/)
+* [Custom Managed Components](https://developers.cloudflare.com/zaraz/advanced/load-custom-managed-component/)
+
+</page>
+
+<page>
+---
+title: Changelog · Cloudflare Zaraz docs
+description: Subscribe to RSS
+lastUpdated: 2025-02-13T19:35:19.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/changelog/
+  md: https://developers.cloudflare.com/zaraz/changelog/index.md
+---
+
+[Subscribe to RSS](https://developers.cloudflare.com/zaraz/changelog/index.xml)
+
+## 2025-02-11
+
+* **Logpush**: Add Logpush support for Zaraz
+
+## 2024-12-16
+
+* **Consent Management**: Allow forcing the consent modal language
+
+- **Zaraz Debugger**: Log the response status and body for server-side requests
+
+* **Monitoring**: Introduce "Advanced Monitoring" with new reports such as geography, user timeline, funnel, retention and more
+* **Monitoring**: Show information about server-side requests success rate
+
+- **Zaraz Types**: Update the `zaraz-types` package
+- **Custom HTML Managed Component**: Apply syntax highlighting for inlined JavaScript code
+
+## 2024-11-12
+
+* **Facebook Component**: Update to version 21 of the API, and fail gracefully when e-commerce payload doesn't match schema
+
+- **Zaraz Monitoring**: Show all response status codes from the Zaraz server-side requests in the dashboard
+- **Zaraz Debugger**: Fix a bug that broke the display when Custom HTML included backticks
+- **Context Enricher**: It's now possible to programatically edit the Zaraz `config` itself, in addition to the `system` and `client` objects
+- **Rocker Loader**: Issues with using Zaraz next to Rocket Loader were fixed
+- **Automatic Actions**: The tools setup flow now fully supports configuring Automatic Actions
+- **Bing Managed Component**: Issues with setting the currency field were fixed
+- **Improvement**: The allowed size for a Zaraz config was increased by 250x
+- **Improvement**: The Zaraz runtime should run faster due to multiple code optimizations
+- **Bugfix**: Fixed an issue that caused the dashboard to sometimes show "E-commerce" option for tools that do not support it
+
+## 2024-09-17
+
+* **Automatic Actions**: E-commerce support is now integrated with Automatic Actions
+* **Consent Management**: Support styling the Consent Modal when CSP is enabled
+* **Consent Management**: Fix an issue that could cause tools to load before consent was granted when TCF is enabled
+* **Zaraz Debugger**: Remove redundant messages related to empty values
+* **Amplitude Managed Component**: Respect the EU endpoint setting
+
+## 2024-08-23
+
+* **Automatic Actions**: Automatic Event Tracking is now fully available
+* **Consent Management**: Fixed issues with rendering the Consent modal on iOS
+* **Zaraz Debugger**: Remove redundant messages related to `__zarazEcommerce`
+* **Zaraz Debugger**: Fixed bug that prevented the debugger to load when certain Custom HTML tools were used
+
+## 2024-08-15
+
+* **Automatic Actions**: Automatic Pageview tracking is now fully available
+* **Google Analytics 4**: Support Google Consent signals when using e-commerce tracking
+* **HTTP Events API**: Ignore bot score detection on the HTTP Events API endpoint
+* **Zaraz Debugger**: Show client-side network requests initiated by Managed Components
+
+## 2024-08-12
+
+* **Automatic Actions**: New tools now support Automatic Pageview tracking
+* **HTTP Events API**: Respect Google consent signals
+
+## 2024-07-23
+
+* **Embeds**: Add support for server-side rendering of X (Twitter) and Instagram embeds
+* **CSP Compliance**: Remove `eval` dependency
+* **Google Analytics 4 Managed Component**: Allow customizing the document title and client ID fields
+* **Custom HTML Managed Component**: Scripts included in a Custom HTML will preserve their running order
+* **Google Ads Managed Component**: Allow linking data with Google Analytics 4 instances
+* **TikTok Managed Component**: Use the new TikTok Events API v2
+* **Reddit Managed Component**: Support custom events
+* **Twitter Managed Component**: Support setting the `event_id`, using custom fields, and improve conversion tracking
+* **Bugfix**: Cookie life-time cannot exceed one year anymore
+* **Bugfix**: Zaraz Debugger UI does not break when presenting really long lines of information
+
+## 2024-06-21
+
+* **Dashboard**: Add an option to disable the automatic `Pageview` event
+
+## 2024-06-18
+
+* **Amplitude Managed Component**: Allow users to choose data center
+* **Bing Managed Component**: Fix e-commerce events handling
+* **Google Analytics 4 Managed Component**: Mark e-commerce events as conversions
+* **Consent Management**: Fix IAB Consent Mode tools not showing with purposes
+
+## 2024-05-03
+
+* **Dashboard**: Add setting for Google Consent mode default
+* **Bugfix**: Cookie values are now decoded
+* **Bugfix**: Ensure context enricher worker can access the `context.system.consent` object
+* **Google Ads Managed Component**: Add conversion linker on pageviews without sending a pageview event
+* **Pinterest Conversion API Managed Component**: Bugfix handling of partial e-commerce event payloads
+
+## 2024-04-19
+
+* **Instagram Managed Component**: Improve performance of Instagram embeds
+* **Mixpanel Managed Component**: Include `gclid` and `fbclid` values in Mixpanel requests if available
+* **Consent Management**: Ensure consent platform is enabled when using IAB TCF compliant mode when there's at least one TCF-approved vendor configured
+* **Bugfix**: Ensure track data payload keys take priority over preset-keys when using enrich-payload feature for custom actions
+
+## 2024-04-08
+
+* **Consent Management**: Add `consent` object to `context.system` for finer control over consent preferences
+* **Consent Management**: Add support for IAB-compliant consent mode
+* **Consent Management**: Add "zarazConsentChoicesUpdated" event
+* **Consent Management**: Modal now respects system dark mode prefs when present
+* **Google Analytics 4 Managed Component**: Add support for Google Consent Mode v2
+* **Google Ads Managed Component**: Add support for Google Consent Mode v2
+* **Twitter Managed Component**: Enable tweet embeds
+* **Bing Managed Component**: Support running without setting cookies
+* **Bugfix**: `client.get` for Custom Managed Components fixed
+* **Bugfix**: Prevent duplicate pageviews in monitoring after consent granting
+* **Bugfix**: Prevent Managed Component routes from blocking origin routes unintentionally
+
+## 2024-02-15
+
+* **Single Page Applications**: Introduce `zaraz.spaPageview()` for manually triggering SPA pageviews
+* **Pinterest Managed Component**: Add ecommerce support
+* **Google Ads Managed Component**: Append url and rnd params to pagead/landing endpoint
+* **Bugfix**: Add noindex robots headers for Zaraz GET endpoint responses
+* **Bugfix**: Gracefully handle responses from custom Managed Components without mapped endpoints
+
+## 2024-02-05
+
+* **Dashboard**: rename "tracks" to "events" for consistency
+* **Pinterest Conversion API Managed Component**: update parameters sent to api
+* **HTTP Managed Component**: update \_settings prefix usage handling
+* **Bugfix**: better minification of client-side js
+* **Bugfix**: fix bug where anchor link click events were not bubbling when using click listener triggers
+* **API update**: begin migration support from deprecated `tool.neoEvents` array to `tool.actions` object config schema migration
+
+## 2023-12-19
+
+* **Google Analytics 4 Managed Component**: Fix Google Analytics 4 average engagement time metric.
+
+## 2023-11-13
+
+* **HTTP Request Managed Component**: Re-added `__zarazTrack` property.
+
+## 2023-10-31
+
+* **Google Analytics 4 Managed Component**: Remove `debug_mode` key if falsy or `false`.
+
+## 2023-10-26
+
+* **Custom HTML**: Added support for non-JavaScript script tags.
+
+## 2023-10-20
+
+* **Bing Managed Component**: Fixed an issue where some events were not being sent to Bing even after being triggered.
+* **Dashboard**: Improved welcome screen for new Zaraz users.
+
+## 2023-10-03
+
+* **Bugfix**: Fixed an issue that prevented some server-side requests from arriving to their destination
+* **Google Analytics 4 Managed Component**: Add support for `dbg` and `ir` fields.
+
+## 2023-09-13
+
+* **Consent Management**: Add support for custom button translations.
+* **Consent Management**: Modal stays fixed when scrolling.
+* **Google Analytics 4 Managed Component**: `hideOriginalIP` and `ga-audiences` can be set from tool event.
+
+## 2023-09-11
+
+* **Reddit Managed Component**: Support new "Account ID" formats (e.g. "ax\_xxxxx").
+
+## 2023-09-06
+
+* **Consent Management**: Consent cookie name can now be customized.
+
+## 2023-09-05
+
+* **Segment Managed Component**: API Endpoint can be customized.
+
+## 2023-08-21
+
+* **TikTok Managed Component**: Support setting `ttp` and `event_id`.
+* **Consent Management**: Accessibility improvements.
+* **Facebook Managed Component**: Support for using "Limited Data Use" features.
+
+</page>
+
+<page>
+---
+title: Zaraz Consent Management platform · Cloudflare Zaraz docs
+description: Zaraz provides a Consent Management platform (CMP) to help you
+  address and manage required consents under the European General Data
+  Protection Regulation (GDPR) and the Directive on privacy and electronic
+  communications. This consent platform lets you easily create a consent modal
+  for your website based on the tools you have configured. With Zaraz CMP, you
+  can make sure Zaraz only loads tools under the umbrella of the specific
+  purposes your users have agreed to.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/consent-management/
+  md: https://developers.cloudflare.com/zaraz/consent-management/index.md
+---
+
+Zaraz provides a Consent Management platform (CMP) to help you address and manage required consents under the European [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/) and the [Directive on privacy and electronic communications](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02002L0058-20091219\&from=EN#tocId7). This consent platform lets you easily create a consent modal for your website based on the tools you have configured. With Zaraz CMP, you can make sure Zaraz only loads tools under the umbrella of the specific purposes your users have agreed to.
+
+The consent modal added to your website is concise and gives your users an easy way to opt-in to any purposes of data processing your tools need.
+
+## Crucial vocabulary
+
+The Zaraz Consent Management platform (CMP) has a **Purposes** section. This is where you will have to create purposes for the third-party tools your website uses. To better understand the terms involved in dealing with personal data, refer to these definitions:
+
+* **Purpose**: The reason you are loading a given tool on your website, such as to track conversions or improve your website’s layout based on behavior tracking. One purpose can be assigned to many tools, but one tool can be assigned only to one purpose.
+* **Consent**: An affirmative action that the user makes, required to store and access cookies (or other persistent data, like `LocalStorage`) on the users’ computer/browser.
+
+Note
+
+All tools use consent as a legal basis. This is due to the fact that they all use cookies that are not strictly necessary for the website’s correct operation. Due to this, all purposes are opt-in.
+
+## Purposes and tools
+
+When you add a new tool to your website, Zaraz does not assign any purpose to it. This means that this tool will skip consent by default. Remember to check the [Consent Management settings](https://developers.cloudflare.com/zaraz/consent-management/enable-consent-management/) every time you set up a new tool. This helps ensure you avoid a situation where your tool is triggered before the user gives consent.
+
+The user’s consent preferences are stored within a first-party cookie. This cookie is a JSON file that maps the purposes’ ID to a `true`/`false`/missing value:
+
+* `true` value: The user gave consent.
+* `false`value: The user refused consent.
+* Missing value: The user has not made a choice yet.
+
+Important
+
+Cloudflare cannot recommend nor assign by default any specific purpose for your tools. It is your responsibility to properly assign tools to purposes if you need to comply with GDPR.
+
+## Important things to note
+
+* Purposes that have no tools assigned will not show up in the CMP modal.
+* If a tool is assigned to a purpose, it will not run unless the user gives consent for the purpose the tool is assigned for.
+* Once your website loads for a given user for the first time, all the triggers you have configured for tools that are waiting for consent are cached in the browser. Then, they will be fired when/if the user gives consent, so they are not lost.
+* If the user visits your website for the first time, the consent modal will automatically show up. This also happens if the user has previously visited your website, but in the meantime you have enabled CMP.
+* On subsequent visits, the modal will not show up. You can make the modal show up by calling the function `zaraz.showConsentModal()` — for example, by binding it to a button.
+
+</page>
+
+<page>
+---
+title: Create a third-party tool action · Cloudflare Zaraz docs
+description: Tools on Zaraz must have actions configured in order to do
+  something. Often, using Automatic Actions is enough for configuring a tool.
+  But you might want to use Custom Actions to create a more customized setup, or
+  perhaps you are using a tool that does not support Automatic Actions. In these
+  cases, you will need to configure Custom Actions manually.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/custom-actions/
+  md: https://developers.cloudflare.com/zaraz/custom-actions/index.md
+---
+
+Tools on Zaraz must have actions configured in order to do something. Often, using Automatic Actions is enough for configuring a tool. But you might want to use Custom Actions to create a more customized setup, or perhaps you are using a tool that does not support Automatic Actions. In these cases, you will need to configure Custom Actions manually.
+
+Every action has firing triggers assigned to it. When the conditions of the firing triggers are met, the action will start. An action can be anything the tool can do - sending analytics information, showing a widget, adding a script and much more.
+
+To start using actions, first [create a trigger](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) to determine when this action will start. If you have already set up a trigger, or if you are using one of the built-in triggers, follow these steps to [create an action](https://developers.cloudflare.com/zaraz/custom-actions/create-action/).
+
+</page>
+
+<page>
+---
+title: Embeds · Cloudflare Zaraz docs
+description: Embeds are tools for incorporating external content, like social
+  media posts, directly onto webpages, enhancing user engagement without
+  compromising site performance and security.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/embeds/
+  md: https://developers.cloudflare.com/zaraz/embeds/index.md
+---
+
+Embeds are tools for incorporating external content, like social media posts, directly onto webpages, enhancing user engagement without compromising site performance and security.
+
+Cloudflare Zaraz introduces server-side rendering for embeds, avoiding third-party JavaScript to improve security, privacy, and page speed. This method processes content on the server side, removing the need for direct communication between the user's browser and third-party servers.
+
+To add an Embed to Your Website:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Click "add new tool" and activate the desired tools on your Cloudflare Zaraz dashboard.
+4. Add a placeholder in your HTML, specifying the necessary attributes. For a generic embed, the snippet looks like this:
+
+```html
+<componentName-embedName attribute="value"></componentName-embedName>
+```
+
+Replace `componentName`, `embedName` and `attribute="value"` with the specific Managed Component requirements. Zaraz automatically detects placeholders and replaces them with the content in a secure and efficient way.
+
+## Examples
+
+### X (Twitter) embed
+
+```html
+<twitter-post tweet-id="12345"></twitter-post>
+```
+
+Replace `tweet-id` with the actual tweet ID for the content you wish to embed.
+
+### Instagram embed
+
+```html
+<instagram-post post-url="https://www.instagram.com/p/ABC/" captions="true"></instagram-post>
+```
+
+Replace `post-url` with the actual URL for the content you wish to embed. To include posts captions set captions attribute to `true`.
+
+</page>
+
+<page>
+---
+title: FAQ · Cloudflare Zaraz docs
+description: Below you will find answers to our most commonly asked questions.
+  If you cannot find the answer you are looking for, refer to the community page
+  or Discord channel to explore additional resources.
+lastUpdated: 2025-02-11T10:50:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/faq/
+  md: https://developers.cloudflare.com/zaraz/faq/index.md
+---
+
+Below you will find answers to our most commonly asked questions. If you cannot find the answer you are looking for, refer to the [community page](https://community.cloudflare.com/) or [Discord channel](https://discord.cloudflare.com) to explore additional resources.
+
+* [General](#general)
+* [Tools](#tools)
+* [Consent](#consent)
+
+If you're looking for information regarding Zaraz Pricing, see the [Zaraz Pricing](https://developers.cloudflare.com/zaraz/pricing-info/) page.
+
+***
+
+## General
+
+### Setting up Zaraz
+
+#### Why is Zaraz not working?
+
+If you are experiencing issues with Zaraz, there could be multiple reasons behind it. First, it's important to verify that the Zaraz script is loading properly on your website.
+
+To check if the script is loading correctly, follow these steps:
+
+1. Open your website in a web browser.
+2. Open your browser's Developer Tools.
+3. In the Console, type `zaraz`.
+4. If you see an error message saying `zaraz is not defined`, it means that Zaraz failed to load.
+
+If Zaraz is not loading, please verify the following:
+
+* The domain running Zaraz [is proxied by Cloudflare](https://developers.cloudflare.com/dns/proxy-status/).
+* Auto Injection is enabled in your [Zaraz Settings](https://developers.cloudflare.com/zaraz/reference/settings/#auto-inject-script).
+* Your website's HTML is valid and includes `<head>` and `</head>` tags.
+* You have at least [one enabled tool](https://developers.cloudflare.com/zaraz/get-started/) configured in Zaraz.
+
+#### The browser extension I'm using cannot find the tool I have added. Why?
+
+Zaraz is loading tools server-side, which means code running in the browser will not be able to see it. Running tools server-side is better for your website performance and privacy, but it also means you cannot use normal browser extensions to debug your Zaraz tools.
+
+#### I'm seeing some data discrepancies. Is there a way to check what data reaches Zaraz?
+
+Yes. You can use the metrics in [Zaraz Monitoring](https://developers.cloudflare.com/zaraz/monitoring/) and [Debug Mode](https://developers.cloudflare.com/zaraz/web-api/debug-mode/) to help you find where in the workflow the problem occurred.
+
+#### Can I use Zaraz with Rocket Loader?
+
+We recommend disabling [Rocket Loader](https://developers.cloudflare.com/speed/optimization/content/rocket-loader/) when using Zaraz. While Zaraz can be used together with Rocket Loader, there's usually no need to use both. Rocket Loader can sometimes delay data from reaching Zaraz, causing issues.
+
+#### Is Zaraz compatible with Content Security Policies (CSP)?
+
+Yes. To learn more about how Zaraz works to be compatible with CSP configurations, refer to the [Cloudflare Zaraz supports CSP](https://blog.cloudflare.com/cloudflare-zaraz-supports-csp/) blog post.
+
+#### Does Cloudflare process my HTML, removing existing scripts and then injecting Zaraz?
+
+Cloudflare Zaraz does not remove other third-party scripts from the page. Zaraz [can be auto-injected or not](https://developers.cloudflare.com/zaraz/reference/settings/#auto-inject-script), depending on your configuration, but if you have existing scripts that you intend to load with Zaraz, you should remove them.
+
+#### Does Zaraz work with Cloudflare Page Shield?
+
+Yes. Refer to [Page Shield](https://developers.cloudflare.com/page-shield/) for more information related to this product.
+
+#### Is there a way to prevent Zaraz from loading on specific pages, like under `/wp-admin`?
+
+To prevent Zaraz from loading on specific pages, refer to [Load Zaraz selectively](https://developers.cloudflare.com/zaraz/advanced/load-selectively/).
+
+#### How can I remove my Zaraz configuration?
+
+Resetting your Zaraz configuration will erase all of your configuration settings, including any tools, triggers, and variables you've set up. This action will disable Zaraz immediately. If you want to start over with a clean slate, you can always reset your configuration.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **Settings** > **Advanced**.
+3. Click "Reset" and follow the instructions.
+
+### Zaraz Web API
+
+#### Why would the `zaraz.ecommerce()` method returns an undefined error?
+
+E-commerce tracking needs to be enabled in [the Zaraz Settings page](https://developers.cloudflare.com/zaraz/reference/settings/#e-commerce-tracking) before you can start using the E-commerce Web API.
+
+#### How would I trigger pageviews manually on a Single Page Application (SPA)?
+
+Zaraz comes with built-in [Single Page Application (SPA) support](https://developers.cloudflare.com/zaraz/reference/settings/#single-page-application-support) that automatically sends pageview events when navigating through the pages of your SPA. However, if you have advanced use cases, you might want to build your own system to trigger pageviews. In such cases, you can use the internal SPA pageview event by calling `zaraz.spaPageview()`.
+
+***
+
+## Tools
+
+### Google Analytics
+
+#### After moving from Google Analytics 4 to Zaraz, I can no longer see demographics data. Why?
+
+You probably have enabled **Hide Originating IP Address** in the [Settings option](https://developers.cloudflare.com/zaraz/custom-actions/edit-tools-and-actions/) for Google Analytics 4. This tells Zaraz to not send the IP address to Google. To have access to demographics data and anonymize your visitor's IP, you should use [**Anonymize Originating IP Address**](#i-see-two-ways-of-anonymizing-ip-address-information-on-the-third-party-tool-google-analytics-one-in-privacy-and-one-in-additional-fields-which-is-the-correct-one) instead.
+
+#### I see two ways of anonymizing IP address information on the third-party tool Google Analytics: one in Privacy, and one in Additional fields. Which is the correct one?
+
+There is not a correct option, as the two options available in Google Analytics (GA) do different things.
+
+The "Hide Originating IP Address" option in [Tool Settings](https://developers.cloudflare.com/zaraz/custom-actions/edit-tools-and-actions/) prevents Zaraz from sending the IP address from a visitor to Google. This means that GA treats Zaraz's Worker's IP address as the visitor's IP address. This is often close in terms of location, but it might not be.
+
+With the **Anonymize Originating IP Address** available in the [Add field](https://developers.cloudflare.com/zaraz/custom-actions/additional-fields/) option, Cloudflare sends the visitor's IP address to Google as is, and passes the 'aip' parameter to GA. This asks GA to anonymize the data.
+
+#### If I set up Event Reporting (enhanced measurements) for Google Analytics, why does Zaraz only report Page View, Session Start, and First Visit?
+
+This is not a bug. Zaraz does not offer all the automatic events the normal GA4 JavaScript snippets offer out of the box. You will need to build [triggers](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) and [actions](https://developers.cloudflare.com/zaraz/custom-actions/) to capture those events. Refer to [Get started](https://developers.cloudflare.com/zaraz/get-started/) to learn more about how Zaraz works.
+
+#### Can I set up custom dimensions for Google Analytics with Zaraz?
+
+Yes. Refer to [Additional fields](https://developers.cloudflare.com/zaraz/custom-actions/additional-fields/) to learn how to send additional data to tools.
+
+#### How do I attach a User Property to my events?
+
+In your Google Analytics 4 action, select **Add field** > **Add custom field...** and enter a field name that starts with `up.` — for example, `up.name`. This will make Zaraz send the field as a User Property and not as an Event Property.
+
+#### How can I enable Google Consent Mode signals?
+
+Zaraz has built-in support for Google Consent Mode v2. Learn more on how to use it in [Google Consent Mode page](https://developers.cloudflare.com/zaraz/advanced/google-consent-mode/).
+
+### Facebook Pixel
+
+#### If I set up Facebook Pixel on my Zaraz account, why am I not seeing data coming through?
+
+It can take between 15 minutes to several hours for data to appear on Facebook's interface, due the way Facebook Pixel works. You can also use [debug mode](https://developers.cloudflare.com/zaraz/web-api/debug-mode/) to confirm that data is being properly sent from your Zaraz account.
+
+### Google Ads
+
+#### What is the expected format for Conversion ID and Conversion Label
+
+Conversion ID and Conversion Label are usually provided by Google Ads as a "gtag script". Here's an example for a $1 USD conversion:
+
+```js
+gtag("event", "conversion", {
+  send_to: "AW-123456789/AbC-D_efG-h12_34-567",
+  value: 1.0,
+  currency: "USD",
+});
+```
+
+The Conversion ID is the first part of `send_to` parameter, without the `AW-`. In the above example it would be `123456789`. The Conversion Label is the second part of the `send_to` parameter, therefore `AbC-D_efG-h12_34-567` in the above example. When setting up your Google Ads conversions through Zaraz, take the information from the original scripts you were asked to implement.
+
+### Custom HTML
+
+#### Can I use Google Tag Manager together with Zaraz?
+
+You can load Google Tag Manager using Zaraz, but it is not recommended. Tools configured inside Google Tag Manager cannot be optimized by Zaraz, and cannot be restricted by the Zaraz privacy controls. In addition, Google Tag Manager could slow down your website because it requires additional JavaScript, and its rules are evaluated client-side. If you are currently using Google Tag Manager, we recommend replacing it with Zaraz by configuring your tags directly as Zaraz tools.
+
+#### Why should I prefer a native tool integration instead of an HTML snippet?
+
+Adding a tool to your website via a native Zaraz integration is always better than using an HTML snippet. HTML snippets usually depends on additional client-side requests, and require client-side code execution, which can slow down your website. They are often a security risk, as they can be hacked. Moreover, it can be very difficult to control their affect on the privacy of your visitors. Tools included in the Zaraz library are not suffering from these issues - they are fast, executed at the edge, and be controlled and restricted because they are sandboxed.
+
+#### How can I set my Custom HTML to be injected just once in my Single Page App (SPA) website?
+
+If you have enabled "Single Page Application support" in Zaraz Settings, your Custom HTML code may be unnecessarily injected every time a new SPA page is loaded. This can result in duplicates. To avoid this, go to your Custom HTML action and select the "Add Field" option. Then, add the "Ignore SPA" field and enable the toggle switch. Doing so will prevent your code from firing on every SPA pageview and ensure that it is injected only once.
+
+### Other tools
+
+#### What if I want to use a tool that is not supported by Zaraz?
+
+The Zaraz engineering team is adding support to new tools all the time. You can also refer to the [community space](https://community.cloudflare.com/c/developers/integrationrequest/68) to ask for new integrations.
+
+#### I cannot get a tool to load when the website is loaded. Do I have to add code to my website?
+
+If you proxy your domain through Cloudflare, you do not need to add any code to your website. By default, Zaraz includes an automated `Pageview` trigger. Some tools, like Google Analytics, automatically add a `Pageview` action that uses this trigger. With other tools, you will need to add it manually. Refer to [Get started](https://developers.cloudflare.com/zaraz/get-started/) for more information.
+
+#### I am a vendor. How can I integrate my tool with Zaraz?
+
+The Zaraz team is working with third-party vendors to build their own Zaraz integrations using the Zaraz SDK. To request a new tool integration, or to collaborate on our SDK, contact us at <zaraz@cloudflare.com>.
+
+***
+
+## Consent
+
+### How do I show the consent modal again to all users?
+
+In such a case, you can change the cookie name in the *Consent cookie name* field in the Zaraz Consent configuration. This will cause the consent modal to reappear for all users. Make sure to use a cookie name that has not been used for Zaraz on your site.
+
+</page>
+
+<page>
+---
+title: Get started · Cloudflare Zaraz docs
+description: Before being able to use Zaraz, it is recommended that you proxy
+  your website through Cloudflare. Refer to Set up Cloudflare for more
+  information. If you do not want to proxy your website through Cloudflare,
+  refer to Use Zaraz on domains not proxied by Cloudflare.
+lastUpdated: 2025-05-29T18:16:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/get-started/
+  md: https://developers.cloudflare.com/zaraz/get-started/index.md
+---
+
+Before being able to use Zaraz, it is recommended that you proxy your website through Cloudflare. Refer to [Set up Cloudflare](https://developers.cloudflare.com/fundamentals/account/) for more information. If you do not want to proxy your website through Cloudflare, refer to [Use Zaraz on domains not proxied by Cloudflare](https://developers.cloudflare.com/zaraz/advanced/domains-not-proxied/).
+
+## Add a third-party tool to your website
+
+You can add new third-party tools and load them into your website through the Cloudflare dashboard.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account.
+2. Select **Tag Management**, then **Tag Setup** from the side menu and select your website.
+3. If you have already added a tool before, select **Third-party tools** and click on **Add new tool**.
+4. Choose a tool from the tools catalog. Select **Continue** to confirm your selection.
+5. In **Set up**, configure the settings for your new tool. The information you need to enter will depend on the tool you choose. If you want to use any dynamic properties or variables, select the `+` sign in the drop-down menu next to the relevant field.
+6. In **Actions** setup the actions for your new tool. You should be able to select Pageviews, Events or E-Commerce [1](#user-content-fn-1).
+7. Select **Save**.
+
+## Events, triggers and actions
+
+Zaraz relies on events, triggers and actions to determine when to load the tools you need in your website, and what action they need to perform. The way you configure Zaraz and where you start largely depend on the tool you wish to use. When using a tool that supports Automatic Actions, this process is largely done for you. If the tool you are adding doesn't support Automatic Actions, read more about configuring [Custom Actions](https://developers.cloudflare.com/zaraz/custom-actions).
+
+When using Automatic Actions, the available actions are as follows:
+
+* **Pageviews** - for tracking every pageview on your website
+* **Events** - For tracking calls using the [`zaraz.track` Web API](https://developers.cloudflare.com/zaraz/web-api/track)
+* **E-commerce** - For tracking calls to [`zaraz.ecommerce` Web API](https://developers.cloudflare.com/zaraz/web-api/ecommerce)
+
+## Web API
+
+If you need to programmatically start actions in your tools, Cloudflare Zaraz provides a unified Web API to send events to Zaraz, and from there, to third-party tools. This Web API includes the `zaraz.track()`, `zaraz.set()` and `zaraz.ecommerce()` methods.
+
+[The Track method](https://developers.cloudflare.com/zaraz/web-api/track/) allows you to track custom events and actions on your website that might happen in real time. [The Set method](https://developers.cloudflare.com/zaraz/web-api/set/) is an easy shortcut to define a variable once and have it sent with every future Track call. [E-commerce](https://developers.cloudflare.com/zaraz/web-api/ecommerce/) is a unified method for sending e-commerce related data to multiple tools without needing to configure triggers and events. Refer to [Web API](https://developers.cloudflare.com/zaraz/web-api/) for more information.
+
+## Troubleshooting
+
+If you suspect that something is not working the way it should, or if you want to verify the operation of tools on your website, read more about [Debug Mode](https://developers.cloudflare.com/zaraz/web-api/debug-mode/) and [Zaraz Monitoring](https://developers.cloudflare.com/zaraz/monitoring/). Also, check the [FAQ](https://developers.cloudflare.com/zaraz/faq/) page to see if your question was already answered there.
+
+## Platform plugins
+
+Users and companies have developed plugins that make using Zaraz easier on specific platforms. We recommend checking out these plugins if you are using one of these platforms.
+
+### WooCommerce
+
+* [Beetle Tracking](https://beetle-tracking.com/) - Integrate Zaraz with your WordPress WooCommerce website to track e-commerce events with zero configuration. Beetle Tracking also supports consent management and other advanced features.
+
+## Footnotes
+
+1. Some tools do not supported Automatic Actions, see the section about [Custom Actions](https://developers.cloudflare.com/zaraz/custom-actions) if the tool you are adding doesn't present Automatic Actions. [↩](#user-content-fnref-1)
+
+</page>
+
+<page>
+---
+title: Versions & History · Cloudflare Zaraz docs
+description: Zaraz can work in real-time. In this mode, every change you make is
+  instantly published. You can also enable Preview & Publish mode, which allows
+  you to test your changes before you commit to them.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/history/
+  md: https://developers.cloudflare.com/zaraz/history/index.md
+---
+
+Zaraz can work in real-time. In this mode, every change you make is instantly published. You can also enable [Preview & Publish mode](https://developers.cloudflare.com/zaraz/history/preview-mode/), which allows you to test your changes before you commit to them.
+
+When enabling Preview & Publish mode, you will also have access to [Zaraz History](https://developers.cloudflare.com/zaraz/history/versions/). Zaraz History shows you a list of all the changes made to your settings, and allows you to revert to any previous settings.
+
+* [Preview mode](https://developers.cloudflare.com/zaraz/history/preview-mode/)
+* [Versions](https://developers.cloudflare.com/zaraz/history/versions/)
+
+</page>
+
+<page>
+---
+title: HTTP Events API · Cloudflare Zaraz docs
+description: The Zaraz HTTP Events API allows you to send information to Zaraz
+  from places that cannot run the Web API, such as your server or your mobile
+  app. It is useful for tracking events that are happening outside the browser,
+  like successful transactions, sign-ups and more. The API also allows sending
+  multiple events in batches.
+lastUpdated: 2025-01-13T09:52:51.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/http-events-api/
+  md: https://developers.cloudflare.com/zaraz/http-events-api/index.md
+---
+
+The Zaraz HTTP Events API allows you to send information to Zaraz from places that cannot run the [Web API](https://developers.cloudflare.com/zaraz/web-api/), such as your server or your mobile app. It is useful for tracking events that are happening outside the browser, like successful transactions, sign-ups and more. The API also allows sending multiple events in batches.
+
+## Configure the API endpoint
+
+The API is disabled unless you configure an endpoint for it. The endpoint determines under what URL the API will be accessible. For example, if you set the endpoint to be `/zaraz/api`, and your domain is `example.com`, requests to the API will go to `https://example.com/zaraz/api`.
+
+To enable the API endpoint:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **Settings**.
+3. Under **Endpoints** > **HTTP Events API**, set your desired path. Remember the path is relative to your domain, and it must start with a `/`.
+
+Important
+
+To avoid getting the API used by unwanted actors, Cloudflare recommends choosing a unique path.
+
+## Send events
+
+The endpoint you have configured for the API will receive `POST` requests with a JSON payload. Below, there is an example payload:
+
+```json
+{
+  "events": [
+    {
+      "client": {
+        "__zarazTrack": "transaction successful",
+        "value": "200"
+      }
+    }
+  ]
+}
+```
+
+The payload must contain an `events` array. Each Event Object in this array corresponds to one event you want Zaraz to process. The above example is similar to calling `zaraz.track('transaction successful', { value: "200" })` using the Web API.
+
+The Event Object holds the `client` object, in which you can pass information about the event itself. Every key you include in the Event Object will be available as a *Track Property* in the Zaraz dashboard.
+
+There are two reserved keys:
+
+* `__zarazTrack`: The value of this key will be available as *Event Name*. This is what you will usually build your triggers around. In the above example, setting this to `transaction successful` is the same as [using the Web API](https://developers.cloudflare.com/zaraz/web-api/track/) and calling `zaraz.track("transaction successful")`.
+* `__zarazEcommerce`: This key needs to be set to `true` if you want Zaraz to process the event as an e-commerce event.
+
+### The `system` key
+
+In addition to the `client` key, you can use the `system` key to include information about the device from which the event originated. For example, you can submit the `User-Agent` string, the cookies and the screen resolution. Zaraz will use this information when connecting to different third-party tools. Since some tools depend on certain fields, it is often useful to include all the information you can.
+
+The same payload from before will resemble the following example, when we add the `system` information:
+
+```json
+{
+  "events": [
+    {
+      "client": {
+        "__zarazTrack": "transaction successful",
+        "value": "200"
+      },
+      "system": {
+        "page": {
+          "url": "https://example.com",
+          "title": "My website"
+        },
+        "device": {
+          "language": "en-US",
+          "ip": "192.168.0.1"
+        }
+      }
+    }
+  ]
+}
+```
+
+For all available system keys, refer to the table below:
+
+| Property | Type | Description |
+| - | - | - |
+| `system.cookies` | Object | A key-value object holding cookies from the device associated with the event. |
+| `system.device.ip` | String | The IP address of the device associated with the event. |
+| `system.device.resolution` | String | The screen resolution of the device associated with the event, in a `WIDTHxHEIGHT` format. |
+| `system.device.viewport` | String | The viewport of the device associated with the event, in a `WIDTHxHEIGHT` format. |
+| `system.device.language` | String | The language code used by the device associated with the event. |
+| `system.device.user-agent` | String | The `User-Agent` string of the device associated with the event. |
+| `system.page.title` | String | The title of the page associated with the event. |
+| `system.page.url` | String | The URL of the page associated with the event. |
+| `system.page.referrer` | String | The URL of the referrer page in the time the event took place. |
+| `system.page.encoding` | String | The encoding of the page associated with the event. |
+
+Note
+
+It is currently not possible to override location related properties, such as City, Country, and Continent.
+
+## Process API responses
+
+For each Event Object in your payload, Zaraz will respond with a Result Object. The Result Objects order matches the order of your Event Objects.
+
+Depending on what tools you are loading using Zaraz, the body of the response coming from the API might include information you will want to process. This is because some tools do not have a complete server-side implementation and still depend on cookies, client-side JavaScript or similar mechanisms. Each Result Object can include the following information:
+
+| Result key | Description |
+| - | - |
+| `fetch` | Fetch requests that tools want to send from the user browser. |
+| `execute` | JavaScript code that tools want to execute in the user browser. |
+| `return` | Information that tools return. |
+| `cookies` | Cookies that tools want to set for the user. |
+
+You do not have to process the information above, but some tools might depend on this to work properly. You can start using the HTTP Events API without processing the information in the table above, and adjust accordingly later.
+
+</page>
+
+<page>
+---
+title: Monitoring · Cloudflare Zaraz docs
+description: Zaraz Monitoring shows you different metrics regarding Zaraz. This
+  helps you to detect issues when they occur. For example, if a third-party
+  analytics provider stops collecting data, you can use the information
+  presented by Zaraz Monitoring to find where in the workflow the problem
+  occurred.
+lastUpdated: 2024-11-14T15:40:43.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/monitoring/
+  md: https://developers.cloudflare.com/zaraz/monitoring/index.md
+---
+
+Zaraz Monitoring shows you different metrics regarding Zaraz. This helps you to detect issues when they occur. For example, if a third-party analytics provider stops collecting data, you can use the information presented by Zaraz Monitoring to find where in the workflow the problem occurred.
+
+You can also check activity data in the **Activity last 24hr** section, when you access [tools](https://developers.cloudflare.com/zaraz/get-started/), [actions](https://developers.cloudflare.com/zaraz/custom-actions/) and [triggers](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) in the dashboard.
+
+To use Zaraz Monitoring:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Monitoring**.
+3. Select one of the options (Loads, Events, Triggers, Actions). Zaraz Monitoring will show you how the traffic for that section evolved for the time period selected.
+
+## Zaraz Monitoring options
+
+* **Loads**: Counts how many times Zaraz was loaded on pages of your website. When [Single Page Application support](https://developers.cloudflare.com/zaraz/reference/settings/#single-page-application-support) is enabled, Loads will count every change of navigation as well.
+* **Events**: Counts how many times a specific event was tracked by Zaraz. It includes the [Pageview event](https://developers.cloudflare.com/zaraz/get-started/), [Track events](https://developers.cloudflare.com/zaraz/web-api/track/), and [E-commerce events](https://developers.cloudflare.com/zaraz/web-api/ecommerce/).
+* **Triggers**: Counts how many times a specific trigger was activated. It includes the built-in [Pageview trigger](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) and any other trigger you set in Zaraz.
+* **Actions**: Counts how many times a [specific action](https://developers.cloudflare.com/zaraz/custom-actions/) was activated. It includes the pre-configured Pageview action, and any other actions you set in Zaraz.
+* **Server-side requests**: tracks the status codes returned from server-side requests that Zaraz makes to your third-party tools.
+
+</page>
+
+<page>
+---
+title: Pricing · Cloudflare Zaraz docs
+description: Zaraz is available to all Cloudflare users, across all tiers. Each
+  month, every Cloudflare account gets 1,000,000 free Zaraz Events. For
+  additional usage, the Zaraz Paid plan costs $5 per month for each additional
+  1,000,000 Zaraz Events.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/pricing-info/
+  md: https://developers.cloudflare.com/zaraz/pricing-info/index.md
+---
+
+Zaraz is available to all Cloudflare users, across all tiers. Each month, every Cloudflare account gets 1,000,000 free Zaraz Events. For additional usage, the Zaraz Paid plan costs $5 per month for each additional 1,000,000 Zaraz Events.
+
+All Zaraz features and tools are always available on all accounts. Learn more about our pricing in [the following pricing announcement](https://blog.cloudflare.com/zaraz-announces-new-pricing)
+
+## The Zaraz Event unit
+
+One Zaraz Event is an event you’re sending to Zaraz, whether that’s a page view, a `zaraz.track` event, or similar. You can easily see the total number of Zaraz Events you’re currently using under the [Monitoring section](https://developers.cloudflare.com/zaraz/monitoring/) in the Cloudflare Zaraz Dashboard.
+
+## Enabling Zaraz Paid
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Plans**.
+3. Click the **Enable Zaraz usage billing** button and follow the instructions.
+
+## Using Zaraz Free
+
+If you don't enable Zaraz Paid, you'll receive email notifications when you reach 50%, 80%, and 90% of your free allocation. Zaraz will be disabled until the next billing cycle if you exceed 1,000,000 events without enabling Zaraz Paid.
+
+</page>
+
+<page>
+---
+title: Reference · Cloudflare Zaraz docs
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/reference/
+  md: https://developers.cloudflare.com/zaraz/reference/index.md
+---
+
+* [Zaraz Context](https://developers.cloudflare.com/zaraz/reference/context/)
+* [Properties reference](https://developers.cloudflare.com/zaraz/reference/properties-reference/)
+* [Settings](https://developers.cloudflare.com/zaraz/reference/settings/)
+* [Third-party tools](https://developers.cloudflare.com/zaraz/reference/supported-tools/)
+* [Triggers and rules](https://developers.cloudflare.com/zaraz/reference/triggers/)
+
+</page>
+
+<page>
+---
+title: Variables · Cloudflare Zaraz docs
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/variables/
+  md: https://developers.cloudflare.com/zaraz/variables/index.md
+---
+
+* [Create a variable](https://developers.cloudflare.com/zaraz/variables/create-variables/)
+* [Edit variables](https://developers.cloudflare.com/zaraz/variables/edit-variables/)
+* [Worker Variables](https://developers.cloudflare.com/zaraz/variables/worker-variables/)
+
+</page>
+
+<page>
+---
+title: Web API · Cloudflare Zaraz docs
+description: Zaraz provides a client-side web API that you can use anywhere
+  inside the <body> tag of a page.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/web-api/
+  md: https://developers.cloudflare.com/zaraz/web-api/index.md
+---
+
+Zaraz provides a client-side web API that you can use anywhere inside the `<body>` tag of a page.
+
+This API allows you to send events and data to Zaraz, that you can later use when creating your triggers. Using the API lets you tailor the behavior of Zaraz to your needs: You can launch tools only when you need them, or send information you care about that is not otherwise automatically collected from your site.
+
+* [Track](https://developers.cloudflare.com/zaraz/web-api/track/)
+* [Set](https://developers.cloudflare.com/zaraz/web-api/set/)
+* [E-commerce](https://developers.cloudflare.com/zaraz/web-api/ecommerce/)
+* [Debug mode](https://developers.cloudflare.com/zaraz/web-api/debug-mode/)
+
+</page>
+
+<page>
+---
+title: Blocking Triggers · Cloudflare Zaraz docs
+description: Blocking Triggers are triggers that instead of being used to define
+  when to start an action, are used to define when to not start an action. You
+  may need to block one or more actions in a tool from firing when a specific
+  condition arises. For these cases, you can set Blocking Triggers.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/blocking-triggers/
+  md: https://developers.cloudflare.com/zaraz/advanced/blocking-triggers/index.md
+---
+
+Blocking Triggers are triggers that instead of being used to define when to start an action, are used to define when to *not* start an action. You may need to block one or more actions in a tool from firing when a specific condition arises. For these cases, you can set Blocking Triggers.
+
+Every tool action has Firing Triggers assigned to it. Blocking Triggers are optional and, if defined, will conditionally prevent the action from starting. When you add Blocking Triggers to an action, the action will not fire if any of its Blocking Triggers are true. If the tool has more than one action, other actions without these Blocking Triggers will still work.
+
+To conditionally block all actions in a tool, you have to configure Blocking Triggers on every action that belongs to that tool. Note that when you use Blocking Triggers, Zaraz will still load on the page.
+
+To use Blocking Triggers, start by [creating the trigger](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) with the conditions you want to use to block an event. Then:
+
+1. Go to [**Zaraz**](https://dash.cloudflare.com/?to=/:account/:zone/zaraz) > **Tools Configuration**.
+2. Under **Third-party tools**, locate the tool with the action you want to block and select **Edit**.
+3. In **Action Name**, select the action you want to block.
+4. In **Blocking Triggers**, use the dropdown menu to add a trigger to block the action.
+5. Select **Save**.
+
+Note
+
+Blocking Triggers are useful if you wish to block specific actions, or even specific tools from firing, while keeping others active. If you wish to turn off Zaraz entirely on specific pages/domains/subdomains, or load Zaraz depending on other factors such as cookies, we recommend [loading Zaraz selectively](https://developers.cloudflare.com/zaraz/advanced/load-selectively/).
+
+</page>
+
+<page>
+---
+title: Context Enricher · Cloudflare Zaraz docs
+description: The Zaraz Context Enricher is a tool to modify or enrich the
+  context that is being used across Zaraz using a Cloudflare Worker. The Context
+  Enricher allows you access to the client and system variables.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/context-enricher/
+  md: https://developers.cloudflare.com/zaraz/advanced/context-enricher/index.md
+---
+
+The Zaraz Context Enricher is a tool to modify or enrich [the context](https://developers.cloudflare.com/zaraz/reference/context/) that is being used across Zaraz using a Cloudflare Worker. The Context Enricher allows you access to the client and system variables.
+
+## Creating a Worker
+
+To use a Context Enricher, you first need to create a new Cloudflare Worker. You can do this through the Cloudflare dashboard or by using [Wrangler](https://developers.cloudflare.com/workers/get-started/guide/).
+
+To create a new Worker in the Cloudflare dashboard:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/).
+2. Go to **Workers & Pages** and select **Create application**.
+3. Give a name to your Worker and select **Deploy**.
+4. Select **Edit code**.
+
+You have now created a basic Worker that responds with "Hello world." To make this Worker functional when using it as a Context Enricher, you need to change the code to return the context back:
+
+```js
+export default {
+  async fetch(request, env, ctx) {
+    const { system, client } = await request.json();
+
+
+    // Here goes your modification to the system or client objects.
+    /*
+      For example, to change the country to a fictitious "Pirate's Island" ("PI"), use:
+      system.device.location.country = 'PI';
+    */
+
+
+    return new Response(JSON.stringify({ system, client }));
+  },
+};
+```
+
+Keep reading for more complete examples of different use cases or refer to [Zaraz Context](https://developers.cloudflare.com/zaraz/reference/context/).
+
+## Configuring your Context Enricher
+
+Now that your Worker is published, you can select it in your Zaraz settings:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/).
+2. Go to **Zaraz** > **Settings**.
+3. Select your Context Enricher Worker.
+4. Save your settings.
+
+Your Context Enricher will now run on all Zaraz requests in that given zone.
+
+## Example Context Enricher
+
+### Adding arbitrary information using an API
+
+You can use the Context Enricher to add information to your context. For example, you could use an API to get the current weather for the user's location and add it to the context.
+
+```js
+function getWeatherForLocation({ client, system }) {
+  // Get the location from the context.
+  const { city } = system.device.location;
+
+
+  // Get the weather from an API.
+  const response = await fetch(
+    `https://wttr.in/${encodeURIComponents(city)}?format=j1`
+  ).then((response) => response.json());
+
+
+  // Add the weather to the context.
+  client.weather = weather;
+
+
+  return { client, system };
+}
+
+
+export default {
+  async fetch(request, env, ctx) {
+    const { system, client } = await request.json();
+
+
+    // Add the weather to the context.
+    const newContext = getWeatherForLocation({ system, client });
+
+
+    // Return as JSON
+    return new Response(JSON.stringify(newContext));
+  },
+};
+```
+
+Now, you can use the weather property anywhere in Zaraz by choosing the `Track Property` from the attributes input and entering `weather`.
+
+### Masking sensitive information, such as emails
+
+Let's assume we want to redact sensitive information, such as emails. For this, we're going to replace all occurrences of email addresses throughout the context. Please keep in mind that this is only an example and might not fit all edge or use cases.
+
+For the sake of simplicity of this example, we're going to replace all strings that contain an `@` symbol:
+
+```js
+function redactEmailAddressesFromObject(context) {
+  // Loop through all keys of the object.
+  for (const key in context) {
+    // Check if the value is a string.
+    if (typeof context[key] === "string") {
+      // Check if the string contains an @ symbol.
+      if (context[key].includes("@")) {
+        // Replace the string with a redacted version.
+        context[key] = "REDACTED@example.com";
+      }
+    } else if (typeof context[key] === "object") {
+      // Recursively call this function to redact the object.
+      context[key] = redactEmailAddressesFromObject(context[key]);
+    }
+  }
+
+
+  return context;
+}
+
+
+export default {
+  async fetch(request, env, ctx) {
+    const { system, client } = await request.json();
+
+
+    // Redact email addresses from the context.
+    const newContext = redactEmailAddressesFromObject({ system, client });
+
+
+    // Return as JSON
+    return new Response(JSON.stringify(newContext));
+  },
+};
+```
+
+</page>
+
+<page>
+---
+title: Data layer compatibility mode · Cloudflare Zaraz docs
+description: Cloudflare Zaraz offers backwards compatibility with the dataLayer
+  function found in tag management software, used to track events and other
+  parameters. This way you can keep your current implementation and Cloudflare
+  Zaraz will automatically collect your events.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/datalayer-compatibility/
+  md: https://developers.cloudflare.com/zaraz/advanced/datalayer-compatibility/index.md
+---
+
+Cloudflare Zaraz offers backwards compatibility with the `dataLayer` function found in tag management software, used to track events and other parameters. This way you can keep your current implementation and Cloudflare Zaraz will automatically collect your events.
+
+To keep the Zaraz script as small and fast as possible, the data layer compatibility mode is disabled by default. To enable it:
+
+1. Go to [**Zaraz**](https://dash.cloudflare.com/?to=/:account/:zone/zaraz) > **Settings**.
+2. Enable the **Data layer compatibility mode** toggle. Refer to [Zaraz settings](https://developers.cloudflare.com/zaraz/reference/settings/) for more information.
+
+## Using the data layer with Zaraz
+
+After enabling the compatibility mode, Zaraz will automatically translate your `dataLayer.push()` calls to `zaraz.track()`, so you can keep using the `dataLayer.push()` function to send events from the browser to Zaraz.
+
+Note
+
+Zaraz does not support automatic e-commerce mapping through the `dataLayer` compatibility mode. If you need to track e-commerce events, refer to the [E-commerce API](https://developers.cloudflare.com/zaraz/web-api/ecommerce/).
+
+Events will only be sent to Zaraz if your pushed object includes an `event` key. The `event`key is used as the name for the Zaraz event. Other keys will become part of the `eventProperties` object. The following example shows how a purchase event will be sent using the data layer to Zaraz — note that the parameters inside the object depend on what you want to track:
+
+```js
+dataLayer.push({
+  event: 'purchase',
+  price: '24',
+  currency: 'USD',
+  transactionID: '12345678',
+});
+```
+
+Cloudflare Zaraz then translates the `dataLayer.push()` call to a `zaraz.track()` call. So, `dataLayer.push({event: "purchase", price: "24", "currency": "USD"})` is equivalent to `zaraz.track("purchase", {"price": "24", "currency": "USD"})`.
+
+Because Zaraz converts the `dataLayer.push()` call to `zaraz.track()`, creating a trigger based on `dataLayer.push()` calls is the same as creating triggers for `zaraz.track()`. As an example, the trigger below will match the above `dataLayer.push()` call because it matches the event with `purchase`.
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *Event Name* | *Equals* | `purchase` |
+
+We do not recommend using `dataLayer`. However, as many websites employ it, Cloudflare Zaraz has this automatic translation layer that converts it to `zaraz.track()`.
+
+</page>
+
+<page>
+---
+title: Use Zaraz on domains not proxied by Cloudflare · Cloudflare Zaraz docs
+description: "You can load Zaraz on domains that are not proxied through
+  Cloudflare. However, you will need to create a separate domain, or subdomain,
+  proxied by Cloudflare (also known as orange-clouded domains), and load the
+  script from it:"
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/domains-not-proxied/
+  md: https://developers.cloudflare.com/zaraz/advanced/domains-not-proxied/index.md
+---
+
+You can load Zaraz on domains that are not proxied through Cloudflare. However, you will need to create a separate domain, or subdomain, proxied by Cloudflare (also [known as orange-clouded](https://community.cloudflare.com/t/step-3-enabling-the-orange-cloud/52715) domains), and load the script from it:
+
+1. Create a new subdomain like `my-subdomain.example.com` and proxy it through Cloudflare. Refer to [Enabling the Orange Cloud](https://community.cloudflare.com/t/step-3-enabling-the-orange-cloud/52715) for more information.
+2. Add the following script to your main website’s HTML, immediately before the `</head>` tag closes:
+
+```html
+<script src="https://my-subdomain.example.com/cdn-cgi/zaraz/i.js"></script>
+```
+
+</page>
+
+<page>
+---
+title: Google Consent Mode · Cloudflare Zaraz docs
+description: Google Consent Mode is used by Google tools to manage consent
+  regarding the usage of private data and Personally Identifiable Information
+  (PII). Zaraz provides automatic support for Consent Mode v2, as well as manual
+  support for Consent Mode v1.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/google-consent-mode/
+  md: https://developers.cloudflare.com/zaraz/advanced/google-consent-mode/index.md
+---
+
+## Background
+
+[Google Consent Mode](https://developers.google.com/tag-platform/security/concepts/consent-mode) is used by Google tools to manage consent regarding the usage of private data and Personally Identifiable Information (PII). Zaraz provides automatic support for Consent Mode v2, as well as manual support for Consent Mode v1.
+
+You can also use Google Analytics and Google Ads without cookies by selecting **Permissions** and disabling **Access client key-value store**.
+
+***
+
+## Consent Mode v2
+
+Consent Mode v2 specifies a "default" consent status that is usually set when the session starts, and an "updated" status that is set when the visitor configures their consent preferences. Consent Mode v2 will turn on automatically when the correct event properties are available, meaning there is no need to change any settings in the respective tools or their actions.
+
+### Set the default consent status
+
+Often websites will want to set a default consent status that denies all categories. You can do that with no code at all by checking the **Set Google Consent Mode v2 state** in the Zaraz **Settings** page.
+
+If that is not what your website needs, and instead you want to set the default consent status in a more granular way, use the reserved `google_consent_default` property:
+
+```js
+zaraz.set("google_consent_default",  {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+})
+```
+
+After the above code is executed, the consent status will be saved to `localStorage` and will be included with every subsequent Zaraz event.
+
+Note that the code should be included as part of your website HTML code, usually inside a `<script>` element within the `<body>` element. It is **not recommended** to use the Custom HTML Zaraz tool for including it, as the consent preferences should be specified before Zaraz loads any other tool.
+
+### Update the consent status
+
+After the user has provided their consent preferences you can set the new status using the reserved `google_consent_update` property. If you are using the Zaraz Consent Management Platform, you can use the [Consent Choices Updated event](https://developers.cloudflare.com/zaraz/consent-management/api/#consent-choices-updated) to know when to update the Google Consent status.
+
+```js
+zaraz.set("google_consent_update",  {
+  'ad_storage': 'granted',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'granted',
+  'analytics_storage': 'denied'
+})
+```
+
+All subsequent events will include the information about both the default and the updated consent status.
+
+### Verify if Zaraz is processing Consent Mode v2
+
+You can verify that Zaraz is processing the Consent Mode settings by enabling the [Zaraz Debugger](https://developers.cloudflare.com/zaraz/web-api/debug-mode/). Server-side requests to Google Analytics and Google Ads should include the `gcd` parameter.
+
+## Consent Mode v1
+
+Consent Mode v1 was deprecated by Google in November 2023, but is still supported. Integration with Zaraz is more complex than Consent Mode v2. You do not need to use Consent Mode v1 if you have implemented Consent Mode v2.
+
+### Set up Consent Mode v1
+
+Configuring Consent Mode v1 is done manually for each tool. Go to the tool page and select **Settings**. Select **Add field**, and select **Consent Mode** from the drop-down menu. Then, select **Confirm**.
+
+The value for Consent Mode must adhere to Google's defined format, which is a four-character string starting with `G1`, followed by two characters indicating consent status for Marketing and Analytics. `1` indicates consent, `0` indicates no consent, and `-` indicates no consent was required. For example, setting the value to `G111` means the user has granted consent for both Marketing and Analytics, `G101` means consent for Analytics only, and `G10-` means no consent for Marketing but no required consent for Analytics.
+
+Since the value for Consent Mode may change per user or session, it is recommended to dynamically set this value using `zaraz.set` in your website code. For instance, use `zaraz.set("google_consent_v1", "G100")` on page load, and `zaraz.set("google_consent_v1", "G111")` after the user granted consent for Marketing and Analytics. In the **Consent Mode** field, select the **+** symbol, choose **Event Property**, and type `google_consent_v1` as the property name. Zaraz will then use the latest value of the `google_consent_v1` Event Property as the Consent Mode string.
+
+## Supported Tools
+
+Consent Mode v1 and v2 are both supported by Google Analytics 4 and Google Ads.
+
+</page>
+
+<page>
+---
+title: Configuration Import & Export · Cloudflare Zaraz docs
+description: Exporting your Zaraz configuration can be useful if you want to
+  create a local backup or if you need to import it to another website. Zaraz
+  provides an easy way to export and import your configuration.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/import-export/
+  md: https://developers.cloudflare.com/zaraz/advanced/import-export/index.md
+---
+
+Exporting your Zaraz configuration can be useful if you want to create a local backup or if you need to import it to another website. Zaraz provides an easy way to export and import your configuration.
+
+## Export your Zaraz configuration
+
+To export your Zaraz configuration:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **Settings** > **Advanced**.
+3. Click "Export" to download your configuration.
+
+## Import your Zaraz configuration
+
+Warning
+
+Importing a Zaraz configuration replaces your existing configuration, meaning that any information you did not back up could be lost. Consider exporting your existing configuration before importing a new one.
+
+To import a Zaraz configuration:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **Settings** > **Advanced**.
+3. Click **Browse** to select your configuration file, and **Import** to import it.
+
+</page>
+
+<page>
+---
+title: Custom Managed Components · Cloudflare Zaraz docs
+description: Zaraz supports loading custom third-party tools using Managed
+  Components. These can be Managed Components that you have developed yourself
+  or that were developed by others. Using Custom Managed Components with Zaraz
+  is done by converting them into a Cloudflare Worker running in your account.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/load-custom-managed-component/
+  md: https://developers.cloudflare.com/zaraz/advanced/load-custom-managed-component/index.md
+---
+
+Zaraz supports loading custom third-party tools using [Managed Components](https://managedcomponents.dev/). These can be Managed Components that you have developed yourself or that were developed by others. Using Custom Managed Components with Zaraz is done by converting them into a Cloudflare Worker running in your account.
+
+If you are new to Managed Components, we recommend you get started with [creating your own Managed Component](https://managedcomponents.dev/getting-started/quickstart) or check out [our demo Managed Component](https://github.com/managed-components/demo).
+
+## Prepare a Managed Component
+
+Note
+
+If your Managed Component requires any building, transpiling, or bundling, you must complete those steps before you can deploy it. For example, this is required for components written in TypeScript and is usually done by running `npm run build` or an equivalent.
+
+To get started, you need have a JavaScript file ready for deployment, that exports the default Managed Component function for your Managed Component.
+
+In this guide, we will use a simple example of a Custom Managed Component that counts user visits and logs this data in the console:
+
+```javascript
+// File: index.js
+export default async function (manager) {
+  // Add a pageview event
+  manager.addEventListener("pageview", event, () => {
+    const { client } = event;
+
+
+    // Get the variable "counter" from the client's cookies and increase by 1
+    let counter = parseInt(client.get("counter")) || 0;
+    counter += 1;
+
+
+    // Log the increased number
+    client.execute(`console.log('Views: ${counter}')`);
+
+
+    // Store the increased number for the next visit
+    client.set("counter", counter);
+  });
+}
+```
+
+## Deploy a Managed Component to Cloudflare
+
+1. Open a terminal in your Managed Component’s root directory.
+2. From there, run `npx managed-component-to-cloudflare-worker ./index.js my-new-counter-mc`, which will deploy the Managed Component to a specialized Cloudflare Worker. Change the path to your `index.js`. You can also rename the Component.
+3. Your Managed Component should now be [visible on your account](https://dash.cloudflare.com/redirect?account=/workers-and-pages) as a Cloudflare Worker prefixed with `custom-mc-`.
+
+## Configure a Managed Component in Cloudflare
+
+Note
+
+As with regular tools, it is recommended that you [create the triggers](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) you need first, if the Custom Managed Component you are adding needs to start actions using firing triggers different from the default `Pageview` trigger.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select your account and domain.
+2. Select **Zaraz** > **Tools Configuration** > [**Third-party tools**](https://dash.cloudflare.com/?to=/:account/:zone/zaraz/tools-config/tools/catalog).
+3. Select **Add new tool** and choose **Custom Managed Component** from the tools library page. Select **Continue** to confirm your selection.
+4. In **Select Custom MC**, choose a Custom Managed Component that you have deployed to your account, such as `custom-mc-my-new-counter-mc`. Select **Continue**.
+5. In **Permissions**, select the permissions you want to grant the Custom Managed Component. If you run an untrusted Managed Component, pay close attention to what permissions you are granting. Select **Continue**.
+6. In **Set up**, configure the settings for your new tool. The information you need to enter will depend on the code of the Managed Component. You can add settings and default fields, as well as use [variables you have previously set up](https://developers.cloudflare.com/zaraz/variables/create-variables/).
+7. Select **Save**.
+
+While your tool is now configured, it does not have any actions associated with it yet. Adding new actions will tell Zaraz when to contact your Managed Component, and what information to send to it. When adding actions, make sure to verify the Action Type you are using. The types `pageview` and `event` are most commonly used, but you can add any action type to match the event listeners your Managed Component is using. Learn how to [create additional actions](https://developers.cloudflare.com/zaraz/custom-actions/).
+
+If your Managed Component listens to `ecommerce` events, toggle **E-commerce tracking** in the Managed Component Settings page.
+
+## Unsupported Features
+
+As of now, Custom Managed Components do not support the use of the following methods yet:
+
+* `manager.registerEmbed`
+* `manager.registerWidget`
+* `manager.proxy`
+* `manager.serve`
+
+</page>
+
+<page>
+---
+title: Load Zaraz selectively · Cloudflare Zaraz docs
+description: You can use Configuration Rules to load Zaraz selectively on
+  specific URLs or subdomains. Configuration Rules can also be used to block
+  Zaraz from loading based on cookies, IP addresses or anything else related to
+  a request.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/load-selectively/
+  md: https://developers.cloudflare.com/zaraz/advanced/load-selectively/index.md
+---
+
+You can use [Configuration Rules](https://developers.cloudflare.com/rules/configuration-rules/) to load Zaraz selectively on specific URLs or subdomains. Configuration Rules can also be used to block Zaraz from loading based on cookies, IP addresses or anything else related to a request.
+
+Refer to [Configuration Rules](https://developers.cloudflare.com/rules/configuration-rules/) documentation to learn more about this feature and how you can use it with Zaraz.
+
+Note
+
+If you need to block one or more actions from firing in a tool, Cloudflare recommends you use [Blocking Triggers](https://developers.cloudflare.com/zaraz/advanced/blocking-triggers/) instead of Configuration Rules.
+
+</page>
+
+<page>
+---
+title: Load Zaraz manually · Cloudflare Zaraz docs
+description: By default, if your domain is proxied by Cloudflare, Zaraz will
+  automatically inject itself to HTML pages in your site. This makes it easier
+  to get up and running quickly. However, you might want to load Zaraz manually,
+  for example to test Zaraz on specific pages first.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/load-zaraz-manually/
+  md: https://developers.cloudflare.com/zaraz/advanced/load-zaraz-manually/index.md
+---
+
+By default, if your domain is proxied by Cloudflare, Zaraz will automatically inject itself to HTML pages in your site. This makes it easier to get up and running quickly. However, you might want to load Zaraz manually, for example to test Zaraz on specific pages first.
+
+After you turn off the [Auto-inject script](https://developers.cloudflare.com/zaraz/reference/settings/#auto-inject-script) option, you will have to manually include the Zaraz script in your HTML, immediately before the `</head>` tag closes. The path to your script would be `/cdn-cgi/zaraz/i.js`. Your script tag should look like this:
+
+```html
+<script src="/cdn-cgi/zaraz/i.js" referrerpolicy="origin"></script>
+```
+
+With the script, your page HTML should be similar to the following:
+
+```html
+<html>
+  <head>
+    ….
+    <script src="/cdn-cgi/zaraz/i.js" referrerpolicy="origin"></script>
+  </head>
+  <body>
+    …
+  </body>
+</html>
+```
+
+Note that if your site is not proxied by Cloudflare, you should refer to the section about [Using Zaraz on domains not proxied by Cloudflare](https://developers.cloudflare.com/zaraz/advanced/domains-not-proxied/).
+
+</page>
+
+<page>
+---
+title: Logpush · Cloudflare Zaraz docs
+description: Send Zaraz logs to an external storage provider like R2, S3, etc.
+lastUpdated: 2025-02-12T09:43:26.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/logpush/
+  md: https://developers.cloudflare.com/zaraz/advanced/logpush/index.md
+---
+
+Send Zaraz logs to an external storage provider like R2, S3, etc.
+
+This is an Enterprise only feature.
+
+## Setup
+
+To configure logpush support for Zaraz please follow these steps
+
+### 1. Create a logpush job
+
+Navigate to your Website (Zone) and from the left sidebar find **Analytics and Logs**.
+
+Under this **Analytics and Logs** section navigate to **Logpush**
+
+Click on **Create a Logpush Job** and follow the steps described in the [Logpush documentation](https://developers.cloudflare.com/logs/get-started/).
+
+When it comes to selecting a dataset please make sure to select **Zaraz Events**
+
+### 2. Enable Logpush from Zaraz settings
+
+Navigate to your website's [Zaraz settings](https://dash.cloudflare.com/?to=/:account/:zone/zaraz/settings)
+
+Enable **Export Zaraz Logs**.
+
+## Fields
+
+Logs will have the following fields
+
+| Field | Type | Description |
+| - | - | - |
+| RequestHeaders | `JSON` | The headers that were sent with the request. |
+| URL | `String` | The Zaraz URL to which the request was made. |
+| IP | `String` | The originating IP. |
+| Body | `JSON` | The body that was sent along with the request. |
+| Event Type | `String` | Can be one of the following: `server_request`, `server_response`, `action_triggered`, `ecommerce_triggered`, `client_request`, `component_error`. |
+| Event Details | `JSON` | Details about the event. |
+| TimestampStart | `String` | The time at which the event occured. |
+
+</page>
+
+<page>
+---
+title: Using JSONata · Cloudflare Zaraz docs
+description: For advanced use cases, it is sometimes useful to be able to
+  retrieve a value in a particular way. For instance, you might be using
+  zaraz.track to send a list of products to Zaraz, but the third-party tool you
+  want to send this data to requires the total cost of the products.
+  Alternatively, you may want to manipulate a value, such as converting it to
+  lowercase.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/advanced/using-jsonata/
+  md: https://developers.cloudflare.com/zaraz/advanced/using-jsonata/index.md
+---
+
+For advanced use cases, it is sometimes useful to be able to retrieve a value in a particular way. For instance, you might be using `zaraz.track` to send a list of products to Zaraz, but the third-party tool you want to send this data to requires the total cost of the products. Alternatively, you may want to manipulate a value, such as converting it to lowercase.
+
+Cloudflare Zaraz uses JSONata to enable you to perform complex operations on your data. With JSONata, you can evaluate expressions against the [Zaraz Context](https://developers.cloudflare.com/zaraz/reference/context/), allowing you to access and manipulate a wide range of values. To learn more about the values available and how to access them, consult the [full reference](https://developers.cloudflare.com/zaraz/reference/context/). You can also refer to the [complete JSONata documentation](https://docs.jsonata.org/) for more information about JSONata's capabilities.
+
+To use JSONata inside Zaraz, follow these steps:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **Tools configuration** > **Tools**.
+3. Select **Edit** next to a tool that you have already configured.
+4. Select an action or add a new one.
+5. Choose the field you want to use JSONata in, and wrap your JSONata expression with double curly brackets, like `{{ expression }}`.
+
+JSONata can also be used inside Triggers, Tool Settings, and String Variables.
+
+## Examples
+
+### Converting a string to lowercase
+
+Converting a string to lowercase is useful if you want to compare it to something else, for example a regular expression. Assuming the original string comes from a cookie named `myCookie`, turning the value lowercase can be done using `{{ $lowercase(system.cookies.myCookie) }}`.
+
+### Sending a sum of all products in the cart
+
+Assuming you are using `zaraz.ecommerce()` to send the cart content like this:
+
+```js
+zaraz.track('Product List Viewed',
+  {  products:
+    [
+    {
+      sku: '2671033',
+      name: 'V-neck T-shirt',
+      price: 14.99,
+      quantity: 3
+    },{
+      sku: '2671034',
+      name: 'T-shirt',
+      price: 10.99,
+      quantity: 2
+    },
+    ],
+  }
+);
+```
+
+If the field in which you want to show the sum, you will enter `{{ $sum(client.products.(price * quantity)) }}`. This will multiply the price of each product by its quantity, and then sum up the total.
+
+</page>
+
+<page>
+---
+title: Consent API · Cloudflare Zaraz docs
+description: The Consent API allows you to programmatically control all aspects
+  of the Consent Management program. This includes managing the modal, the
+  consent status, and obtaining information about your configured purposes.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/consent-management/api/
+  md: https://developers.cloudflare.com/zaraz/consent-management/api/index.md
+---
+
+## Background
+
+The Consent API allows you to programmatically control all aspects of the Consent Management program. This includes managing the modal, the consent status, and obtaining information about your configured purposes.
+
+Using the Consent API, you can integrate Zaraz Consent preferences with an external Consent Management Platform, customize your consent modal, or restrict consent management to users in specific regions.
+
+***
+
+## Events
+
+### `Consent API Ready`
+
+It can be useful to know when the Consent API is fully loaded on the page so that code interacting with its methods and properties is not called prematurely.
+
+```js
+document.addEventListener("zarazConsentAPIReady", () => {
+  // do things with the Consent API
+});
+```
+
+### `Consent Choices Updated`
+
+This event is fired every time the user makes changes to their consent preferences. It can be used to act on changes to the consent, for example when updating a tool with the new consent preferences.
+
+```js
+document.addEventListener("zarazConsentChoicesUpdated", () => {
+  // read the new consent preferences using `zaraz.consent.getAll();` and do things with it
+});
+```
+
+***
+
+## Properties
+
+The following are properties of the `zaraz.consent` object.
+
+* `modal` boolean
+
+  * Get or set the current visibility status of the consent modal dialog.
+
+* `purposes` object read-only
+
+  * An object containing all configured purposes, with their ID, name, description, and order.
+
+* `APIReady` boolean read-only
+
+  * Indicates whether the Consent API is currently available on the page.
+
+***
+
+## Methods
+
+### `Get`
+
+```js
+zaraz.consent.get(purposeId);
+```
+
+* `get(purposeId)` : `boolean | undefined`
+
+Get the current consent status for a purpose using the purpose ID.
+
+* `true`: The consent was granted.
+* `false`: The consent was not granted.
+* `undefined`: The purpose does not exist.
+
+#### Parameters
+
+* `purposeId` string
+
+  * The ID representing the Purpose.
+
+### `Set`
+
+```js
+zaraz.consent.set(consentPreferences);
+```
+
+* `set(consentPreferences)` : `undefined`
+
+Set the consent status for some purposes using the purpose ID.
+
+#### Parameters
+
+* `consentPreferences` object
+
+  * a `{ purposeId: boolean }` object describing the purposes you want to set and their respective consent status.
+
+### `Get All`
+
+```js
+zaraz.consent.getAll();
+```
+
+* `getAll()` : `{ purposeId: boolean }`
+
+Returns an object with the consent status of all purposes.
+
+### `Set All`
+
+```js
+zaraz.consent.setAll(consentStatus);
+```
+
+* `setAll(consentStatus)` : `undefined`
+
+Set the consent status for all purposes at once.
+
+#### Parameters
+
+* `consentStatus` boolean
+
+  * Indicates whether the consent was granted or not.
+
+### `Get All Checkboxes`
+
+```js
+zaraz.consent.getAllCheckboxes();
+```
+
+* `getAllCheckboxes()` : `{ purposeId: boolean }`
+
+Returns an object with the checkbox status of all purposes.
+
+### `Set Checkboxes`
+
+```js
+zaraz.consent.setCheckboxes(checkboxesStatus);
+```
+
+* `setCheckboxes(checkboxesStatus)` : `undefined`
+
+Set the consent status for some purposes using the purpose ID.
+
+#### Parameters
+
+* `checkboxesStatus` object
+
+  * a `{ purposeId: boolean }` object describing the checkboxes you want to set and their respective checked status.
+
+### `Set All Checkboxes`
+
+```js
+zaraz.consent.setAllCheckboxes(checkboxStatus);
+```
+
+* `setAllCheckboxes(checkboxStatus)` : `undefined`
+
+Set the `checkboxStatus` status for all purposes in the consent modal at once.
+
+#### Parameters
+
+* `checkboxStatus` boolean
+
+  * Indicates whether the purposes should be marked as checked or not.
+
+### `Send queued events`
+
+```js
+zaraz.consent.sendQueuedEvents();
+```
+
+* `sendQueuedEvents()` : `undefined`
+
+If some Pageview-based events were not sent due to a lack of consent, they can be sent using this method after consent was granted.
+
+## Examples
+
+### Restricting consent checks based on location
+
+You can combine multiple features of Zaraz to effectively disable Consent Management for some visitors. For example, if you would like to use it only for visitors from the EU, you can disable the automatic showing of the consent modal and add a Custom HTML tool with the following script:
+
+```html
+<script>
+function getCookie(name) {
+  const value = `; ${document.cookie}`
+  return value?.split(`; ${name}=`)[1]?.split(";")[0]
+}
+
+
+function handleZarazConsentAPIReady() {
+  const consent_cookie = getCookie("cf_consent")
+  const isEUCountry = "{{system.device.location.isEUCountry}}" === "1"
+  if (!consent_cookie) {
+    if (isEUCountry) {
+      zaraz.consent.modal = true
+    } else {
+      zaraz.consent.setAll(true)
+      zaraz.consent.sendQueuedEvents()
+    }
+  }
+}
+
+
+if (zaraz.consent?.APIReady) {
+  handleZarazConsentAPIReady()
+} else {
+  document.addEventListener("zarazConsentAPIReady", handleZarazConsentAPIReady)
+}
+</script>
+```
+
+Note: If you've customized the cookie name for the Consent Manager, use that customized name instead of "cf\_consent" in the snippet above.
+
+By letting this Custom HTML tool to run without consent requirements, the modal will appear to all EU visitors, while for other visitors consent will be automatically granted. The `{{ system.device.location.isEUCountry }}` property will be `1` if the visitor is from an EU country and `0` otherwise. You can use any other property or variable to customize the Consent Management behavior in a similar manner, such as `{{ system.device.location.country }}` to restrict consent checks based on country code.
+
+</page>
+
+<page>
+---
+title: Custom CSS · Cloudflare Zaraz docs
+description: You can add custom CSS to the Zaraz Consent Management Platform, to
+  make the consent modal more in-line with your website's design.
+lastUpdated: 2025-02-13T16:39:13.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/consent-management/custom-css/
+  md: https://developers.cloudflare.com/zaraz/consent-management/custom-css/index.md
+---
+
+You can add custom CSS to the Zaraz Consent Management Platform, to make the consent modal more in-line with your website's design.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Consent**.
+3. Find the **Custom CSS** section, and add your custom CSS code as you would on any other HTML editor.
+
+</page>
+
+<page>
+---
+title: Enable the Consent Management platform (CMP) · Cloudflare Zaraz docs
+description: Your Consent Management platform is ready. Your website should now
+  display a modal asking for consent for the tools you have configured.
+lastUpdated: 2024-12-16T13:32:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/consent-management/enable-consent-management/
+  md: https://developers.cloudflare.com/zaraz/consent-management/enable-consent-management/index.md
+---
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Consent**.
+3. Turn on **Enable Consent Management**.
+4. In **Consent modal text** fill in any legal information required in your country. Use HTML code to format your information as you would in any other HTML editor.
+5. Under **Purposes**, select **Add new Purpose**. Give your new purpose a name and a description. Purposes are the reasons for using third-party tools in your website.
+6. In **Assign purpose to tools**, match tools to purposes by selecting one of the purposes previously created from the drop-down menu. Do this for all your tools.
+7. Select **Save**.
+
+Your Consent Management platform is ready. Your website should now display a modal asking for consent for the tools you have configured.
+
+## Adding different languages
+
+In your Zaraz consent settings, you can add your consent modal text and purposes in various languages.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Consent**.
+3. Select a default language of your choice. The default setting is English.
+4. In **Consent modal text** and **Purposes**, you can select different languages and add translations.
+
+## Overriding the consent modal language
+
+By default, the Zaraz Consent Management Platform will try to match the language of the consent modal with the language requested by the browser, using the `Accept-Language` HTTP header. If, for any reason, you would like to force the consent modal language to a specific one, you can use the `zaraz.set` Web API to define the default `__zarazConsentLanguage` value.
+
+Below is an example that forces the language shown to be American English.
+
+```html
+<script>
+  zaraz.set('__zarazConsentLanguage', 'en-US')
+</script>
+```
+
+## Next steps
+
+If the default consent modal does not suit your website's design, you can use the [Custom CSS tool](https://developers.cloudflare.com/zaraz/consent-management/custom-css/) to add your own custom design.
+
+</page>
+
+<page>
+---
+title: IAB Transparency & Consent Framework Compliance · Cloudflare Zaraz docs
+description: The Zaraz Consent Management Platform is compliant with the IAB
+  Transparency & Consent Framework. Enabling this feature could be required in
+  order to serve Google Ads in the EEA and the UK.
+lastUpdated: 2025-03-07T11:07:33.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/consent-management/iab-tcf-compliance/
+  md: https://developers.cloudflare.com/zaraz/consent-management/iab-tcf-compliance/index.md
+---
+
+The Zaraz Consent Management Platform is compliant with the IAB Transparency & Consent Framework. Enabling this feature [could be required](https://blog.google/products/adsense/new-consent-management-platform-requirements-for-serving-ads-in-the-eea-and-uk/) in order to serve Google Ads in the EEA and the UK.
+
+The CMP ID of the approval is 433 and be can seen in the [IAB Europe](https://iabeurope.eu/cmp-list/) website.
+
+Using the Zaraz Consent Management Platform in IAB TCF Compliance Mode is is opt-in.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Select **Zaraz** > **Consent**.
+3. Check the **Use IAB TCF compliant modal** option.
+4. Under the **Assign purposes to tools** section, add vendor details to every tool that was not automatically assigned.
+5. Press **Save**.
+
+</page>
+
+<page>
+---
+title: Additional fields · Cloudflare Zaraz docs
+description: Some tools supported by Zaraz let you add fields in addition to the
+  required field. Fields can usually be added either to a specific action, or to
+  all the action within a tool, by adding the field as a Default Field.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/custom-actions/additional-fields/
+  md: https://developers.cloudflare.com/zaraz/custom-actions/additional-fields/index.md
+---
+
+Some tools supported by Zaraz let you add fields in addition to the required field. Fields can usually be added either to a specific action, or to all the action within a tool, by adding the field as a **Default Field**.
+
+## Add an additional field to a specific action
+
+Adding an additional field to an action will attach it to this action only, and will not affect your other actions.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Select **Zaraz** > **Tools Configuration** > **Third-party tools**.
+3. Locate the third-party tool with the action you want to add the additional field to, and select **Edit**.
+4. Select the action you wish to modify.
+5. Select **Add Field**.
+6. Choose the desired field from the drop-down menu and select **Add**.
+7. Enter the value you wish to pass to the action.
+8. Select **Save**.
+
+The new field will now be used in this event.
+
+## Add an additional field to all actions in a tool
+
+Adding an additional field to the tool sets it as a default field for all of the tool actions. It is the same as adding it to every action in the tool.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Select **Zaraz** > **Tools**.
+3. Locate the third-party tool where you want to add the field, and select **Edit**.
+4. Select **Settings** > **Add Field**.
+5. Choose the desired field from the drop-down menu, and select **Add**.
+6. Enter the value you wish to pass to all the actions in the tool.
+7. Select **Save**.
+
+The new field will now be attached to every action that belongs to the tool.
+
+</page>
+
+<page>
+---
+title: Create an action · Cloudflare Zaraz docs
+description: Once you have your triggers ready, you can use them to configure
+  your actions. An action defines a specific task that your tool will perform.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/custom-actions/create-action/
+  md: https://developers.cloudflare.com/zaraz/custom-actions/create-action/index.md
+---
+
+Once you have your triggers ready, you can use them to configure your actions. An action defines a specific task that your tool will perform.
+
+To create an action, first [add a third-party tool](https://developers.cloudflare.com/zaraz/get-started/). If you have already added a third-party tool, follow these steps to create an action.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Under **Third-party tools**, locate the tool you want to configure an action for, and select **Edit**.
+4. Under Custom actions select **Create action**.
+5. Give the action a descriptive name.
+6. In the **Firing Triggers** field, choose the relevant trigger or triggers you [previously created](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/). If you choose more than one trigger, the action will start when any of the selected triggers are matched.
+7. Depending on the tool you are adding an action for, you might also have the option to choose an **Action type**. You might also need to fill in more fields in order to complete setting up the action.
+8. Select **Save**.
+
+The new action will appear under **Tool actions**. To edit or disable/enable an action, refer to [Edit tools and actions](https://developers.cloudflare.com/zaraz/custom-actions/edit-tools-and-actions/).
+
+</page>
+
+<page>
+---
+title: Create a trigger · Cloudflare Zaraz docs
+description: Triggers define the conditions under which a tool will start an
+  action. Since a tool must have actions in order to work, and actions must have
+  triggers, it is important to set up your website's triggers correctly. A
+  trigger can be made out of one or more Rules. Zaraz supports multiple types of
+  Trigger Rules.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/
+  md: https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/index.md
+---
+
+Triggers define the conditions under which a tool will start an action. Since a tool must have actions in order to work, and actions must have triggers, it is important to set up your website's triggers correctly. A trigger can be made out of one or more Rules. Zaraz supports [multiple types of Trigger Rules](https://developers.cloudflare.com/zaraz/reference/triggers/).
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Select the **Triggers** tab.
+4. Select **Create trigger**.
+5. In **Trigger Name** enter a descriptive name for your trigger.
+6. In **Rule type**, choose from the actions available in the drop-down menu to start building your rule. Refer to [Triggers and rules](https://developers.cloudflare.com/zaraz/reference/triggers/) for more information on what each rule type means.
+7. In **Variable name**, input the variable you want as the trigger. For example, use *Event Name* if you are using [`zaraz.track()`](https://developers.cloudflare.com/zaraz/web-api/track/) in your website. If you want to use a variable you have previously [created in Variables](https://developers.cloudflare.com/zaraz/variables/create-variables/), select the `+` sign in the drop-down menu, scroll to **Variables**, and choose your variable.
+8. Use the **Match operation** drop-down list to choose a comparison operator. For an expression to match, the value in **Variable name** and **Match string** must satisfy the comparison operator.
+9. In **Match string**, input the string that completes the rule.
+10. You can add more than one rule to your trigger. Select **Add rule** and repeat steps 5-8 to add another set of rules and conditions. If you add more than one rule, your trigger will only be valid when all conditions are true.
+11. Select **Save**.
+
+Your trigger is now complete. If you go back to the main page you will see it listed under **Triggers**, as well as which tools use it. You can also [**Edit** or **Delete** your trigger](https://developers.cloudflare.com/zaraz/custom-actions/edit-triggers/).
+
+</page>
+
+<page>
+---
+title: Edit tools and actions · Cloudflare Zaraz docs
+description: On this page you will be able to edit settings related to the tool,
+  add actions, and edit existing ones. To edit an existing action, select its
+  name.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/custom-actions/edit-tools-and-actions/
+  md: https://developers.cloudflare.com/zaraz/custom-actions/edit-tools-and-actions/index.md
+---
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools**.
+3. Under **Third-party tools**, locate your tool and select **Edit**.
+
+On this page you will be able to edit settings related to the tool, add actions, and edit existing ones. To edit an existing action, select its name.
+
+## Enable or disable a tool
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Under **Third-party tools**, locate your tool and select the **Enabled** toggle.
+
+## Enable or disable an action
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration** > **Third-party tools**.
+3. Locate the tool you wan to edit and select **Edit**.
+4. Find the action you want to change state, and enable or disable it with the toggle.
+
+## Delete a tool
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Under **Third-party tools**, locate your tool and select **Delete**.
+
+</page>
+
+<page>
+---
+title: Edit a trigger · Cloudflare Zaraz docs
+description: You can edit every field related to the trigger, as well as add new
+  trigger rules.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/custom-actions/edit-triggers/
+  md: https://developers.cloudflare.com/zaraz/custom-actions/edit-triggers/index.md
+---
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Under **Triggers**, locate your trigger and select **Edit**.
+
+You can edit every field related to the trigger, as well as add new trigger rules.
+
+## Delete a trigger
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration**.
+3. Under **Triggers**, locate your trigger and select **Delete**.
+
+</page>
+
+<page>
+---
+title: Preview changes before publishing · Cloudflare Zaraz docs
+description: Zaraz allows you to test your configurations before publishing
+  them. This is helpful to avoid unintended consequences when deploying a new
+  tool or trigger.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/history/preview-mode/
+  md: https://developers.cloudflare.com/zaraz/history/preview-mode/index.md
+---
+
+Zaraz allows you to test your configurations before publishing them. This is helpful to avoid unintended consequences when deploying a new tool or trigger.
+
+After enabling Preview & Publish you will also have access to [Zaraz History](https://developers.cloudflare.com/zaraz/history/versions/).
+
+## Enable Preview & Publish mode
+
+By default, Zaraz is configured to commit changes in real time. To enable preview mode and test new features you are adding to Zaraz:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **History**.
+3. Enable **Preview & Publish Workflow**.
+
+You are now working in preview mode. To commit changes and make them live, you will have to select **Publish** on your account.
+
+### Test changes before publishing them
+
+Now that you have Zaraz working in preview mode, you can open your website and test your settings:
+
+1. In [Zaraz settings](https://dash.cloudflare.com/?to=/:account/:zone/zaraz/settings) copy your **Debug Key**.
+
+2. Navigate to the website where you want to test your new settings.
+
+3. Access the browser’s developer tools. For example, to access developer tools in Google Chrome, select **View** > **Developer** > **Developer Tools**.
+
+4. Select the **Console** pane and enter the following command to start Zaraz’s preview mode:
+
+   ```js
+   zaraz.preview("<YOUR_DEBUG_KEY>")
+   ```
+
+5. Your website will reload along with Zaraz debugger, and Zaraz will use the most recent changes in preview mode.
+
+6. If you are satisfied with your changes, go back to the [Zaraz dashboard](https://dash.cloudflare.com/?to=/:account/:zone/zaraz/) and select **Publish** to apply them to all users. If not, use the dashboard to continue adjusting your configuration.
+
+To exit preview mode, close Zaraz debugger.
+
+## Disable Preview & Publish mode
+
+Disable Preview & Publish mode to work in real time. When you work in real time, any changes made on the dashboard are applied instantly to the domain you are working on.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **History**.
+3. Disable **Preview & Publish Workflow**.
+4. In the modal, decide if you want to delete all unpublished changes, or if you want to publish any change made in the meantime.
+
+Zaraz is now working in real time. Any change you make will be immediately applied the domain you are working on.
+
+</page>
+
+<page>
+---
+title: Versions · Cloudflare Zaraz docs
+description: Version History enables you to keep track of all the Zaraz
+  configuration changes made in your website. With Version History you can also
+  revert changes to previous settings should there be a problem.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/history/versions/
+  md: https://developers.cloudflare.com/zaraz/history/versions/index.md
+---
+
+Version History enables you to keep track of all the Zaraz configuration changes made in your website. With Version History you can also revert changes to previous settings should there be a problem.
+
+To access Version History you need to enable [Preview & Publish mode](https://developers.cloudflare.com/zaraz/history/preview-mode/) first. Then, you can access Version History under **Zaraz** > **History**.
+
+## Access Version History
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+
+2. Go to **Zaraz** > **History**.
+
+3. If this is your first time using this feature, this page will be empty. Otherwise, you will have a list of changes made to your account with the following information:
+
+   * Date of change
+   * User who made the change
+   * Description of the change
+
+## Revert changes
+
+Version History enables you to revert any changes made to your Zaraz settings.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **History**.
+3. Find the changes you want to revert, and select **Restore**.
+4. Confirm you want to revert your changes.
+5. Select **Publish** to publish your changes.
+
+</page>
+
+<page>
+---
+title: Monitoring API · Cloudflare Zaraz docs
+description: The Zaraz Monitoring API allows users to retrieve detailed data on
+  Zaraz events through the GraphQL Analytics API. Using this API, you can
+  monitor events, pageviews, triggers, actions, and server-side request
+  statuses, including any errors and successes. The data available through the
+  API mirrors what is shown on the Zaraz Monitoring page in the dashboard, but
+  with the API, you can query it programmatically to create alerts and
+  notifications for unexpected deviations.
+lastUpdated: 2025-05-14T00:02:06.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/monitoring/monitoring-api/
+  md: https://developers.cloudflare.com/zaraz/monitoring/monitoring-api/index.md
+---
+
+The **Zaraz Monitoring API** allows users to retrieve detailed data on Zaraz events through the **GraphQL Analytics API**. Using this API, you can monitor events, pageviews, triggers, actions, and server-side request statuses, including any errors and successes. The data available through the API mirrors what is shown on the Zaraz Monitoring page in the dashboard, but with the API, you can query it programmatically to create alerts and notifications for unexpected deviations.
+
+To get started, you'll need to generate an Analytics API token by following the [API token authentication guide](https://developers.cloudflare.com/analytics/graphql-api/getting-started/authentication/api-token-auth/).
+
+## Key Entities
+
+The Monitoring API includes the following core entities, which each provide distinct insights:
+
+* **zarazTrackAdaptiveGroups**: Contains data on Zaraz events, such as event counts and timestamps.
+* **zarazActionsAdaptiveGroups**: Provides information on Zaraz Actions.
+* **zarazTriggersAdaptiveGroups**: Tracks data on Zaraz Triggers.
+* **zarazFetchAdaptiveGroups**: Captures server-side request data, including URLs and returning status codes for third-party requests made by Zaraz.
+
+## Example GraphQL Queries
+
+You can construct any query you'd like using the above datasets, but here are some example queries you can use.
+
+* Events
+
+  Query for the count of Zaraz events, grouped by time.
+
+  ```graphql
+  query ZarazEvents(
+    $zoneTag: string
+    $limit: uint64!
+    $start: Time
+    $end: Time
+    $orderBy: ZoneZarazTrackAdaptiveGroupsOrderBy!
+  ) {
+    viewer {
+      zones(filter: { zoneTag: $zoneTag }) {
+        data: zarazTrackAdaptiveGroups(
+          limit: $limit
+          filter: { datetimeHour_geq: $start, datetimeHour_leq: $end }
+          orderBy: [$orderBy]
+        ) {
+          count
+          dimensions {
+            ts: datetimeHour
+          }
+        }
+      }
+    }
+  }
+  ```
+
+  [Run in GraphQL API Explorer](https://graphql.cloudflare.com/explorer?query=I4VwpgTgngBAWgQwggXgUQG5gHYBcDOAFAFAwwAkKA9tmACoIDmAXDPrhAJbaOkUA2nALadcrEN1wA2ACwBCPuXZIxMOsLCKcAE1bqhmsuSoRtkAEJRWcGmETIUdZAGMA1gEFtCAA65OWAHEIKhBvfAB5UwsoBQBKGABvPgxOMAB3SES+MmpaIgAzTn5cSFYEmFz6JlZKWwZGGABfeKSyNpgvXARWFCRUJwQ3Tx8-QODQomz2mEERVXJZ0Sn2wuLSxI6EEr8DAAkQiAB9RjBgGuUIXAAaTe2NfZAj-lOanSbltpMzCEtWAG1jFEflAALofFofMjOEJ4SEdDTYfCcGj4LLTaYEVidMA7MAPCBwxofIntEnvRpAA\&variables=N4IgXg9gdgpgKgQwOYgFwgFoHkByBRAfQEkAREAGhABsBLAWxoBc0BGABjcoGdGEAnZugBMbIQFYAtGwDsElgDY4bAJyoOqFsowUQMKABM0IEeKmyFcFmLVsNWnRD76YfAEIBPI-oSMYjejAAEhAArnwEAIIAygDCIAC+QA)
+
+* Loads
+
+  Query for the count of Zaraz loads, grouped by time.
+
+  ```graphql
+  query ZarazLoads(
+    $zoneTag: string
+    $limit: uint64!
+    $start: Date
+    $end: Date
+    $orderBy: ZoneZarazTriggersAdaptiveGroupsOrderBy!
+  ) {
+    viewer {
+      zones(filter: { zoneTag: $zoneTag }) {
+        data: zarazTriggersAdaptiveGroups(
+          limit: $limit
+          filter: { date_geq: $start, date_leq: $end, triggerName: Pageview }
+          orderBy: [$orderBy]
+        ) {
+          count
+          dimensions {
+            ts: date
+          }
+        }
+      }
+    }
+  }
+  ```
+
+  [Run in GraphQL API Explorer](https://graphql.cloudflare.com/explorer?query=I4VwpgTgngBAWgQwggXgGQPYICYGcAUAUDDACQoYB2YAKggOYBcMuALhAJaX3FkA2HALYdWzEF1YA2ACwBCXqTZJRMACIJWYBWErZm6zQowRskAEJRmcKmETIUNTvXqRcAQWwIADqw4A3MABxCAwQL1wAeRNzKHkAShgAb14-DjAAd0gk3hIKagIAMw4+TQhmRJg82gZmchs6ehgAXwTkknaYT1YEZhQkVEcOZ1cPb18A4NDwog6OgWEVUnmRHNmikshyzo0wAH0XYFqlCFYAGm3NXb4wQ7IdbHP2IZcIADkEQTBmAAUGMFSMs1Vh1jKYIBZmABtUigmIAXWBMFaiJIAGNQpRWCjOkIdLgOFRcNlZrNWLhmF0tCSSE1EbSOvSgU0gA\&variables=N4IgXg9gdgpgKgQwOYgFwgFoHkByBRAfQEkAREAGhABsBLAWxoBc0BGABjcoGdGEAnZugBMbIQFYAtGwDsElmIogYUACZoQI8VNksAbIoh8VMPgCEAnupUJGMAgEEAygGEQAXyA)
+
+* Triggers
+
+  Query for the total execution count of each trigger processed by Zaraz.
+
+  ```graphql
+  query ZarazTriggers(
+    $zoneTag: string
+    $limit: uint64!
+    $start: Date
+    $end: Date
+  ) {
+    viewer {
+      zones(filter: { zoneTag: $zoneTag }) {
+        data: zarazTriggersAdaptiveGroups(
+          limit: $limit
+          filter: { date_geq: $start, date_leq: $end }
+          orderBy: [count_DESC]
+        ) {
+          count
+          dimensions {
+            name: triggerName
+          }
+        }
+      }
+    }
+  }
+  ```
+
+  [Run in GraphQL API Explorer](https://graphql.cloudflare.com/explorer?query=I4VwpgTgngBAWgQwggXgFQgSwObcgZwAoAoGGAEhQHsA7MNBbALhnwBcsbtSKAbTALaY2LEJhpsAbABYAhD3LskImABEEbMArA0AJi3WbiAShgBvHgDdMYAO6RzPMtTpEAZpl6aILMzBf0jCyUtIHYMAC+phZksTC6GggsKEioGDh4EPgAggkADmyYlmAA4hBUIHlETnEw-EIq5PXCNXEeXpC+8RpgAPp4wMFKEGwANN2avbxggxQ6upGtsVQQupAAQlAsANoAxhUSvaoAogDKAMIAukvRS2T7IBJ38YI6+Ji0+I61tTQIAmAWBwMpAAHL-LQ-MgRJYwuJwxYRIA\&variables=N4IgXg9gdgpgKgQwOYgFwgFoHkByBRAfQEkAREAGhABsBLAWxoBc0BGABjcoGdGEAnZugBMbIQFYAtGwDsElmIogYUACZoQI8VNksAbCAC+QA)
+
+* Erroneous responses
+
+  Query for the count of 400 server-side responses, grouped by time and URL.
+
+  ```graphql
+  query ErroneousResponses(
+    $zoneTag: string
+    $limit: uint64!
+    $start: Time
+    $end: Time
+    $orderBy: ZoneZarazFetchAdaptiveGroupsOrderBy!
+  ) {
+    viewer {
+      zones(filter: { zoneTag: $zoneTag }) {
+        data: zarazFetchAdaptiveGroups(
+          limit: $limit
+          filter: {
+            datetimeHour_geq: $start
+            datetimeHour_leq: $end
+            url_neq: ""
+            status: 400
+          }
+          orderBy: [$orderBy]
+        ) {
+          count
+          dimensions {
+            ts: datetimeHour
+            name: url
+          }
+        }
+      }
+    }
+  }
+  ```
+
+  [Run in GraphQL API Explorer](https://graphql.cloudflare.com/explorer?query=I4VwpgTgngBAohCB7AdmJIDOAlMmAOqmeAFAFAwwAkAXqmACoCGA5gFwyYAuEAliiwrUANrwC2vLhxD8uANgAsAQiFVuTCFJgNxYVWBQATDjrF7KVJBEOQAQlA4Ateo41MaAMTBcAxgAsAQUMmfC5eADcwAHFkEHxMAHlrOygVAEoYAG8hcN4wAHdILKFKOjRMEgAzXmEuSA5MmDLGVg5aemYWGABfDOzKAZhgriYOGjdPb38gkLDImIx48kHB0QktKjXJEpXq2vrilZXh710ACQwIAH0WMGA29U0do5OwswuQa+E7toNDZ5Wn2EVzQ9xgACJwQDBuouFgOAoAAyI6E9VFWGwQewcADalmSWKgAF0AX1UT4MCguKjDLoUJheERDkcBlxMBxXudLqjKCgmGZpBBhKjugDRYNxWjukA\&variables=N4IgXg9gdgpgKgQwOYgFwgFoHkByBRAfQEkAREAGhABsBLAWxoBc0BGABjcoGdGEAnZugBMbIQFYAtGwDsElgDY4bAJyoOqFsowUQMKABM0IEeKmyFcFmLVsNWnRD76YfAEIBPI-oSMYjejAAEhAArnwEAIIAygDCIAC+QA)
+
+### Variables Example
+
+```json
+{
+  "zoneTag": "d6dfdf32c704a77ac227243a5eb5ca61",
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2025-01-30T00:00:00Z",
+  "limit": 10000,
+  "orderBy": "datetimeHour_ASC"
+}
+```
+
+Be sure to customize the zoneTag to match your specific zone, along with setting the desired start and end dates
+
+### Explanation of Parameters
+
+* **zoneTag**: Unique identifier of your Cloudflare zone.
+* **limit**: Maximum number of results to return.
+* **start** and **end**: Define the date range for the query in ISO 8601 format.
+* **orderBy**: Determines the sorting order, such as by ascending or descending datetime.
+
+## Example `curl` Request
+
+Use this `curl` command to query the Zaraz Monitoring API for the number of events processed by Zaraz. Replace `$TOKEN` with your API token, `$ZONE_TAG` with your zone tag, and adjust the start and end dates as needed.
+
+```bash
+curl -X POST https://api.cloudflare.com/client/v4/graphql \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TOKEN" \
+  -d '{
+    "query": "query AllEvents($zoneTag: String!, $limit: Int!, $start: Date, $end: Date, $orderBy: [ZoneZarazTriggersAdaptiveGroupsOrderBy!]) { viewer { zones(filter: { zoneTag: $zoneTag }) { data: zarazTrackAdaptiveGroups( limit: $limit filter: { datetimeHour_geq: $start datetimeHour_leq: $end } orderBy: [$orderBy] ) { count dimensions { ts: datetimeHour } } } } }",
+    "variables": {
+      "zoneTag": "$ZONE_TAG",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2025-01-30T00:00:00Z",
+      "limit": 10000,
+      "orderBy": "datetimeHour_ASC"
+    }
+  }'
+```
+
+### Explanation of the `curl` Components
+
+* **Authorization**: The `Authorization` header requires a Bearer token. Replace `$TOKEN` with your actual API token.
+* **Content-Type**: Set `application/json` to indicate a JSON payload.
+* **Data Payload**: This payload includes the GraphQL query and variable parameters, such as `zoneTag`, `start`, `end`, `limit`, and `orderBy`.
+
+This `curl` example will return a JSON response containing event counts and timestamps within the specified date range. Modify the `variables` values as needed for your use case.
+
+## Additional Resources
+
+Refer to the [full GraphQL Analytics API documentation](https://developers.cloudflare.com/analytics/graphql-api/) for more details on available fields, filters, and further customization options for Zaraz Monitoring API queries.
+
+</page>
+
+<page>
+---
+title: Zaraz Context · Cloudflare Zaraz docs
+description: The Zaraz Context is a versatile object that provides a set of
+  configurable properties for Zaraz, a web analytics tool for tracking user
+  behavior on websites. These properties can be accessed and utilized across
+  various components, including Worker Variables and JSONata expressions.
+lastUpdated: 2025-03-07T11:07:33.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/reference/context/
+  md: https://developers.cloudflare.com/zaraz/reference/context/index.md
+---
+
+The Zaraz Context is a versatile object that provides a set of configurable properties for Zaraz, a web analytics tool for tracking user behavior on websites. These properties can be accessed and utilized across various components, including [Worker Variables](https://developers.cloudflare.com/zaraz/variables/worker-variables/) and [JSONata expressions](https://developers.cloudflare.com/zaraz/advanced/using-jsonata/).
+
+System properties, which are automatically collected by Zaraz, provide insights into the user's environment and device, while Client properties, obtained through [Zaraz Web API](https://developers.cloudflare.com/zaraz/web-api/) calls like zaraz.track(), offer additional information on user behavior and actions.
+
+## System properties
+
+### Page information
+
+| Property | Type | Description |
+| - | - | - |
+| `system.page.query` | Object | Key-Value object containing all query parameters in the current URL. |
+| `system.page.title` | String | Current page title. |
+| `system.page.url` | URL | [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) Object containing information about the current URL |
+| `system.page.referrer` | String | Current page referrer from `document.referrer`. |
+| `system.page.encoding` | String | Current page character encoding from `document.characterSet`. |
+| | | |
+
+### Cookies
+
+| Property | Type | Description |
+| - | - | - |
+| `system.cookies` | Object | Key-Value object containing all present cookies. |
+
+The keys inside the `system.cookies` are the cookies name. The property `system.cookies.foo` will return the value of the a cookie named `foo`.
+
+### Device information
+
+| Property | Type | Description |
+| - | - | - |
+| `system.device.ip` | String | Visitor incoming IP address. |
+| `system.device.resolution` | String | Screen resolution for device. |
+| `system.device.viewport` | String | Visible web page area in user’s device. |
+| `system.device.language` | String | Language used in user's device. |
+| `system.device.location` | Object | All location-related keys from [IncomingRequestCfProperties](https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties) |
+| `system.device.user-agent.ua` | String | Browser user agent. |
+| `system.device.user-agent.browser.name` | String | Browser name. |
+| `system.device.user-agent.browser.version` | String | Browser version. |
+| `system.device.user-agent.engine.name` | String | Type of browser engine (for example, WebKit). |
+| `system.device.user-agent.engine.version` | String | Version of the browser engine. |
+| `system.device.user-agent.os.name` | String | Operating system. |
+| `system.device.user-agent.os.version` | String | Version of the operating system. |
+| `system.device.user-agent.device` | String | Type of device used (for example, iPhone). |
+| `system.device.user-agent.cpu` | String | Device’s CPU. |
+| | | |
+
+### Consent Management
+
+| Property | Type | Description |
+| - | - | - |
+| `system.consent` | Object | Key-value object containing the current consent status from the Zaraz Consent Manager. |
+
+The keys inside the `system.consent` object are purpose IDs, and values are `true` for consent, `false` for lack of consent.
+
+### Managed Components
+
+| Property | Type | Description |
+| - | - | - |
+| `system.clientKV` | Object | Key-value object containing all the KV data from your Managed Components. |
+
+The keys inside the `system.clientKV` object are formatted as Tool ID, underscore, Key name. Assuming you want to read the value of the `ga4` key used by a tool with ID `abcd`, the path would be `system.clientKV.abcd_ga4`.
+
+### Miscellaneous
+
+| Property | Type | Description |
+| - | - | - |
+| `system.misc.random` | Number | Random number unique to each request. |
+| `system.misc.timestamp` | Number | Unix time in seconds. |
+| `system.misc.timestampMilliseconds` | Number | Unix time in milliseconds. |
+| | | |
+
+## Event properties
+
+| Property | Type | Description |
+| - | - | - |
+| `client.__zarazTrack` | String | Returns the name of the event sent using the Track method of the Web API. Refer to [Zaraz Track](https://developers.cloudflare.com/zaraz/web-api/track/) for more information. |
+| `client.<KEY_NAME>` | String | Returns the value of a `zaraz.track()` `eventProperties` key. The key can either be directly used in `zaraz.track()` or set using `zaraz.set()`. Replace `<KEY_NAME>` with the name of your key. Refer to [Zaraz Track](https://developers.cloudflare.com/zaraz/web-api/track/) for more information. |
+| | | |
+
+</page>
+
+<page>
+---
+title: Properties reference · Cloudflare Zaraz docs
+description: Cloudflare Zaraz offers properties that you can use when
+  configuring the product. They are helpful to send data to a third-party tool
+  or to create triggers as they have context about a specific user's browser
+  session and the actions they take on the website. Below is a list of the
+  properties you can access from the Cloudflare dashboard and their values.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/reference/properties-reference/
+  md: https://developers.cloudflare.com/zaraz/reference/properties-reference/index.md
+---
+
+Cloudflare Zaraz offers properties that you can use when configuring the product. They are helpful to send data to a third-party tool or to create triggers as they have context about a specific user's browser session and the actions they take on the website. Below is a list of the properties you can access from the Cloudflare dashboard and their values.
+
+## Web API
+
+| Property | Description |
+| - | - |
+| *Event Name* | Returns the name of the event sent using the Track method of the Web API. Refer to the [Track method](https://developers.cloudflare.com/zaraz/web-api/track/) for more information. |
+| *Track Property name:* | Returns the value of a `zaraz.track()` `eventProperties` key. The key can either be directly used in `zaraz.track()` or set using `zaraz.set()`. Set the name of your key here. Refer to the [Set method](https://developers.cloudflare.com/zaraz/web-api/set/) for more information. |
+
+## Page Properties
+
+| Property | Description |
+| - | - |
+| *Page character encoding* | Returns the document character encoding from `document.characterSet`. |
+| *Page referrer* | Returns the page referrer from `document.referrer`. |
+| *Page title* | Returns the page title. |
+| *Query param name:* | Returns the value of a URL query parameter. When you choose this variable, you need to set the name of your parameter. |
+| *URL* | Returns a string containing the entire URL. |
+| *URL base domain* | Returns the base domain part of the URL, without any subdomains. |
+| *URL host* | Returns the domain (that is, the hostname) followed by a `:` and the port of the URL (if a port was specified). |
+| *URL hostname* | Returns the domain of the URL. |
+| *URL origin* | Returns the origin of the URL — that is, its scheme, domain, and port. |
+| *URL password* | Returns the password specified before the domain name. |
+| *URL pathname* | Returns the path of the URL, including the initial `/`. Does not include the query string or fragment. |
+| *URL port* | Returns the port number of the URL. |
+| *URL protocol scheme* | Returns the protocol scheme of the URL, including the final `:`. |
+| *URL query parameters* | Returns query parameters provided, beginning with the leading `?` character. |
+| *URL username* | Returns the username specified before the domain name. |
+
+## Cookies
+
+| Property | Description |
+| - | - |
+| *Cookie name:* | Returns cookies obtained from the browser `document`. |
+
+## Device properties
+
+| Property | Description |
+| - | - |
+| *Browser engine* | Returns the type of browser engine (for example, `WebKit`). |
+| *Browser engine version* | Returns the version of the browser’s engine. |
+| *Browser name* | Returns the browser’s name. |
+| *Browser version* | Returns the browser’s version. |
+| *Device CPU* | Returns the device’s CPU. |
+| *Device IP address* | Returns the incoming IP address. |
+| *Device language* | Returns the language used. |
+| *Device screen resolution* | Returns the screen resolution of the device. |
+| *Device type* | Returns the type of device used (for example, `iPhone`). |
+| *Device viewport* | Returns the visible web page area in user’s device. |
+| *Operating system name* | Returns the operating system. |
+| *Operating system version* | Returns the version of the operating system. |
+| *User-agent string* | Returns the browser’s user agent. |
+
+## Device location
+
+| Property | Description |
+| - | - |
+| *City* | Returns the city of the incoming request. For example, `Lisbon`. |
+| *Continent* | Returns the continent of the incoming request. For example, `EU` |
+| *Country* code | Returns the country code of the incoming request. For example, `PT`. |
+| *EU* country | Returns a `1` if the country of the incoming request is in the European Union, and a `0` if it is not. |
+| *Region* | Returns the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) name for the first level region associated with the IP address of the incoming request. For example, `Lisbon`. |
+| *Region* code | Returns the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) region code associated with the IP address of the incoming request. For example, `11`. |
+| *Timezone* | Returns the timezone of the incoming request. For example, `Europe/Lisbon`. |
+
+## Miscellaneous
+
+| Property | Description |
+| - | - |
+| *Random number* | Returns a random number unique to each request. |
+| *Timestamp (milliseconds)* | Returns the Unix time in milliseconds. |
+| *Timestamp (seconds)* | Returns the Unix time in seconds. |
+
+</page>
+
+<page>
+---
+title: Zaraz settings · Cloudflare Zaraz docs
+description: To configure Zaraz's general settings, select Zaraz > Settings.
+  Make sure you save your changes, by selecting the Save button after making
+  them.
+lastUpdated: 2025-02-12T09:43:26.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/reference/settings/
+  md: https://developers.cloudflare.com/zaraz/reference/settings/index.md
+---
+
+To configure Zaraz's general settings, select [**Zaraz**](https://dash.cloudflare.com/?to=/:account/:zone/zaraz) > **Settings**. Make sure you save your changes, by selecting the **Save** button after making them.
+
+## Workflow
+
+Allows you to choose between working in Real-time or Preview & Publish modes. By default, Zaraz instantly publishes all changes you make in your account. Choosing Preview & Publish lets you test your settings before committing to them. Refer to [Preview mode](https://developers.cloudflare.com/zaraz/history/preview-mode/) for more information.
+
+## Web API
+
+### Debug Key
+
+The debug key is used to enable Debug Mode. Refer to [Debug mode](https://developers.cloudflare.com/zaraz/web-api/debug-mode/) for more information.
+
+### E-commerce tracking
+
+Toggle this option on to enable the Zaraz E-commerce API. Refer to [E-commerce](https://developers.cloudflare.com/zaraz/web-api/ecommerce/) for more information.
+
+## Compatibility
+
+### Data layer compatibility mode
+
+Cloudflare Zaraz offers backwards compatibility with the `dataLayer` function found in tag management software, used to track events and other parameters. You can toggle this option off if you do not need it. Refer to [Data layer compatibility mode](https://developers.cloudflare.com/zaraz/advanced/datalayer-compatibility/) for more information.
+
+### Single Page Application support
+
+When you toggle Single Page Application support off, the `pageview` trigger will only work when loading a new web page. When enabled, Zaraz's `pageview` trigger will work every time the URL changes on a single page application. This is also known as virtual page views.
+
+## Privacy
+
+Zaraz offers privacy settings you can configure, such as:
+
+* **Remove URL query parameters**: Removes all query parameters from URLs. For example, `https://example.com/?q=hello` becomes `https://example.com/`.
+
+* **Trim IP addresses**: Trims part of the IP address before passing it to server-side loaded tools, to hide it from third-parties.
+
+* **Clean User Agent strings**: Clear sensitive information from the User Agent string by removing information such as operating system version, extensions installed, among others.
+
+* **Remove external referrers**: Hides the page referrers URL if the hostname is different from the website's.
+
+* **Cookie domain**: Choose the domain on which Zaraz will set your tools' cookies. By default, Zaraz will attempt to save the cookies on the highest-level domain possible, meaning that if your website is on `foo.example.com`, the cookies will be saved on `example.com`. You can change this behavior and configure the cookies to be saved on `foo.example.com` by entering a custom domain here.
+
+## Injection
+
+### Auto-inject script
+
+This option automatically injects the script needed for Zaraz to work on your website. It is turned on by default.
+
+If you turn this option off, Zaraz will stop automatically injecting its script on your domain. If you still want Zaraz functionality, you will need to add the Zaraz script manually. Refer to [Load Zaraz manually](https://developers.cloudflare.com/zaraz/advanced/load-zaraz-manually/) for more information.
+
+### Iframe injection
+
+When toggled on, the Zaraz script will also be injected into `iframe` elements.
+
+## Endpoints
+
+Specify custom URLs for Zaraz's scripts. You need to use a valid pathname:
+
+```txt
+/<PATHNAME>/<FILE.JS>
+```
+
+This is an example of a custom pathname to host Zaraz's initialization script:
+
+```txt
+/my-server/my-scripts/start.js
+```
+
+### HTTP Events API
+
+Refer to [HTTP Events API](https://developers.cloudflare.com/zaraz/http-events-api/) for more information on this endpoint.
+
+## Other
+
+### Bot Score Threshold
+
+Choose whether to prevent Zaraz from loading on suspected bot-initiated requests. This is based on the request's [bot score](https://developers.cloudflare.com/bots/concepts/bot-score/) which is an estimate, and therefore cannot be guaranteed to be always accurate.
+
+The options are:
+
+* **Block none**: Load Zaraz for all requests, even if those come from bots.
+* **Block automated only**: Prevent Zaraz from loading on requests from requests in the [**Automated** category](https://developers.cloudflare.com/bots/concepts/bot-score/#bot-groupings).
+* **Block automated and likely automated**: Prevent Zaraz from loading on requests from requests in the [**Automated** and **Likely Automated** category](https://developers.cloudflare.com/bots/concepts/bot-score/#bot-groupings).
+
+### Context Enricher
+
+Refer to the [Context Enricher](https://developers.cloudflare.com/zaraz/advanced/context-enricher/) for more information on this setting.
+
+### Logpush
+
+Enterprise-only
+
+Send Zaraz events logs to an external storage service.
+
+Refer to [Logpush](https://developers.cloudflare.com/zaraz/advanced/logpush/) for more information on this setting.
+
+</page>
+
+<page>
+---
+title: Supported tools · Cloudflare Zaraz docs
+description: "Cloudflare Zaraz supports the following third-party tools:"
+lastUpdated: 2024-12-18T12:07:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/reference/supported-tools/
+  md: https://developers.cloudflare.com/zaraz/reference/supported-tools/index.md
+---
+
+Cloudflare Zaraz supports the following third-party tools:
+
+| Name | Category |
+| - | - |
+| Amplitude | Analytics |
+| Bing | Advertising |
+| Branch | Marketing automation |
+| Facebook Pixel | Advertising |
+| Floodlight | Advertising |
+| Google Ads | Advertising |
+| Google Analytics | Analytics |
+| Google Analytics 4 | Analytics |
+| Google Conversion Linker | Miscellaneous |
+| Google Maps - Reserve with Google | Advertising / Miscellaneous |
+| HubSpot | Marketing automation |
+| iHire | Marketing automation / Recruiting |
+| Impact Radius | Marketing automation |
+| Instagram | Embeds |
+| Indeed | Recruiting |
+| LinkedIn Insight | Advertising |
+| Mixpanel | Analytics |
+| Outbrain | Advertising |
+| Pinterest | Advertising |
+| Pinterest Conversions API | Advertising |
+| Pod Sights | Advertising / Analytics |
+| Quora | Advertising |
+| Reddit | Advertising |
+| Segment | Customer Data Platform |
+| Snapchat | Advertising |
+| Snowplow | Analytics |
+| Taboola | Advertising |
+| Tatari | Advertising |
+| TikTok | Advertising |
+| Twitter Pixel | Advertising / Embeds |
+| Upward | Recruiting |
+| ZipRecruiter | Recruiting |
+
+For any other tool, use the custom integrations below:
+
+| Name | Category |
+| - | - |
+| Custom HTML | Custom |
+| Custom Image | Custom |
+| HTTP Request | Custom |
+
+Refer to [Add a third-party tool](https://developers.cloudflare.com/zaraz/get-started/) to learn more about this topic.
+
+</page>
+
+<page>
+---
+title: Triggers and rules · Cloudflare Zaraz docs
+description: Triggers define the conditions under which a tool will start an
+  action. In most cases, your objective will be to create triggers that match
+  specific website events that are relevant to your business. A trigger can be
+  based on an event that happened on your website, like after selecting a button
+  or loading a specific page.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/reference/triggers/
+  md: https://developers.cloudflare.com/zaraz/reference/triggers/index.md
+---
+
+Triggers define the conditions under which [a tool will start an action](https://developers.cloudflare.com/zaraz/custom-actions/). In most cases, your objective will be to create triggers that match specific website events that are relevant to your business. A trigger can be based on an event that happened on your website, like after selecting a button or loading a specific page.
+
+These website events can be passed to Cloudflare Zaraz in a number of ways. You can use the [Track](https://developers.cloudflare.com/zaraz/web-api/track/) method of the Web API or the [`dataLayer`](https://developers.cloudflare.com/zaraz/advanced/datalayer-compatibility/) call. Alternatively, if you do not want to write code to track events on your website, you can configure triggers to listen to browser-side website events, with different types of rules like click listeners or form submissions.
+
+## Rule types
+
+The exact composition of the trigger will change depending on the type of rule you choose.
+
+### Match rule
+
+Zaraz matches the variable you input in **Variable name** with the text under **Match string**. For a complete list of supported variables, refer to [Properties reference](https://developers.cloudflare.com/zaraz/reference/properties-reference/).
+
+**Trigger example: Match `zaraz.track("purchase")`**
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *Event Name* | *Equals* | `purchase` |
+
+If you create a trigger with match rules using variables from Page Properties, Cookies, Device Properties, or Miscellaneous categories, you will often want to add a second rule that matches `Pageview`. Otherwise, your trigger will be valid for every other event happening on this page too. Refer to [Create a trigger](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) to learn how to add more than one condition to a trigger.
+
+**Trigger example: All pages under `/blog`**
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *URL pathname* | *Starts with* | `/blog` |
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *Event Name* | *Equals* | `Pageview` |
+
+**Trigger example: All logged in users**
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *Cookie: name:* `isLoggedIn` | *Equals* | `true` |
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *Event Name* | *Equals* | `Pageview` |
+
+Refer to [Properties reference](https://developers.cloudflare.com/zaraz/reference/properties-reference/) for more information on the variables you can use when using Match rule.
+
+### Click listener
+
+Tracks clicks in a web page. You can set up click listeners using CSS selectors or XPath expressions. **Wait for actions** (in milliseconds) tells Zaraz to prevent the page from changing for the amount of time specified. This allows all requests triggered by the click listener to reach their destination.
+
+Note
+
+When using CSS type rules in triggers, you have to include the CSS selector — for example, the ID (`#`) or the class (`.`) symbols. Otherwise, the click listener will not work.
+
+**Trigger example for CSS selector:**
+
+| Rule type | Type | Selector | Wait for actions |
+| - | - | - | - |
+| *Click listener* | *CSS* | `#my-button` | `500` |
+
+To improve the performance of the web page, you can limit a click listener to a specific URL, by combining it with a Match rule. For example, to track button clicks on a specific page you can set up the following rules in a trigger:
+
+| Rule type | Type | Selector | Wait for actions |
+| - | - | - | - |
+| *Click listener* | *CSS* | `#myButton` | `500` |
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *URL pathname* | *Equals* | `/my-page-path` |
+
+If you need to track a link of an element using CSS selectors - for example, on a clickable button - you have to create a listener for the `href` attribute of the `<a>` tag:
+
+| Rule type | Type | Selector | Wait for actions |
+| - | - | - | - |
+| *Click listener* | *CSS* | `a[href$='/#my-css-selector']` | `500` |
+
+Refer to [**Create a trigger**](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) to learn how to add more than one rule to a trigger.
+
+***
+
+**Trigger example for XPath:**
+
+| Rule type | Type | Selector | Wait for actions |
+| - | - | - | - |
+| *Click listener* | *XPath* | `/html/body//*[contains(text(), 'Add To Cart')]` | `500` |
+
+### Element Visibility
+
+Triggers an action when a CSS selector becomes visible in the screen.
+
+| Rule type | CSS Selector |
+| - | - |
+| *Element Visibility* | `#my-id` |
+
+### Scroll depth
+
+Triggers an action when the users scrolls a predetermined amount of pixels. This can be a fixed amount of pixels or a percentage of the screen.
+
+**Example with pixels**
+
+| Rule type | CSS Selector |
+| - | - |
+| *Scroll Depth* | `100px` |
+
+***
+
+**Example with a percentage of the screen**
+
+| Rule type | CSS Selector |
+| - | - |
+| *Scroll Depth* | `45%` |
+
+### Form submission
+
+Tracks form submissions using CSS selectors. Select the **Validate** toggle button to only fire the trigger when the form has no validation errors.
+
+**Trigger example:**
+
+| Rule type | CSS Selector | Validate |
+| - | - | - |
+| *Form submission* | `#my-form` | Toggle on or off |
+
+To improve the performance of the web page, you can limit a Form submission trigger to a specific URL, by combining it with a Match rule. For example, to track a form on a specific page you can set up the following rules in a trigger:
+
+| Rule type | CSS Selector | Validate |
+| - | - | - |
+| *Form submission* | `#my-form` | Toggle on or off |
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *URL pathname* | *Equals* | `/my-page-path` |
+
+Refer to [**Create a trigger**](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) to learn how to add more than one condition to a trigger.
+
+### Timer
+
+Set up a timer that will fire the trigger after each **Interval**. Set your interval time in milliseconds. In **Limit** specify the number of times the interval will run, causing the trigger to fire. If you do not specify a limit, the timer will repeat for as long as the page is on display.
+
+**Trigger example:**
+
+| Rule type | Interval | Limit |
+| - | - | - |
+| *Timer* | `5000` | `1` |
+
+The above Timer will fire once, after five seconds. To improve the performance of a web page, you can limit a Timer trigger to a specific URL, by combining it with a Match rule. For example, to set up a timer on a specific page you can set up the following rules in a trigger:
+
+| Rule type | Interval | Limit |
+| - | - | - |
+| *Timer* | `5000` | `1` |
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *URL pathname* | *Equals* | `/my-page-path` |
+
+Refer to [**Create a trigger**](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) to learn how to add more than one condition to a trigger.
+
+</page>
+
+<page>
+---
+title: Create a variable · Cloudflare Zaraz docs
+description: Variables are reusable blocks of information. They allow you to
+  have one source of data you can reuse across tools and triggers in the
+  dashboard. You can then update this data in a single place.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/variables/create-variables/
+  md: https://developers.cloudflare.com/zaraz/variables/create-variables/index.md
+---
+
+Variables are reusable blocks of information. They allow you to have one source of data you can reuse across tools and triggers in the dashboard. You can then update this data in a single place.
+
+For example, instead of typing a specific user ID in multiple fields, you can create a variable with that information instead. If there is a change and you have to update the user ID, you just need to update the variable and the change will be reflected across the dashboard.
+
+[Worker Variables](https://developers.cloudflare.com/zaraz/variables/worker-variables/) are a special type of variable that generates value dynamically.
+
+## Create a new variable
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration** > **Variables**.
+3. Select **Create variable**, and give it a name.
+4. In **Variable type** select between `String`, `Masked variable` or `Worker` from the drop-down menu. Use `Masked variable` when you have a private value that you do not want to share, such as an API token.
+5. In **Variable value** enter the value of your variable.
+6. Select **Save**.
+
+Your variable is now ready to be used with tools and triggers.
+
+## Next steps
+
+Refer to [Add a third-party tool](https://developers.cloudflare.com/zaraz/get-started/) and [Create a trigger](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/) for more information on how to add a variable to tools and triggers.
+
+If you need to edit or delete variables, refer to [Edit variables](https://developers.cloudflare.com/zaraz/variables/edit-variables/).
+
+</page>
+
+<page>
+---
+title: Edit a variable · Cloudflare Zaraz docs
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/variables/edit-variables/
+  md: https://developers.cloudflare.com/zaraz/variables/edit-variables/index.md
+---
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration** > **Variables**.
+3. Locate the variable you want to edit, and select **Edit** to make your changes.
+4. Select **Save** to save your edits.
+
+## Delete a variable
+
+Important
+
+You cannot delete a variable being used in tools or triggers.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+2. Go to **Zaraz** > **Tools Configuration** > **Third-party tools**.
+3. Locate any tools using the variable, and delete the variable from those tools.
+4. Select **Zaraz** > **Tools Configuration** > **Triggers**.
+5. Locate all the triggers using the variable, and delete the variable from those triggers.
+6. Navigate to **Zaraz** > **Tools Configuration** > **Variables**.
+7. Locate the variable you want to delete, and select **Delete**.
+
+</page>
+
+<page>
+---
+title: Worker Variables · Cloudflare Zaraz docs
+description: "Zaraz Worker Variables are a powerful type of variable that you
+  can configure and then use in your actions and triggers. Unlike string and
+  masked variables, Worker Variables are dynamic. This means you can use a
+  Cloudflare Worker to determine the value of the variable, allowing you to use
+  them for countless purposes. For example:"
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/variables/worker-variables/
+  md: https://developers.cloudflare.com/zaraz/variables/worker-variables/index.md
+---
+
+Zaraz Worker Variables are a powerful type of variable that you can configure and then use in your actions and triggers. Unlike string and masked variables, Worker Variables are dynamic. This means you can use a Cloudflare Worker to determine the value of the variable, allowing you to use them for countless purposes. For example:
+
+1. A Worker Variable that calculates the sum of all products in the cart
+2. A Worker Variable that takes a cookie, makes a request to your backend, and returns the User ID
+3. A Worker Variable that hashes a value before sending it to a third-party vendor
+
+## Creating a Worker
+
+To use a Worker Variable, you first need to create a new Cloudflare Worker. You can do this through the Cloudflare dashboard or by using [Wrangler](https://developers.cloudflare.com/workers/get-started/guide/).
+
+To create a new Worker in the Cloudflare dashboard:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/).
+2. Go to **Workers & Pages** and select **Create application**.
+3. Give a name to your Worker and select **Deploy**.
+4. Select **Edit code**.
+
+You have now created a basic Worker that responds with "Hello world." If you use this Worker as a Variable, your Variable will always output "Hello world." The response body coming from your Worker will be the value of your Worker Variable. To make this Worker useful, you will usually want to use information coming from Zaraz, which is known as the Zaraz Context.
+
+Zaraz forwards the Zaraz Context object to your Worker as a JSON payload with a POST request. You can access any property like this:
+
+```js
+const { system, client } = await request.json()
+
+
+/* System parameters */
+system.page.url.href // URL of the current page
+system.page.query.gclid // Value of the gclid query parameter
+system.device.resolution // Device screen resolution
+system.device.language // Browser preferred language
+
+
+/* Zaraz Track values */
+client.value // value from `zaraz.track("foo", {value: "bar"})`
+client.products[0].name // name of the first product in an ecommerce call
+```
+
+Keep reading for more complete examples of different use cases or refer to [Zaraz Context](https://developers.cloudflare.com/zaraz/reference/context/).
+
+## Configuring a Worker Variable
+
+Once your Worker is published, configuring a Worker Variable is easy.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/).
+2. Go to **Zaraz** > **Tools configuration** > **Variables**.
+3. Click **Create variable**.
+4. Give your variable a name, choose **Worker** as the Variable type, and select your newly created Worker.
+5. Save your variable.
+
+## Using your Worker Variable
+
+Now that your Worker Variable is configured, you can use it in your actions and triggers.
+
+To use your Worker Variable:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **Zaraz** > **Tools configuration** > **Tools**.
+3. Click **Edit** next to a tool that you have already configured.
+4. Select an action or add a new one.
+5. Click on the plus sign at the right of the text fields.
+6. Select your Worker Variable from the list.
+
+## Example Worker Variables
+
+### Calculates the sum of all products in the cart
+
+Assuming we are sending a list of products in a cart, like this:
+
+```js
+zaraz.ecommerce("Cart Viewed", {
+  products: [
+    { name: "shirt", price: "50" },
+    { name: "jacket", price: "20" },
+    { name: "hat", price: "30" },
+  ],
+});
+```
+
+Calculating the sum can be done like this:
+
+```js
+export default {
+  async fetch(request, env) {
+    // Parse the Zaraz Context object
+    const { system, client } = await request.json();
+
+
+    // Get an array of all prices
+    const productsPrices = client.products.map((p) => p.price);
+
+
+    // Calculate the sum
+    const sum = productsPrices.reduce((partialSum, a) => partialSum + a, 0);
+
+
+    return new Response(sum);
+  },
+};
+```
+
+### Match a cookie with a user in your backend
+
+Zaraz exposes all cookies automatically under the `system.cookies` object, so they are always available. Accessing the cookie and using it to query your backend might look like this:
+
+```js
+export default {
+  async fetch(request, env) {
+    // Parse the Zaraz Context object
+    const { system, client } = await request.json();
+
+
+    // Get the value of the cookie "login-cookie"
+    const cookieValue = system.cookies["login-cookie"];
+
+
+    const userId = await fetch("https://example.com/api/getUserIdFromCookie", {
+      method: POST,
+      body: cookieValue,
+    });
+
+
+    return new Response(userId);
+  },
+};
+```
+
+### Hash a value before sending it to a third-party vendor
+
+Assuming you're sending a value that your want to hash, for example, an email address:
+
+```js
+zaraz.track("user_logged_in", { email: "user@example.com" });
+```
+
+You can access this property and hash it like this:
+
+```js
+async function digestMessage(message) {
+  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convert bytes to hex string
+  return hashHex;
+}
+
+
+export default {
+  async fetch(request, env) {
+    // Parse the Zaraz Context object
+    const { system, client } = await request.json();
+
+
+    const { email } = client;
+
+
+    return new Response(await digestMessage(email));
+  },
+};
+```
+
+</page>
+
+<page>
+---
+title: Debug mode · Cloudflare Zaraz docs
+description: >-
+  Zaraz offers a debug mode to troubleshoot the events and triggers systems. To
+  activate debug mode you need to create a special debug cookie (zarazDebug)
+  containing your debug key.
+
+  You can set this cookie manually or via the zaraz.debug helper function
+  available in your console.
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/web-api/debug-mode/
+  md: https://developers.cloudflare.com/zaraz/web-api/debug-mode/index.md
+---
+
+Zaraz offers a debug mode to troubleshoot the events and triggers systems. To activate debug mode you need to create a special debug cookie (`zarazDebug`) containing your debug key. You can set this cookie manually or via the `zaraz.debug` helper function available in your console.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and domain.
+
+2. Go to **Zaraz** > **Settings**.
+
+3. Copy your **Debug Key**.
+
+4. Open a web browser and access its Developer Tools. For example, to access Developer Tools in Google Chrome, select **View** > **Developer** > **Developer Tools**.
+
+5. Select the **Console** pane and enter the following command to create a debug cookie:
+
+   ```js
+   zaraz.debug("YOUR_DEBUG_KEY")
+   ```
+
+Zaraz’s debug mode is now enabled. A pop-up window will show up with the debugger information. To exit debug mode, remove the cookie by typing `zaraz.debug()` in the console pane of the browser.
+
+</page>
+
+<page>
+---
+title: zaraz.ecommerce · Cloudflare Zaraz docs
+description: You can use zaraz.ecommerce() anywhere inside the <body> tag of a page.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/web-api/ecommerce/
+  md: https://developers.cloudflare.com/zaraz/web-api/ecommerce/index.md
+---
+
+You can use `zaraz.ecommerce()` anywhere inside the `<body>` tag of a page.
+
+`zaraz.ecommerce()` allows you to track common events of the e-commerce user journey, such as when a user adds a product to cart, starts the checkout funnel or completes an order on your website. It is an `async` function, so you can choose to `await` it if you would like to make sure it completed before running other code.
+
+To start using `zaraz.ecommerce()`, you first need to enable it in your Zaraz account and enable the E-commerce action for the tool you plan to send e-commerce data to. Then, add `zaraz.ecommerce()` to the `<body>` element of your website.
+
+Right now, Zaraz e-commerce is compatible with Google Analytics 3 (Universal Analytics), Google Analytics 4, Bing, Facebook Pixel, Amplitude, Pinterest Conversions API, TikTok and Branch.
+
+Note
+
+It is crucial you follow the guidelines set by third-party tools, such as Google Analytics 3 and Google Analytics 4, to ensure compliance with their limitations on payload size and length. For instance, if your `Order Completed` call includes a large number of products, it may exceed the limitations of the selected tool.
+
+## Enable e-commerce tracking
+
+You do not need to map e-commerce events to triggers. Zaraz automatically forwards data using the right format to the tools with e-commerce support.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select your account and domain.
+2. Select **Zaraz** > **Settings**.
+3. Enable **E-commerce tracking**.
+4. Select **Save**.
+5. Go to **Zaraz** > **Tools Configuration** > **Third-party tools**.
+6. Locate the tool you want to use with e-commerce tracking and select **Edit**.
+7. Select **Settings**.
+8. Under **Advanced**, enable **E-commerce tracking**.
+9. Select **Save**.
+
+E-commerce tracking is now enabled. If you add additional tools to your website that you want to use with `zaraz.ecommerce()`, you will need to repeat steps 6-9 for that tool.
+
+## Add e-commerce tracking to your website
+
+After enabling e-commerce tracking on your Zaraz dashboard, you need to add `zaraz.ecommerce()` to the `<body>` element of your website:
+
+```js
+zaraz.ecommerce("Event Name", { parameters });
+```
+
+To create a complete tracking event, you need to add an event and one or more parameters. Below you will find a list of events and parameters Zaraz supports, as well as code examples for different types of events.
+
+## List of supported events
+
+* `Product List Viewed`
+* `Products Searched`
+* `Product Clicked`
+* `Product Added`
+* `Product Added to Wishlist`
+* `Product Removed`
+* `Product Viewed`
+* `Cart Viewed`
+* `Checkout Started`
+* `Checkout Step Viewed`
+* `Checkout Step Completed`
+* `Payment Info Entered`
+* `Order Completed`
+* `Order Updated`
+* `Order Refunded`
+* `Order Cancelled`
+* `Clicked Promotion`
+* `Viewed Promotion`
+* `Shipping Info Entered`
+
+## List of supported parameters:
+
+| Parameter | Type | Description |
+| - | - | - |
+| `product_id` | String | Product ID. |
+| `sku` | String | Product SKU number. |
+| `category` | String | Product category. |
+| `name` | String | Product name. |
+| `brand` | String | Product brand name. |
+| `variant` | String | Product variant (depending on the product, it could be product color, size, etc.). |
+| `price` | Number | Product price. |
+| `quantity` | Number | Product number of units. |
+| `coupon` | String | Name or serial number of coupon code associated with product. |
+| `position` | Number | Product position in the product list (for example, `2`). |
+| `products` | Array | List of products displayed in the product list. |
+| `products.[].product_id` | String | Product ID displayed on the product list. |
+| `products.[].sku` | String | Product SKU displayed on the product list. |
+| `products.[].category` | String | Product category displayed on the product list. |
+| `products.[].name` | String | Product name displayed on the product list. |
+| `products.[].brand` | String | Product brand displayed on the product list. |
+| `products.[].variant` | String | Product variant displayed on the product list. |
+| `products.[].price` | Number | Price of the product displayed on the product list. |
+| `products.[].quantity` | Number | Quantity of a product displayed on the product list. |
+| `products.[].coupon` | String | Name or serial number of coupon code associated with product displayed on the product list. |
+| `products.[].position` | Number | Product position in the product list (for example, `2`). |
+| `checkout_id` | String | Checkout ID. |
+| `order_id` | String | Internal ID of order/transaction/purchase. |
+| `affiliation` | String | Name of affiliate from which the order occurred. |
+| `total` | Number | Revenue with discounts and coupons added in. |
+| `revenue` | Number | Revenue excluding shipping and tax. |
+| `shipping` | Number | Cost of shipping for transaction. |
+| `tax` | Number | Total tax for transaction. |
+| `discount` | Number | Total discount for transaction. |
+| `coupon` | String | Name or serial number of coupon redeemed on the transaction-level. |
+| `currency` | String | Currency code for the transaction. |
+| `value` | Number | Total value of the product after quantity. |
+| `creative` | String | Label for creative asset of promotion being tracked. |
+| `query` | String | Product search term. |
+| `step` | Number | The Number of the checkout step in the checkout process. |
+| `payment_type` | String | The type of payment used. |
+
+## Event code examples
+
+### Product viewed
+
+```js
+zaraz.ecommerce("Product Viewed", {
+  product_id: "999555321",
+  sku: "2671033",
+  category: "T-shirts",
+  name: "V-neck T-shirt",
+  brand: "Cool Brand",
+  variant: "White",
+  price: 14.99,
+  currency: "usd",
+  value: 18.99,
+});
+```
+
+### Product List Viewed
+
+```js
+zaraz.ecommerce("Product List Viewed", {
+  products: [
+    {
+      product_id: "999555321",
+      sku: "2671033",
+      category: "T-shirts",
+      name: "V-neck T-shirt",
+      brand: "Cool Brand",
+      variant: "White",
+      price: 14.99,
+      currency: "usd",
+      value: 18.99,
+      position: 1,
+    },
+    {
+      product_id: "999555322",
+      sku: "2671034",
+      category: "T-shirts",
+      name: "T-shirt",
+      brand: "Cool Brand",
+      variant: "Pink",
+      price: 10.99,
+      currency: "usd",
+      value: 16.99,
+      position: 2,
+    },
+  ],
+});
+```
+
+### Product added
+
+```js
+zaraz.ecommerce("Product Added", {
+  product_id: "999555321",
+  sku: "2671033",
+  category: "T-shirts",
+  name: "V-neck T-shirt",
+  brand: "Cool Brand",
+  variant: "White",
+  price: 14.99,
+  currency: "usd",
+  quantity: 1,
+  coupon: "SUMMER-SALE",
+  position: 2,
+});
+```
+
+### Checkout Step Viewed
+
+```js
+zaraz.ecommerce("Checkout Step Viewed", {
+  step: 1,
+});
+```
+
+### Order completed
+
+```js
+zaraz.ecommerce("Order Completed", {
+  checkout_id: "616727740",
+  order_id: "817286897056801",
+  affiliation: "affiliate.com",
+  total: 30.0,
+  revenue: 20.0,
+  shipping: 3,
+  tax: 2,
+  discount: 5,
+  coupon: "winter-sale",
+  currency: "USD",
+  products: [
+    {
+      product_id: "999666321",
+      sku: "8251511",
+      name: "Boy’s shorts",
+      price: 10,
+      quantity: 2,
+      category: "shorts",
+    },
+    {
+      product_id: "742566131",
+      sku: "7251567",
+      name: "Blank T-shirt",
+      price: 5,
+      quantity: 2,
+      category: "T-shirts",
+    },
+  ],
+});
+```
+
+</page>
+
+<page>
+---
+title: zaraz.set · Cloudflare Zaraz docs
+description: "You can use zaraz.set() anywhere inside the <body> tag of a page:"
+lastUpdated: 2024-08-13T19:56:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/web-api/set/
+  md: https://developers.cloudflare.com/zaraz/web-api/set/index.md
+---
+
+You can use `zaraz.set()` anywhere inside the `<body>` tag of a page:
+
+```js
+zaraz.set(key, value, [options])
+```
+
+Set is useful if you want to make a variable available in all your events without manually setting it every time you are using `zaraz.track()`. For the purpose of this example, assume users in your system have a unique identifier that you want to send to your tools. You might have many `zaraz.track()` calls all sharing this one parameter:
+
+```js
+zaraz.track("form completed", {userId: "ABC-123"})
+```
+
+```js
+zaraz.track("button clicked", {userId: "ABC-123", value: 200})
+```
+
+```js
+zaraz.track("cart viewed", {items: 3, userId: "ABC-123"})
+```
+
+Here, all the events are collecting the `userId` key, and the code for setting that key repeats itself. With `zaraz.set()` you can avoid repetition by setting the key once when the page loads. Zaraz will then attach this key to all future `zaraz.track()` calls.
+
+Using the above data as the example, if you use `zaraz.set("userId", "ABC-123")` once, before the `zaraz.track()` calls, you can remove the `userId` key from all `zaraz.track()` calls.
+
+Another example:
+
+```js
+zaraz.set('product_name', 't-shirt', {scope: 'page'})
+```
+
+Keys that are sent using `zaraz.set()` can be used inside tool actions exactly like keys in the `eventProperties` of `zaraz.track()`. So, the above `product` key is accessible through the Cloudflare dashboard with the variable *Track Property name:*, and setting its name as `product_name`. Zaraz will then replace it with `t-shirt`.
+
+![Example of how to create a variable with the Set method, tracking t-shirts](https://developers.cloudflare.com/_astro/set.CkjK1ovh_e1KsU.webp)
+
+The `[options]` argument is an optional object and can include a `scope` property that has a string value. This property determines the lifetime of this key, meaning for how long Zaraz should keep attaching it to `zaraz.track()` calls. Allowed values are:
+
+* `page`: To set the key for the context of the current page only.
+* `session`: To make the key last the whole session.
+* `persist`: To save the key across sessions. This is the default mode and uses `localStorage` to save the value.
+
+In the previous example, `{scope: 'page'}` makes the `product_name` property available to all `zaraz.track()` calls in the current page, but will not affect calls after visitors navigate to other pages.
+
+To unset a variable, set it to `undefined`. The variable will then be removed from all scopes it was included in, and will not be automatically sent with future `zaraz.track` calls. For example:
+
+```js
+zaraz.set('product_name', undefined)
+```
+
+</page>
+
+<page>
+---
+title: zaraz.track · Cloudflare Zaraz docs
+description: You can use zaraz.track() anywhere inside the <body> tag of a page.
+lastUpdated: 2024-09-24T17:04:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/zaraz/web-api/track/
+  md: https://developers.cloudflare.com/zaraz/web-api/track/index.md
+---
+
+You can use `zaraz.track()` anywhere inside the `<body>` tag of a page.
+
+`zaraz.track()` allows you to track custom events on your website, that might happen in real time. It is an `async` function, so you can choose to `await` it if you would like to make sure it completed before running other code.
+
+Example of user events you might be interested in tracking are successful sign-ups, calls-to-action clicks, or purchases. Common examples for other types of events are tracking the impressions of specific elements on a page, or loading a specific widget.
+
+To start tracking events, use the `zaraz.track()` function like this:
+
+```js
+zaraz.track(eventName, [eventProperties]);
+```
+
+The `eventName` parameter is a string, and the `eventProperties` parameter is an optional flat object of additional context you can attach to the event using your own keys of choice. For example, tracking a purchase with the value of 200 USD could look like this:
+
+```js
+zaraz.track("purchase", { value: 200, currency: "USD" });
+```
+
+Note that the name of the event (`purchase` in the above example), the names of the keys (`value` and `currency`) and the number of keys are customizable by you. You choose what variables to track and how you want to track these variables. However, picking meaningful names will help you when you configure your triggers, because the trigger configuration has to match the events your website is sending.
+
+After using `zaraz.track()` in your website, you will usually want to create a trigger based on it, and then use the trigger in an action. Start by [creating a new trigger](https://developers.cloudflare.com/zaraz/custom-actions/create-trigger/), with *Event Name* as your trigger's **Variable name**, and the `eventName` you are tracking in **Match string**. Following the above example, your trigger will look like this:
+
+**Trigger example: Match `zaraz.track("purchase")`**
+
+| Rule type | Variable name | Match operation | Match string |
+| - | - | - | - |
+| *Match rule* | *Event Name* | *Equals* | `purchase` |
+
+In every tool you want to use this trigger, add an action with this trigger [configured as a firing trigger](https://developers.cloudflare.com/zaraz/custom-actions/). Each action that uses this trigger can access the `eventProperties` you have sent. In the **Action** fields, you can use `{{ client.<KEY_NAME> }}` to get the value of `<KEY_NAME>`. In the above example, Zaraz will replace `{{ client.value }}` with `200`. If your key includes special characters or numbers, surround it with backticks like ``{{ client.`<KEY_NAME>` }}``.
+
+For more information regarding the properties you can use with `zaraz.track()`, refer to [Properties reference](https://developers.cloudflare.com/zaraz/reference/properties-reference/).
+
+</page>
+
