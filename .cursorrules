@@ -1,0 +1,19 @@
+# --- Cursor Rules ---
+# Use these rules to control which files the AI can see.
+# Docs: https://cursor.sh/help/rules
+
+# Ignore large, irrelevant, or sensitive directories and files.
+@never
+node_modules
+.git
+.vscode
+.idea
+dist
+build
+out
+__pycache__
+*.log
+*.lock
+*.wasm
+*.jar
+.env*
