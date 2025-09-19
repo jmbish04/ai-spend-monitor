@@ -1,4 +1,4 @@
-import type { ScheduledEvent } from '@cloudflare/workers-types';
+import type { ExecutionContext, ScheduledEvent } from '@cloudflare/workers-types';
 import { loadConfig } from './env';
 import { RawPageStore } from './core/storage';
 import { formatUtcDate } from './core/rollups';
@@ -7,6 +7,7 @@ import { fetchAnthropicSpend } from './providers/anthropic';
 import { fetchVertexSpendViaBudget } from './providers/gcp_billing';
 import { fetchVertexSpendViaBigQuery } from './providers/gcp_bigquery';
 import type { ProviderRawPage, ProviderResult, SpendRow } from './core/types';
+import { SpendDatabase } from './core/database';
 
 const log = (entry: Record<string, unknown>) => {
   console.log(JSON.stringify(entry));
@@ -39,8 +40,28 @@ export const handleScheduled = async (event: ScheduledEvent, env: any, ctx: Exec
   const from = formatUtcDate(fromDate);
   const to = formatUtcDate(now);
   const rawStore = new RawPageStore(config.RAW_PAGES);
+  const db = new SpendDatabase(config.DB);
+  const cronStartedAt = now;
   const rows: SpendRow[] = [];
   const rawPages: ProviderRawPage[] = [];
+  let persistedRows = 0;
+
+  const recordCronRun = (status: 'success' | 'error', error?: string) => {
+    const completedAt = new Date();
+    ctx.waitUntil(
+      db
+        .recordCronRun({
+          startedAt: cronStartedAt,
+          completedAt,
+          status,
+          rowsIngested: persistedRows,
+          error,
+        })
+        .catch((cronErr) =>
+          errorLog({ level: 'error', op: 'cron-run-log', message: (cronErr as Error).message }),
+        ),
+    );
+  };
 
   try {
     if (config.flags.openai && config.openai.apiKey) {
@@ -104,6 +125,11 @@ export const handleScheduled = async (event: ScheduledEvent, env: any, ctx: Exec
 
     await Promise.all(rawPages.map((page) => rawStore.put(page)));
 
+    if (rows.length) {
+      persistedRows = await db.recordSpend(rows, now);
+      log({ level: 'info', op: 'd1-ingest', rows: persistedRows });
+    }
+
     const doId = config.ROLLUP_DO.idFromName('global');
     const stub = config.ROLLUP_DO.get(doId);
     const payload = {
@@ -127,6 +153,7 @@ export const handleScheduled = async (event: ScheduledEvent, env: any, ctx: Exec
     }
 
     log({ level: 'info', op: 'rollup-update', duration_ms: 0, rows: rows.length });
+    recordCronRun('success');
   } catch (err) {
     errorLog({ level: 'error', op: 'scheduled', message: (err as Error).message });
     const doId = config.ROLLUP_DO.idFromName('global');
@@ -143,6 +170,7 @@ export const handleScheduled = async (event: ScheduledEvent, env: any, ctx: Exec
         }),
       }),
     );
+    recordCronRun('error', (err as Error).message);
     throw err;
   }
 };

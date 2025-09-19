@@ -3,6 +3,7 @@ import type { CapConfig } from './core/types';
 
 type KVNamespace = import('@cloudflare/workers-types').KVNamespace;
 type DurableObjectNamespace = import('@cloudflare/workers-types').DurableObjectNamespace;
+type D1Database = import('@cloudflare/workers-types').D1Database;
 
 const booleanFlag = z
   .string()
@@ -26,7 +27,7 @@ export const configSchema = z.object({
   ENABLE_ANTHROPIC: booleanFlag,
   ENABLE_VERTEX_BILLING_API: booleanFlag,
   ENABLE_VERTEX_BQ: booleanFlag,
-  CRON_LOOKBACK_HOURS: numberFromString.default(48),
+  CRON_LOOKBACK_HOURS: numberFromString.default('48'),
   OPENAI_API_KEY: z.string().optional(),
   OPENAI_ORG_ID: z.string().optional(),
   OPENAI_PROJECT_ID: z.string().optional(),
@@ -62,6 +63,7 @@ export type FeatureFlags = {
 export interface RuntimeBindings {
   RAW_PAGES: KVNamespace;
   ROLLUP_DO: DurableObjectNamespace;
+  DB?: D1Database;
 }
 
 export interface RuntimeConfig {
@@ -143,6 +145,7 @@ export const loadConfig = (env: Record<string, unknown> & Partial<RuntimeBinding
   return {
     RAW_PAGES: (env as RuntimeBindings).RAW_PAGES,
     ROLLUP_DO: (env as RuntimeBindings).ROLLUP_DO,
+    DB: (env as RuntimeBindings).DB,
     flags,
     cronLookbackHours: parsed.CRON_LOOKBACK_HOURS,
     caps,
