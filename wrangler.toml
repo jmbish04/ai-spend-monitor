@@ -1,4 +1,4 @@
-name = "ai-spend-monitor"
+name = "ai-spend"
 main = "src/index.ts"
 compatibility_date = "2024-09-26"
 # enable node compat for vitest/miniflare usage if needed
