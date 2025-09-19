@@ -12,8 +12,14 @@ crons = ["0 * * * *"]
 
 [[kv_namespaces]]
 binding = "RAW_PAGES"
-id = "00000000000000000000000000000000"
-preview_id = "00000000000000000000000000000000"
+id = "4a66c2ce5f864ed6a5eb416346577868"
+preview_id = "4a66c2ce5f864ed6a5eb416346577868"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-spend-monitor-db"
+database_id = "ef027717-5aaf-4b45-8659-3bf92f9c80da"
+preview_database_id = "ef027717-5aaf-4b45-8659-3bf92f9c80da"
 
 [durable_objects]
 bindings = [
