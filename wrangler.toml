@@ -1,0 +1,45 @@
+name = "ai-spend-monitor"
+main = "src/index.ts"
+compatibility_date = "2024-09-26"
+# enable node compat for vitest/miniflare usage if needed
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+logs = "debug"
+
+[triggers]
+crons = ["0 * * * *"]
+
+[[kv_namespaces]]
+binding = "RAW_PAGES"
+id = "00000000000000000000000000000000"
+preview_id = "00000000000000000000000000000000"
+
+[durable_objects]
+bindings = [
+  { name = "ROLLUP_DO", class_name = "RollupDO" }
+]
+
+[vars]
+ENABLE_OPENAI = "true"
+ENABLE_ANTHROPIC = "true"
+ENABLE_VERTEX_BILLING_API = "false"
+ENABLE_VERTEX_BQ = "true"
+OPENAI_SOFT_CAP = "0"
+OPENAI_HARD_CAP = "0"
+ANTHROPIC_SOFT_CAP = "0"
+ANTHROPIC_HARD_CAP = "0"
+VERTEX_SOFT_CAP = "0"
+VERTEX_HARD_CAP = "0"
+GLOBAL_SOFT_CAP = "0"
+GLOBAL_HARD_CAP = "0"
+CRON_LOOKBACK_HOURS = "48"
+ON_HARDCAP_WEBHOOK = ""
+SLACK_WEBHOOK_URL = ""
+ALERT_EMAIL_WEBHOOK = ""
+
+[migrations]
+# placeholder to ensure DO class is registered
+[[migrations]]
+new_classes = ["RollupDO"]
+timestamp = 2024-01-01T00:00:00Z
