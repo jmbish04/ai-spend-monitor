@@ -5,10 +5,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev",
     "test": "vitest",
-    "check": "tsc --noEmit",
-    "deploy:dry": "wrangler deploy --dry-run"
+    "dev": "npx wrangler dev",
+    "build": "npx wrangler build",
+    "migrate:remote": "npx wrangler d1 migrations apply DB --remote",
+    "migrate:local": "npx wrangler d1 migrations apply DB --local",
+    "deploy": "pnpm run migrate:remote && pnpm run build && npx wrangler deploy"
   },
   "dependencies": {
     "hono": "^4.9.7",
