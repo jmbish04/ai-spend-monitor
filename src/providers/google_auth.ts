@@ -35,12 +35,7 @@ const pemToArrayBuffer = (pem: string): ArrayBuffer => {
   const sanitized = pem.replace('-----BEGIN PRIVATE KEY-----', '')
     .replace('-----END PRIVATE KEY-----', '')
     .replace(/\s+/g, '');
-  let binary: string;
-  if (typeof atob === 'function') {
-    binary = atob(sanitized);
-  } else {
-    binary = Buffer.from(sanitized, 'base64').toString('binary');
-  }
+  const binary = typeof atob === 'function' ? atob(sanitized) : Buffer.from(sanitized, 'base64').toString('latin1');
   const bytes = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i += 1) {
     bytes[i] = binary.charCodeAt(i);
