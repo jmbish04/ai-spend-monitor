@@ -5,10 +5,10 @@ compatibility_date = "2024-09-26"
 compatibility_flags = ["nodejs_compat"]
 
 [observability]
-logs = "debug"
+enabled = true
 
 [triggers]
-crons = ["0 * * * *"]
+crons = ["*/30 * * * *"] # every 30 minutes
 
 [[kv_namespaces]]
 binding = "RAW_PAGES"
@@ -20,6 +20,8 @@ binding = "DB"
 database_name = "ai-spend-monitor-db"
 database_id = "ef027717-5aaf-4b45-8659-3bf92f9c80da"
 preview_database_id = "ef027717-5aaf-4b45-8659-3bf92f9c80da"
+migrations_table = "d1_migrations"  # Optional: customize migration tracking table name
+migrations_dir = "migrations"       # Optional: specify custom migration directory
 
 [durable_objects]
 bindings = [
@@ -30,7 +32,7 @@ bindings = [
 ENABLE_OPENAI = "true"
 ENABLE_ANTHROPIC = "true"
 ENABLE_VERTEX_BILLING_API = "false"
-ENABLE_VERTEX_BQ = "true"
+ENABLE_VERTEX_BQ = "false"
 OPENAI_SOFT_CAP = "0"
 OPENAI_HARD_CAP = "0"
 ANTHROPIC_SOFT_CAP = "0"
