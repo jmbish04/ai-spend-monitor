@@ -3,7 +3,7 @@ import { fetchWithRetry, parseJsonResponse } from '../core/http';
 import type { ProviderFetchOptions, ProviderRawPage, ProviderResult, SpendRow } from '../core/types';
 import { mintAccessToken } from './google_auth';
 
-interface BudgetsResponse {
+export interface BudgetsResponse {
   name: string;
   amountSpend?: { units?: string; nanos?: number };
   amountSpent?: { units?: string; nanos?: number };
@@ -25,6 +25,34 @@ const toAmount = (value?: { units?: string; nanos?: number }): number => {
   return units + nanos / 1_000_000_000;
 };
 
+const currentSpendFromBudget = (budget: BudgetsResponse): number =>
+  toAmount(budget.currentSpend ?? budget.amountSpent ?? { units: '0' });
+
+const buildBudgetRows = (
+  budget: BudgetsResponse,
+  fetchedAt: Date,
+  previous?: BudgetsResponse,
+): SpendRow[] => {
+  const previousSpend = previous ? currentSpendFromBudget(previous) : 0;
+  const currentSpend = currentSpendFromBudget(budget);
+  const rawDelta = previous ? currentSpend - previousSpend : currentSpend;
+  const delta = rawDelta > 0 ? rawDelta : previous ? 0 : currentSpend;
+
+  if (delta <= 0) {
+    return [];
+  }
+
+  return [
+    {
+      provider: 'vertex',
+      day: formatUtcDate(fetchedAt),
+      cost_usd: delta,
+      currency: 'USD',
+      source: 'budgets_api',
+    },
+  ];
+};
+
 interface BillingConfig {
   serviceAccountJson: string;
   budgetName: string;
@@ -33,6 +61,7 @@ interface BillingConfig {
 export const fetchVertexSpendViaBudget = async (
   config: BillingConfig,
   options: ProviderFetchOptions,
+  previousBudget?: BudgetsResponse,
 ): Promise<ProviderResult<BudgetsResponse>> => {
   const token = await mintAccessToken(config.serviceAccountJson, [BUDGET_SCOPE], options.fetchImpl);
   const response = await fetchWithRetry({
@@ -47,25 +76,7 @@ export const fetchVertexSpendViaBudget = async (
   });
   const budget = await parseJsonResponse<BudgetsResponse>(response);
   const now = new Date();
-  const rows: SpendRow[] = [
-    {
-      provider: 'vertex',
-      day: formatUtcDate(now),
-      cost_usd: toAmount(budget.currentSpend ?? budget.amountSpent ?? { units: '0' }),
-      currency: 'USD',
-      source: 'budgets_api',
-    },
-  ];
-  if (budget.forecastedSpend) {
-    rows.push({
-      provider: 'vertex',
-      day: formatUtcDate(now),
-      cost_usd: toAmount(budget.forecastedSpend),
-      currency: 'USD',
-      source: 'budgets_api',
-      model: 'forecast',
-    });
-  }
+  const rows = buildBudgetRows(budget, now, previousBudget);
 
   return {
     rows,
@@ -76,35 +87,27 @@ export const fetchVertexSpendViaBudget = async (
         fetchedAt: now.toISOString(),
         window: { from: options.from, to: options.to },
         payload: budget,
-        meta: { endpoint: 'budgets' },
+        meta: {
+          endpoint: 'budgets',
+          currentSpend: currentSpendFromBudget(budget),
+          forecastedSpend: budget.forecastedSpend ? toAmount(budget.forecastedSpend) : undefined,
+        },
       },
     ],
   };
 };
 
 export const vertexBudgetRowsFromRaw = (pages: ProviderRawPage<any>[]): SpendRow[] => {
-  return pages.map((page) => {
+  const sorted = [...pages].sort((a, b) => a.fetchedAt.localeCompare(b.fetchedAt));
+  const rows: SpendRow[] = [];
+  let previous: BudgetsResponse | undefined;
+
+  for (const page of sorted) {
     const budget = page.payload as BudgetsResponse;
-    const now = new Date(page.fetchedAt);
-    const rows: SpendRow[] = [
-      {
-        provider: 'vertex',
-        day: formatUtcDate(now),
-        cost_usd: toAmount(budget.currentSpend ?? budget.amountSpent ?? { units: '0' }),
-        currency: 'USD',
-        source: 'budgets_api',
-      },
-    ];
-    if (budget.forecastedSpend) {
-      rows.push({
-        provider: 'vertex',
-        day: formatUtcDate(now),
-        cost_usd: toAmount(budget.forecastedSpend),
-        currency: 'USD',
-        source: 'budgets_api',
-        model: 'forecast',
-      });
-    }
-    return rows;
-  }).flat();
+    const fetchedAt = new Date(page.fetchedAt);
+    rows.push(...buildBudgetRows(budget, fetchedAt, previous));
+    previous = budget;
+  }
+
+  return rows;
 };

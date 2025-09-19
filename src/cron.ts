@@ -5,6 +5,7 @@ import { formatUtcDate } from './core/rollups';
 import { fetchOpenAISpend } from './providers/openai';
 import { fetchAnthropicSpend } from './providers/anthropic';
 import { fetchVertexSpendViaBudget } from './providers/gcp_billing';
+import type { BudgetsResponse } from './providers/gcp_billing';
 import { fetchVertexSpendViaBigQuery } from './providers/gcp_bigquery';
 import type { ProviderRawPage, ProviderResult, SpendRow } from './core/types';
 
@@ -73,6 +74,11 @@ export const handleScheduled = async (event: ScheduledEvent, env: any, ctx: Exec
     }
 
     if (config.flags.vertexBillingApi && config.gcp.serviceAccount && config.gcp.budgetName) {
+      const previousBudgetPage = await rawStore.getLatest(
+        'vertex',
+        (page) => page.meta?.endpoint === 'budgets',
+      );
+      const previousBudget = previousBudgetPage?.payload as BudgetsResponse | undefined;
       const result = await collectRows('vertex-budgets', () =>
         fetchVertexSpendViaBudget(
           {
@@ -80,6 +86,7 @@ export const handleScheduled = async (event: ScheduledEvent, env: any, ctx: Exec
             budgetName: config.gcp.budgetName!,
           },
           { from, to },
+          previousBudget,
         ),
       );
       rows.push(...result.rows);
