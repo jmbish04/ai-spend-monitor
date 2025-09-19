@@ -31,7 +31,7 @@ bindings = [
 [vars]
 ENABLE_OPENAI = "true"
 ENABLE_ANTHROPIC = "true"
-ENABLE_VERTEX_BILLING_API = "false"
+ENABLE_VERTEX_BILLING_API = "true"
 ENABLE_VERTEX_BQ = "false"
 OPENAI_SOFT_CAP = "0"
 OPENAI_HARD_CAP = "0"
@@ -46,8 +46,7 @@ ON_HARDCAP_WEBHOOK = ""
 SLACK_WEBHOOK_URL = ""
 ALERT_EMAIL_WEBHOOK = ""
 
-[migrations]
-# placeholder to ensure DO class is registered
+# Durable Object migrations
 [[migrations]]
+tag = "v1" # A unique identifier for this migration
 new_classes = ["RollupDO"]
-timestamp = 2024-01-01T00:00:00Z
