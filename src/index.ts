@@ -1,12 +1,16 @@
 import type { ExecutionContext } from '@cloudflare/workers-types';
-import { createApp } from './routes/index';
-import { handleScheduled } from './cron';
-import { RollupDO } from './core/storage';
+import { Env } from './env';
+import { scheduled } from './cron';
+import { apiRouter } from './routes';
 
-const app = createApp();
+// Export the Durable Object class so that Wrangler can discover it.
+export { RollupDO } from './core/rollups';
 
+// Export the Worker handlers.
 export default {
-  fetch: (request: Request, env: unknown, ctx: ExecutionContext) => app.fetch(request, env, ctx),
-  scheduled: handleScheduled,
-  RollupDO,
+	fetch: (request: Request, env: Env, ctx: ExecutionContext): Promise<Response> => {
+		return apiRouter.fetch(request, env, ctx);
+	},
+	scheduled,
 };
+
