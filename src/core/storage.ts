@@ -50,6 +50,27 @@ export class RawPageStore {
     };
   }
 
+  async getLatest(
+    provider: ProviderName,
+    predicate?: (page: ProviderRawPage) => boolean,
+  ): Promise<ProviderRawPage | undefined> {
+    let cursor: string | undefined;
+    let latest: ProviderRawPage | undefined;
+    do {
+      const res = await this.kv.list({ prefix: `${RAW_PREFIX}/${provider}/`, cursor, limit: 1000 });
+      for (const key of res.keys) {
+        const value = await this.kv.get<ProviderRawPage>(key.name, 'json');
+        if (value && (!predicate || predicate(value))) {
+          if (!latest || value.fetchedAt > latest.fetchedAt) {
+            latest = value;
+          }
+        }
+      }
+      cursor = res.list_complete ? undefined : res.cursor;
+    } while (cursor);
+    return latest;
+  }
+
   async getAll(): Promise<ProviderRawPage[]> {
     let cursor: string | undefined;
     const items: ProviderRawPage[] = [];

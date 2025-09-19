@@ -59,51 +59,83 @@ export const dispatchCapAlerts = async (
   const html = buildAlertHtml(toNotify, now);
 
   if (options.channels.slackWebhook) {
-    const ok = await postJson(
-      options.channels.slackWebhook,
-      {
-        text: message,
-        blocks: [
-          { type: 'section', text: { type: 'mrkdwn', text: `*AI spend monitor alert*\n${message}` } },
-          {
-            type: 'context',
-            elements: toNotify.map((breach) => ({
-              type: 'mrkdwn',
-              text: formatBreachLine(breach),
-            })),
-          },
-        ],
-      },
-      fetchImpl,
-    );
-    results.push({ channel: 'slack', ok });
+    try {
+      const ok = await postJson(
+        options.channels.slackWebhook,
+        {
+          text: message,
+          blocks: [
+            { type: 'section', text: { type: 'mrkdwn', text: `*AI spend monitor alert*\n${message}` } },
+            {
+              type: 'context',
+              elements: toNotify.map((breach) => ({
+                type: 'mrkdwn',
+                text: formatBreachLine(breach),
+              })),
+            },
+          ],
+        },
+        fetchImpl,
+      );
+      results.push({ channel: 'slack', ok });
+    } catch (err) {
+      console.error(
+        JSON.stringify({
+          level: 'error',
+          channel: 'slack',
+          message: (err as Error).message,
+        }),
+      );
+      results.push({ channel: 'slack', ok: false });
+    }
   }
 
   if (options.channels.emailWebhook) {
-    const ok = await postJson(
-      options.channels.emailWebhook,
-      {
-        subject: '[AI Spend Monitor] Cap breach detected',
-        text: message,
-        html,
-      },
-      fetchImpl,
-    );
-    results.push({ channel: 'email', ok });
+    try {
+      const ok = await postJson(
+        options.channels.emailWebhook,
+        {
+          subject: '[AI Spend Monitor] Cap breach detected',
+          text: message,
+          html,
+        },
+        fetchImpl,
+      );
+      results.push({ channel: 'email', ok });
+    } catch (err) {
+      console.error(
+        JSON.stringify({
+          level: 'error',
+          channel: 'email',
+          message: (err as Error).message,
+        }),
+      );
+      results.push({ channel: 'email', ok: false });
+    }
   }
 
   const hardBreaches = toNotify.filter((breach) => breach.level === 'hard');
   if (hardBreaches.length > 0 && options.hardCapWebhook) {
-    await postJson(
-      options.hardCapWebhook,
-      {
-        event: 'ai_spend_hard_cap',
-        breaches: hardBreaches,
-        totals: context.totals,
-        triggeredAt: now.toISOString(),
-      },
-      fetchImpl,
-    );
+    try {
+      await postJson(
+        options.hardCapWebhook,
+        {
+          event: 'ai_spend_hard_cap',
+          breaches: hardBreaches,
+          totals: context.totals,
+          triggeredAt: now.toISOString(),
+        },
+        fetchImpl,
+      );
+    } catch (err) {
+      console.error(
+        JSON.stringify({
+          level: 'error',
+          channel: 'hard_cap',
+          message: (err as Error).message,
+        }),
+      );
+    }
   }
 
   const updated = updateAlertTimestamps(options.lastSent, toNotify, now);

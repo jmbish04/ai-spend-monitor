@@ -26,7 +26,7 @@ export const configSchema = z.object({
   ENABLE_ANTHROPIC: booleanFlag,
   ENABLE_VERTEX_BILLING_API: booleanFlag,
   ENABLE_VERTEX_BQ: booleanFlag,
-  CRON_LOOKBACK_HOURS: numberFromString.default(48),
+  CRON_LOOKBACK_HOURS: numberFromString.default('48'),
   OPENAI_API_KEY: z.string().optional(),
   OPENAI_ORG_ID: z.string().optional(),
   OPENAI_PROJECT_ID: z.string().optional(),
