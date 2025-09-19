@@ -2,9 +2,12 @@ import type { ExecutionContext } from '@cloudflare/workers-types';
 import { Env } from './env';
 import { handleScheduled } from './cron';
 import { createApp } from './routes';
+// Import the Durable Object class directly.
+import { RollupDO as RollupDOClass } from './core/rollups';
 
-// Export the Durable Object class so that Wrangler can discover it.
-export { RollupDO } from './core/rollups';
+// Export the Durable Object class as a named constant.
+// This makes it explicitly discoverable by Wrangler during deployment.
+export const RollupDO = RollupDOClass;
 
 const apiRouter = createApp();
 
